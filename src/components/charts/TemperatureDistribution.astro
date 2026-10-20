@@ -1,0 +1,69 @@
+---
+import { JSDOM } from "jsdom";
+import bins from "../../assets/distribution_ete.json";
+import metadata from "../../assets/distribution_ete.metadata.json";
+import { createTemperatureDistribution } from "../../lib/charts/temperatureDistribution.js";
+
+const total = bins.reduce((sum, bin) => sum + bin.nombre_jours, 0);
+const hotDays = bins.filter(bin => bin.debut_c >= 30).reduce((sum, bin) => sum + bin.nombre_jours, 0);
+if (total !== metadata.total_jours || hotDays !== metadata.jours_au_moins_30) {
+  throw new Error("V1 : les effectifs ne correspondent pas aux métadonnées vérifiées.");
+}
+const modalBin = bins.reduce((best, bin) => bin.nombre_jours > best.nombre_jours ? bin : best);
+const number = (value: number) => new Intl.NumberFormat("fr-FR").format(value);
+const description = `Histogramme des températures maximales des journées de juin à août à Besançon, de 1959 à 2022. ${number(total)} journées, comptées une fois chacune. L’axe horizontal indique les températures en degrés Celsius par classes de 2 degrés ; la hauteur des barres indique le nombre de journées. La classe la plus fréquente va de ${modalBin.debut_c} degrés inclus à ${modalBin.fin_c} degrés exclus, avec ${number(modalBin.nombre_jours)} journées. ${number(hotDays)} journées atteignent au moins 30 degrés. La ligne verticale pointillée indique ce seuil. La distribution ne montre pas la chronologie.`;
+const dom = new JSDOM("");
+const document = dom.window.document;
+function render(compact: boolean) {
+  const name = compact ? "mobile" : "desktop";
+  const chart = createTemperatureDistribution(bins, { document, compact, width: compact ? 320 : 900 });
+  chart.setAttribute("role", "img");
+  chart.setAttribute("aria-labelledby", `distribution-svg-title-${name} distribution-svg-description-${name}`);
+  chart.removeAttribute("aria-label");
+  const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+  title.id = `distribution-svg-title-${name}`;
+  title.textContent = `Besançon, étés 1959–2022 : ${number(hotDays)} journées à 30 °C ou plus sur ${number(total)} étudiées`;
+  const desc = document.createElementNS("http://www.w3.org/2000/svg", "desc");
+  desc.id = `distribution-svg-description-${name}`;
+  desc.textContent = description;
+  chart.prepend(title, desc);
+  return chart.outerHTML;
+}
+const desktop = render(false);
+const mobile = render(true);
+dom.window.close();
+---
+<section id="distribution" class="temperature-distribution chapter-section" aria-labelledby="distribution-title">
+  <div class="shell">
+    <div class="section-heading"><p class="eyebrow">Explorer · les températures estivales</p><span class="section-number" aria-hidden="true">03 /</span></div>
+    <div class="distribution-heading">
+      <h2 id="distribution-title">À quelles températures les étés de Besançon <em>nous exposent-ils&nbsp;?</em></h2>
+      <p>Les relevés météorologiques permettent de voir comment se répartissent les températures maximales des journées d’été, des plus courantes aux plus élevées.</p>
+    </div>
+    <figure class="distribution-figure" aria-labelledby="distribution-chart-title" aria-describedby="distribution-reading distribution-interpretation distribution-method">
+      <figcaption>
+        <p class="eyebrow">Comment les températures maximales se répartissent-elles pendant l’été&nbsp;?</p>
+        <h3 id="distribution-chart-title">{number(hotDays)} journées d’été à 30&nbsp;°C ou plus<br />sur {number(total)} étudiées</h3>
+        <p>Besançon · juin à août · 1959–2022</p>
+      </figcaption>
+      <p id="distribution-reading" class="distribution-reading">Chaque barre couvre 2&nbsp;°C. Sa hauteur donne le nombre de journées. La ligne pointillée marque 30&nbsp;°C.</p>
+      <div class="distribution-axes">
+        <p class="distribution-y-label">Nombre de journées</p>
+        <div class="distribution-svg distribution-desktop" set:html={desktop} />
+        <div class="distribution-svg distribution-mobile" set:html={mobile} />
+        <p class="distribution-x-label">Température maximale quotidienne (°C)</p>
+      </div>
+      <p id="distribution-interpretation" class="distribution-interpretation">La classe la plus fréquente va de <strong>{modalBin.debut_c}&nbsp;°C inclus à {modalBin.fin_c}&nbsp;°C exclus</strong>, avec <strong>{number(modalBin.nombre_jours)} journées</strong>. Sur les {number(total)} journées retenues, <strong>{number(hotDays)} ont atteint au moins 30&nbsp;°C</strong>. Cette vue regroupe tous les étés : elle ne montre pas comment les températures ont évolué d’une année à l’autre.</p>
+      <p id="distribution-method" class="distribution-method"><strong>Source :</strong> <a href={metadata.source_url}>Météo-France, séries quotidiennes de référence</a>, station {metadata.station}. Sélection : températures numériques, dates valides et uniques, qualité Q_SQR&nbsp;=&nbsp;1, juin à août de 1959 à 2022 ; les 64 années sont complètes. Les prolongements 2023–2024 sont exclus. Dénominateur : {number(total)} journées, chacune comptée une fois, sans pondération par la population. Les effectifs sont des nombres de journées, pas des pourcentages.</p>
+    </figure>
+    <details class="distribution-table">
+      <summary>Consulter les effectifs par classe de température</summary>
+      <table>
+        <caption>Maximales estivales à Besançon, 1959–2022. Borne inférieure incluse, borne supérieure exclue.</caption>
+        <thead><tr><th scope="col">Classe (°C)</th><th scope="col">Nombre de journées</th></tr></thead>
+        <tbody>{bins.map(bin => <tr><th scope="row">De {bin.debut_c} à moins de {bin.fin_c}</th><td>{number(bin.nombre_jours)}</td></tr>)}</tbody>
+        <tfoot><tr><th scope="row">Total</th><td>{number(total)}</td></tr></tfoot>
+      </table>
+    </details>
+  </div>
+</section>

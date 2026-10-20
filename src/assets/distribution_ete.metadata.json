@@ -1,0 +1,29 @@
+{
+  "source": "Météo-France — SQR des températures maximales quotidiennes",
+  "source_file": "SQR_MTX325056001.csv",
+  "source_sha256": "cbaf473cacc2b81c869e9d7eaff5de3055fcb4e8d6c0b44d1f9e15db7f5af8b0",
+  "source_url": "https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference",
+  "station": "25056001",
+  "commune": "Besançon",
+  "periode": {
+    "debut": 1959,
+    "fin": 2022
+  },
+  "mois": [
+    6,
+    7,
+    8
+  ],
+  "qualite": {
+    "champ": "Q_SQR",
+    "valeur": 1
+  },
+  "annees_completes": 64,
+  "observations_quotidiennes_valides": 23376,
+  "total_jours": 5888,
+  "jours_au_moins_30": 682,
+  "largeur_classe_c": 2,
+  "unite": "nombre de journées",
+  "convention_classes": "Borne inférieure incluse, borne supérieure exclue.",
+  "denominateur": "Toutes les journées de juin à août retenues de 1959 à 2022 ; une journée compte une fois, sans pondération par la population."
+}

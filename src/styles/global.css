@@ -836,6 +836,161 @@ h2 {
     margin-bottom: 30px;
   }
 }
+.next-chapter-inner > .button {
+  margin-top: 30px;
+}
+.temperature-distribution {
+  background: #F2EBDF;
+}
+.distribution-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 44px;
+}
+.distribution-heading > p {
+  color: var(--muted);
+  max-width: 450px;
+}
+.distribution-figure {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 36px;
+}
+.distribution-figure figcaption h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+  font-weight: 500;
+  color: var(--choco);
+  line-height: 1.25;
+  margin-block: 16px;
+}
+.distribution-figure figcaption > p:last-child {
+  color: var(--muted);
+  font-size: .85rem;
+}
+.distribution-reading {
+  margin-block: 20px 28px;
+  max-width: 720px;
+  font-size: .88rem;
+}
+.distribution-axes {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.distribution-y-label, .distribution-x-label {
+  font-size: .82rem;
+  color: var(--ink);
+}
+.distribution-x-label {
+  text-align: center;
+  margin-top: -12px;
+  margin-bottom: 26px;
+}
+.distribution-svg svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.distribution-mobile {
+  display: none;
+}
+.distribution-interpretation {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  font-size: .95rem;
+  line-height: 1.85;
+}
+.distribution-method {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.85;
+}
+.distribution-table {
+  margin-top: 24px;
+  border-block: 1px solid var(--line);
+  padding-block: 18px;
+}
+.distribution-table summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--choco);
+}
+.distribution-table summary:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 5px;
+}
+.distribution-table table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  font-size: .85rem;
+}
+.distribution-table caption {
+  text-align: left;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.distribution-table th, .distribution-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.distribution-table td, .distribution-table thead th:last-child {
+  text-align: right;
+}
+.distribution-table tbody th {
+  font-weight: 400;
+}
+.distribution-table tfoot {
+  font-weight: 700;
+}
+@media(max-width:959px) {
+  .distribution-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .distribution-heading > p {
+    max-width: 650px;
+  }
+  .distribution-desktop {
+    display: none;
+  }
+  .distribution-mobile {
+    display: block;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .distribution-y-label {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+@media(max-width:639px) {
+  .distribution-figure {
+    padding: 24px 14px;
+    margin-inline: -8px;
+  }
+  .distribution-reading {
+    font-size: .83rem;
+  }
+  .distribution-method {
+    font-size: .76rem;
+  }
+  .distribution-interpretation {
+    font-size: .9rem;
+  }
+  .distribution-figure .eyebrow {
+    font-size: .6rem;
+  }
+  .distribution-table table {
+    font-size: .78rem;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto

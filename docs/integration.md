@@ -1,7 +1,8 @@
 # Préparation du récit et des visualisations
 
-Étapes 1 et 2 réalisées : accueil, contexte, définitions et présentation des sources.
-Aucun graphique, filtre ou carte n’est intégré à l’accueil.
+Étapes 1 à 3 réalisées : accueil, contexte, définitions, sources et distribution V1.
+V1 est un histogramme statique rendu au build, documenté dans `temperature-distribution.md`.
+La carte V2, le graphique historique V3 et l’explorateur V4 restent à réaliser.
 La configuration Astro, Tailwind, Observable Plot et Netlify est conservée.
 Le graphique initial reste archivé dans `src/components/LegacyPlotExample.astro`,
 sans être importé dans la page publique.
@@ -50,9 +51,9 @@ Cette étape ne modifie aucun fichier de données.
 
 ## Méthodes A, B et C et fonction autonome
 
-Prévoir trois modes d’intégration dans le travail à venir, selon les définitions
-exactes du TP. Le brief ne définit pas les lettres A, B et C : leur association
-à une technique reste à confirmer avec le support pédagogique, sans l’inventer.
+Les définitions sont fournies par le brief de l’étape 3 : A = calcul et rendu au
+build ; B = calcul et rendu chez le lecteur ; C = une page générée par valeur.
+V1 utilise A : sa distribution est fixe et rendue en SVG statique dans Astro.
 Pour chaque méthode, documenter les dépendances, le chargement des JSON,
 l’accessibilité, le responsive et les limites.
 
