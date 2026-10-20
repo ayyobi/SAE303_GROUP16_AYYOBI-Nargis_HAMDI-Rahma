@@ -2,8 +2,8 @@
 - URL Notebook Observable :
 - Nom :
 - Prénom :
-- Nom binome :
-- Prénom binome :
+- Nom binome :HAMDI
+- Prénom binome :Rahmaa
 
 # Remarques :
 
