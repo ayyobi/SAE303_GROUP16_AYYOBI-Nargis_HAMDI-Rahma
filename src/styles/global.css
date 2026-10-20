@@ -991,6 +991,250 @@ h2 {
     font-size: .78rem;
   }
 }
+.lcz-section {
+  background: var(--paper);
+}
+.lcz-explorer {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 30px;
+  background: #F2EBDF;
+}
+.lcz-caption h3, .lcz-reading h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--choco);
+}
+.lcz-caption > p, .lcz-instructions, .lcz-credit {
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.85;
+  margin-top: 14px;
+}
+.lcz-instructions {
+  max-width: 950px;
+}
+.lcz-controls {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-block: 24px 10px;
+}
+.lcz-controls > div {
+  flex: 1 1 230px;
+  min-width: 0;
+}
+.lcz-controls label {
+  display: block;
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.lcz-controls select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 28px 12px 12px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--muted);
+  border-radius: 5px;
+  font: inherit;
+  font-size: .83rem;
+}
+.lcz-button {
+  padding: 12px 18px;
+  border: 1px solid var(--choco);
+  border-radius: 50px;
+  background: var(--paper);
+  color: var(--choco);
+  font-size: .8rem;
+  cursor: pointer;
+}
+.lcz-button:hover:not(:disabled) {
+  background: var(--beige);
+}
+.lcz-button:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+.lcz-status {
+  min-height: 3.4em;
+  font-size: .82rem;
+  line-height: 1.7;
+  padding-block: 12px;
+}
+.lcz-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 24px;
+}
+.lcz-map {
+  height: auto;
+  aspect-ratio: 1;
+  max-height: 680px;
+  width: 100%;
+  border: 1px solid var(--muted);
+  border-radius: 5px;
+  background: #F6F3EC;
+  isolation: isolate;
+  z-index: 0;
+  font-family: var(--sans);
+}
+.lcz-map.leaflet-container {
+  background: #F6F3EC;
+}
+.lcz-map .leaflet-control-attribution {
+  background: #FAF7F0;
+  color: var(--ink);
+  font-size: 10px;
+}
+.lcz-map .leaflet-control-attribution a, .lcz-map .leaflet-popup-close-button {
+  color: var(--choco);
+}
+.lcz-map .leaflet-popup-content-wrapper {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+}
+.lcz-map .leaflet-popup-content {
+  font-size: .8rem;
+}
+.lcz-map path:focus-visible {
+  outline: none;
+  stroke: #111;
+  stroke-width: 1.5px;
+}
+.lcz-reset-bounds {
+  margin-top: 14px;
+}
+.lcz-legend {
+  padding-top: 8px;
+}
+.lcz-legend h4 {
+  font-size: .9rem;
+  margin-bottom: 18px;
+}
+.lcz-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lcz-legend li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: .82rem;
+  margin-block: 16px;
+}
+.lcz-swatch {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #56504A;
+  background: var(--lcz-color);
+}
+.lcz-legend li[data-active=false] .lcz-swatch {
+  background: #ECEBE9;
+}
+.lcz-legend li[data-active=false] > span:last-child {
+  text-decoration: line-through;
+}
+.lcz-legend > p {
+  font-size: .75rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 18px;
+}
+.lcz-zone-info {
+  background: var(--paper);
+  border-left: 3px solid var(--olive);
+  padding: 20px;
+  margin-top: 24px;
+  font-size: .85rem;
+  min-height: 100px;
+}
+.lcz-zone-info h4 {
+  font-size: 1rem;
+}
+.lcz-zone-info p {
+  margin-top: 10px;
+}
+.lcz-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.lcz-table table {
+  min-width: 620px;
+}
+.lcz-table tbody th {
+  width: 44%;
+}
+.lcz-table tbody th p {
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: 6px;
+}
+.lcz-table td, .lcz-table th {
+  vertical-align: top;
+}
+.lcz-reading {
+  max-width: 900px;
+  margin-top: 38px;
+}
+.lcz-reading p {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.lcz-next {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.lcz-controls select:focus-visible, .lcz-table-scroll:focus-visible, .lcz-map:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+@media(max-width:959px) {
+  .lcz-map-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lcz-legend ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 20px;
+  }
+  .lcz-map {
+    height: auto;
+    max-height: 600px;
+  }
+}
+@media(max-width:639px) {
+  .lcz-explorer {
+    padding: 18px 12px;
+    margin-inline: -8px;
+  }
+  .lcz-controls {
+    gap: 16px;
+  }
+  .lcz-map {
+    height: auto;
+    min-height: 320px;
+  }
+  .lcz-legend ul {
+    grid-template-columns: 1fr;
+  }
+  .lcz-legend li {
+    margin-block: 7px;
+  }
+  .lcz-zone-info {
+    padding: 16px;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto

@@ -1,0 +1,47 @@
+---
+import "leaflet/dist/leaflet.css";
+import geojsonUrl from "../../assets/besancon_lcz_coeur_8km.geojson?url";
+import raw from "../../assets/besancon_lcz_coeur_8km.geojson?raw";
+import { LCZ_FAMILIES, LCZ_MODES, LCZ_SOURCE, validateLCZ, formatLCZ, describeLCZ } from "../../lib/maps/lcz.js";
+const data = validateLCZ(JSON.parse(raw));
+---
+<section id="ville" class="lcz-section chapter-section" aria-labelledby="ville-title">
+  <div class="shell">
+    <div class="section-heading"><p class="eyebrow">Explorer · les espaces urbains</p><span class="section-number" aria-hidden="true">04 /</span></div>
+    <div class="distribution-heading">
+      <h2 id="ville-title">La forme de Besançon peut-elle nous aider à comprendre les <em>enjeux de chaleur&nbsp;?</em></h2>
+      <div class="chapter-copy"><p>Des espaces bâtis aux secteurs végétalisés, les paysages urbains ne se ressemblent pas. La cartographie du Cerema permet d’explorer ces différences et de réfléchir aux possibilités d’adaptation.</p><p>Ici, les zones climatiques locales regroupent les lieux selon leur forme et leur couverture du sol. Les couleurs décrivent des types d’espaces, jamais des températures mesurées.</p></div>
+    </div>
+    <div class="lcz-explorer" data-lcz-map data-geojson={geojsonUrl} data-map-state="waiting">
+      <figure aria-labelledby="lcz-map-title" aria-describedby="lcz-map-description">
+        <figcaption class="lcz-caption"><h3 id="lcz-map-title">Où se trouvent les différents types d’espaces&nbsp;?</h3><p>Cerema · LCZ SPOT 2022 · secteur central de Besançon, environ 8 × 8 km</p></figcaption>
+        <p id="lcz-map-description" class="lcz-instructions">Filtrez les espaces, puis cliquez sur une zone pour connaître sa classe. Les zones écartées restent en gris. Vous pouvez déplacer la carte et zoomer avec les boutons ou deux doigts. Au clavier : Tab pour atteindre la carte et les classes, flèches pour déplacer, + et − pour zoomer, Entrée pour afficher les informations.</p>
+        <div class="lcz-controls">
+          <div><label for="lcz-mode">Que souhaitez-vous examiner&nbsp;?</label><select id="lcz-mode" data-mode data-map-control disabled>{LCZ_MODES.map(mode => <option>{mode}</option>)}</select></div>
+          <div><label for="lcz-category">Une classe en particulier</label><select id="lcz-category" data-category data-map-control disabled><option value="all">Toutes les classes du filtre</option>{data.features.map(f => <option value={f.properties.lcz}>LCZ {f.properties.lcz} — {f.properties.libelle}</option>)}</select></div>
+          <button type="button" class="lcz-button" data-show-all data-map-control disabled>Afficher toutes les zones</button>
+        </div>
+        <p class="lcz-status" data-status role="status" aria-live="polite" aria-atomic="true">La carte se chargera à l’approche de cette section. Le tableau des catégories est déjà disponible.</p>
+        <button type="button" class="lcz-button" data-retry hidden>Réessayer de charger la carte</button>
+        <div class="lcz-map-layout">
+          <div><div class="lcz-map" data-map role="region" aria-label="Carte interactive des classes LCZ du centre de Besançon" aria-describedby="lcz-map-description"></div><button type="button" class="lcz-button lcz-reset-bounds" data-reset-bounds data-map-control disabled>Revenir à l’emprise initiale</button></div>
+          <div class="lcz-legend"><h4>Types d’espaces</h4><ul>{LCZ_FAMILIES.map(f => <li data-family={f.name} data-active="true"><span class="lcz-swatch" style={`--lcz-color:${f.color}`} aria-hidden="true"></span><span>{f.name}</span></li>)}</ul><p>Les couleurs distinguent six familles. Elles ne représentent pas une échelle de chaleur.</p><p>Fond gris clair : espaces atténués par le filtre.</p></div>
+        </div>
+        <div class="lcz-zone-info" data-zone-info aria-live="polite" aria-atomic="true">Les informations de la classe sélectionnée apparaîtront ici. Elles sont aussi disponibles dans le tableau ci-dessous.</div>
+        <p class="lcz-credit">Source : <a href={LCZ_SOURCE}>Cerema, cartographie LCZ SPOT 2022</a> · <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/">Licence Ouverte 2.0</a>. Extrait du notebook : {data.features.length} classes regroupant {data.metadata.polygones_selection} polygones sources. Géométries déjà simplifiées à 10 m ; contours indicatifs. Sans fond de carte externe.</p>
+        <noscript><p class="lcz-credit">JavaScript est nécessaire pour explorer la carte. Le tableau suivant présente les mêmes catégories, familles et surfaces.</p></noscript>
+      </figure>
+    </div>
+    <details class="distribution-table lcz-table">
+      <summary>Consulter les 14 classes et leurs informations sans utiliser la carte</summary>
+      <div class="lcz-table-scroll" role="region" aria-label="Tableau des classes LCZ, défilement horizontal si nécessaire" tabindex="0">
+        <table><caption>Surfaces de chaque classe dans l’ensemble du secteur ; aucun relevé de température.</caption><thead><tr><th scope="col">Classe et description</th><th scope="col">Famille</th><th scope="col">Surface (km²)</th><th scope="col">Polygones sources</th></tr></thead><tbody>{data.features.map(f => <tr><th scope="row"><strong>LCZ {f.properties.lcz} — {f.properties.libelle}</strong><p>{describeLCZ(f.properties)}</p></th><td>{f.properties.famille}</td><td>{formatLCZ(f.properties.surface_km2)}</td><td>{f.properties.polygones_source}</td></tr>)}</tbody></table>
+      </div>
+    </details>
+    <div class="lcz-reading"><h3>Des espaces différents, des pistes à examiner</h3><p>Le secteur représenté associe bâti compact, bâti ouvert ou diffus, bâtiments et sols imperméables, végétation, sol nu et eau. Cette répartition peut aider à cibler des études locales sur l’ombre, la végétalisation ou les sols perméables. Elle ne suffit pas à décider seule où réaliser des travaux, ni à comparer la température de deux quartiers.</p><p class="lcz-next">Après la répartition des journées d’été et la lecture des espaces urbains, une autre question se pose : comment les fortes chaleurs ont-elles évolué au fil des années&nbsp;? Ce sera le prochain temps de l’enquête.</p></div>
+  </div>
+</section>
+<script>
+  import { mountLCZMap } from "../../scripts/lcz-map.js";
+  document.querySelectorAll<HTMLElement>("[data-lcz-map]").forEach(mountLCZMap);
+</script>
