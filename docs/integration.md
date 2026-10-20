@@ -1,6 +1,7 @@
 # Préparation du récit et des visualisations
 
-Étape 1 uniquement : aucun graphique, filtre ou carte n’est intégré à l’accueil.
+Étapes 1 et 2 réalisées : accueil, contexte, définitions et présentation des sources.
+Aucun graphique, filtre ou carte n’est intégré à l’accueil.
 La configuration Astro, Tailwind, Observable Plot et Netlify est conservée.
 Le graphique initial reste archivé dans `src/components/LegacyPlotExample.astro`,
 sans être importé dans la page publique.
