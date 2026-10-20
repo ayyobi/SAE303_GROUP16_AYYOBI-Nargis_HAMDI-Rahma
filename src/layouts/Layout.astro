@@ -1,18 +1,28 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta name="description" content="Une enquête sur les fortes chaleurs à Besançon : observations de Météo-France, espaces urbains du Cerema et projections Climadiag." />
+    <meta name="theme-color" content="#5B3A2E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <title>Besançon sous la chaleur — Une enquête climatique</title>
   </head>
   <body>
-    <slot />
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <Header />
+    <main id="contenu"><slot /></main>
+    <Footer />
   </body>
 </html>
 
@@ -21,6 +31,6 @@ import "../styles/global.css";
   body {
     margin: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
 </style>

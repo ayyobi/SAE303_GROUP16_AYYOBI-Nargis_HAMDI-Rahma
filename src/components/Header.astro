@@ -1,0 +1,36 @@
+---
+// Les rubriques futures seront activées lorsque leur contenu sera intégré.
+const links = [
+  { label: "Accueil", href: "/#accueil", available: true },
+  { label: "Comprendre", href: "/#comprendre", available: true },
+  { label: "Les données", href: "/#les-donnees", available: false },
+  { label: "La ville", href: "/#la-ville", available: false },
+  { label: "Explorer", href: "/#explorer", available: false },
+  { label: "Méthode", href: "/methode", available: false },
+];
+---
+<header class="site-header"><div class="shell header-inner">
+  <a class="wordmark" href="/#accueil" aria-label="Besançon sous la chaleur, accueil">BESANÇON<span>°</span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
+  <nav id="main-navigation" aria-label="Navigation principale">{links.filter(link => link.available).map(({ label, href }) => <a href={href}>{label}</a>)}</nav>
+</div></header>
+<noscript><style>@media(max-width:959px){.site-header{position:relative}#main-navigation{display:grid;position:static;grid-template-columns:1fr 1fr;padding:10px 0;box-shadow:none}.header-inner{flex-wrap:wrap}.menu-toggle{display:none}}</style></noscript>
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const navigation = document.querySelector<HTMLElement>('#main-navigation');
+  if (button && navigation) {
+    const setOpen = (open: boolean) => button.setAttribute('aria-expanded', String(open));
+    button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { setOpen(false); button.focus(); }
+    });
+    document.addEventListener('click', event => {
+      if (event.target instanceof Element && !event.target.closest('.site-header')) setOpen(false);
+    });
+    document.addEventListener('focusin', event => {
+      if (event.target instanceof Element && !event.target.closest('.site-header')) setOpen(false);
+    });
+    window.matchMedia('(min-width: 960px)').addEventListener('change', () => setOpen(false));
+  }
+</script>

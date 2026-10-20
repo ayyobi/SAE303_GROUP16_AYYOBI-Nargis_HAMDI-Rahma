@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # Local Netlify folder
 .netlify
+
+# Sources originales locales : ne jamais publier les fichiers du défi.
+data-raw/
+*.csv
+*Observable*.html

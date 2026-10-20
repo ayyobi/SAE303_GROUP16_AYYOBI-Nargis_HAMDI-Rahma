@@ -1,0 +1,3962 @@
+[
+  {
+    "YYYYMM": "195901",
+    "VALEUR": -0.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195902",
+    "VALEUR": -1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195903",
+    "VALEUR": 4.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195904",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195905",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195906",
+    "VALEUR": 12.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195907",
+    "VALEUR": 15.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195908",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195909",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195910",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195911",
+    "VALEUR": 2.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "195912",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196001",
+    "VALEUR": -1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196002",
+    "VALEUR": 1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196003",
+    "VALEUR": 3.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196004",
+    "VALEUR": 4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196005",
+    "VALEUR": 9.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196006",
+    "VALEUR": 12.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196007",
+    "VALEUR": 11.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196008",
+    "VALEUR": 13,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196009",
+    "VALEUR": 9.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196010",
+    "VALEUR": 7.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196011",
+    "VALEUR": 5.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196012",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196101",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196102",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196103",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196104",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196105",
+    "VALEUR": 7.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196106",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196107",
+    "VALEUR": 12.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196108",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196109",
+    "VALEUR": 13.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196110",
+    "VALEUR": 7.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196111",
+    "VALEUR": 2.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196112",
+    "VALEUR": 0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196201",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196202",
+    "VALEUR": -1.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196203",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196204",
+    "VALEUR": 4.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196205",
+    "VALEUR": 6.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196206",
+    "VALEUR": 10,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196207",
+    "VALEUR": 12.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196208",
+    "VALEUR": 13.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196209",
+    "VALEUR": 10.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196210",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196211",
+    "VALEUR": 0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196212",
+    "VALEUR": -5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196301",
+    "VALEUR": -6.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196302",
+    "VALEUR": -5.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196303",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196304",
+    "VALEUR": 6.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196305",
+    "VALEUR": 7.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196306",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196307",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196308",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196309",
+    "VALEUR": 11.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196310",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196311",
+    "VALEUR": 5.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196312",
+    "VALEUR": -4.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196401",
+    "VALEUR": -4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196402",
+    "VALEUR": 1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196403",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196404",
+    "VALEUR": 5.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196405",
+    "VALEUR": 9.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196406",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196407",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196408",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196409",
+    "VALEUR": 11.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196410",
+    "VALEUR": 5.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196411",
+    "VALEUR": 3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196412",
+    "VALEUR": -1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196501",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196502",
+    "VALEUR": -3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196503",
+    "VALEUR": 2.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196504",
+    "VALEUR": 3.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196505",
+    "VALEUR": 7.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196506",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196507",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196508",
+    "VALEUR": 12.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196509",
+    "VALEUR": 9.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196510",
+    "VALEUR": 6.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196511",
+    "VALEUR": 2.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196512",
+    "VALEUR": 2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196601",
+    "VALEUR": -3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196602",
+    "VALEUR": 4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196603",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196604",
+    "VALEUR": 6.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196605",
+    "VALEUR": 8.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196606",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196607",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196608",
+    "VALEUR": 11.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196609",
+    "VALEUR": 11.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196610",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196611",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196612",
+    "VALEUR": 0.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196701",
+    "VALEUR": -1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196702",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196703",
+    "VALEUR": 3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196704",
+    "VALEUR": 3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196705",
+    "VALEUR": 7.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196706",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196707",
+    "VALEUR": 14.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196708",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196709",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196710",
+    "VALEUR": 8.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196711",
+    "VALEUR": 2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196712",
+    "VALEUR": -2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196801",
+    "VALEUR": -2.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196802",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196803",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196804",
+    "VALEUR": 4.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196805",
+    "VALEUR": 7.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196806",
+    "VALEUR": 11,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196807",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196808",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196809",
+    "VALEUR": 10.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196810",
+    "VALEUR": 8.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196811",
+    "VALEUR": 2.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196812",
+    "VALEUR": -1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196901",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196902",
+    "VALEUR": -2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196903",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196904",
+    "VALEUR": 4.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196905",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196906",
+    "VALEUR": 10,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196907",
+    "VALEUR": 14.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196908",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196909",
+    "VALEUR": 11,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196910",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196911",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "196912",
+    "VALEUR": -5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197001",
+    "VALEUR": -0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197002",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197003",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197004",
+    "VALEUR": 3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197005",
+    "VALEUR": 7.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197006",
+    "VALEUR": 13.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197007",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197008",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197009",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197010",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197011",
+    "VALEUR": 3.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197012",
+    "VALEUR": -1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197101",
+    "VALEUR": -3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197102",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197103",
+    "VALEUR": -1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197104",
+    "VALEUR": 6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197105",
+    "VALEUR": 9.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197106",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197107",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197108",
+    "VALEUR": 13.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197109",
+    "VALEUR": 9.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197110",
+    "VALEUR": 6.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197111",
+    "VALEUR": 1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197112",
+    "VALEUR": -0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197201",
+    "VALEUR": -1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197202",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197203",
+    "VALEUR": 2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197204",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197205",
+    "VALEUR": 7.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197206",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197207",
+    "VALEUR": 12.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197208",
+    "VALEUR": 12,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197209",
+    "VALEUR": 7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197210",
+    "VALEUR": 4.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197211",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197212",
+    "VALEUR": -2.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197301",
+    "VALEUR": -3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197302",
+    "VALEUR": -1.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197303",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197304",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197305",
+    "VALEUR": 9.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197306",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197307",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197308",
+    "VALEUR": 14.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197309",
+    "VALEUR": 11,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197310",
+    "VALEUR": 5.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197311",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197312",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197401",
+    "VALEUR": 2.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197402",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197403",
+    "VALEUR": 4.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197404",
+    "VALEUR": 3.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197405",
+    "VALEUR": 7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197406",
+    "VALEUR": 10.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197407",
+    "VALEUR": 11.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197408",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197409",
+    "VALEUR": 10.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197410",
+    "VALEUR": 3.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197411",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197412",
+    "VALEUR": 3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197501",
+    "VALEUR": 2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197502",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197503",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197504",
+    "VALEUR": 4.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197505",
+    "VALEUR": 7.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197506",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197507",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197508",
+    "VALEUR": 14.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197509",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197510",
+    "VALEUR": 4.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197511",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197512",
+    "VALEUR": -2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197601",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197602",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197603",
+    "VALEUR": 0.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197604",
+    "VALEUR": 3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197605",
+    "VALEUR": 8.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197606",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197607",
+    "VALEUR": 14.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197608",
+    "VALEUR": 11.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197609",
+    "VALEUR": 9.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197610",
+    "VALEUR": 8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197611",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197612",
+    "VALEUR": -1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197701",
+    "VALEUR": 1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197702",
+    "VALEUR": 3.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197703",
+    "VALEUR": 4.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197704",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197705",
+    "VALEUR": 8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197706",
+    "VALEUR": 11.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197707",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197708",
+    "VALEUR": 12.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197709",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197710",
+    "VALEUR": 7.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197711",
+    "VALEUR": 3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197712",
+    "VALEUR": 0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197801",
+    "VALEUR": -0.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197802",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197803",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197804",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197805",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197806",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197807",
+    "VALEUR": 12.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197808",
+    "VALEUR": 11.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197809",
+    "VALEUR": 9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197810",
+    "VALEUR": 5.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197811",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197812",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197901",
+    "VALEUR": -4.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197902",
+    "VALEUR": 0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197903",
+    "VALEUR": 3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197904",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197905",
+    "VALEUR": 7.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197906",
+    "VALEUR": 12.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197907",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197908",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197909",
+    "VALEUR": 10.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197910",
+    "VALEUR": 8.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197911",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "197912",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198001",
+    "VALEUR": -1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198002",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198003",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198004",
+    "VALEUR": 3.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198005",
+    "VALEUR": 7.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198006",
+    "VALEUR": 10.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198007",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198008",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198009",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198010",
+    "VALEUR": 5.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198011",
+    "VALEUR": 0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198012",
+    "VALEUR": -2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198101",
+    "VALEUR": -2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198102",
+    "VALEUR": -2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198103",
+    "VALEUR": 5.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198104",
+    "VALEUR": 5.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198105",
+    "VALEUR": 8.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198106",
+    "VALEUR": 11.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198107",
+    "VALEUR": 13,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198108",
+    "VALEUR": 12.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198109",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198110",
+    "VALEUR": 7.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198111",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198112",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198201",
+    "VALEUR": 0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198202",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198203",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198204",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198205",
+    "VALEUR": 8.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198206",
+    "VALEUR": 13.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198207",
+    "VALEUR": 15,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198208",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198209",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198210",
+    "VALEUR": 7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198211",
+    "VALEUR": 3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198212",
+    "VALEUR": 1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198301",
+    "VALEUR": 0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198302",
+    "VALEUR": -1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198303",
+    "VALEUR": 2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198304",
+    "VALEUR": 5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198305",
+    "VALEUR": 7.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198306",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198307",
+    "VALEUR": 17,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198308",
+    "VALEUR": 14.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198309",
+    "VALEUR": 11.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198310",
+    "VALEUR": 6.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198311",
+    "VALEUR": 1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198312",
+    "VALEUR": -0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198401",
+    "VALEUR": 0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198402",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198403",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198404",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198405",
+    "VALEUR": 6.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198406",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198407",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198408",
+    "VALEUR": 13.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198409",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198410",
+    "VALEUR": 7.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198411",
+    "VALEUR": 4.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198412",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198501",
+    "VALEUR": -7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198502",
+    "VALEUR": -1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198503",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198504",
+    "VALEUR": 5.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198505",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198506",
+    "VALEUR": 10.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198507",
+    "VALEUR": 14.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198508",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198509",
+    "VALEUR": 10.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198510",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198511",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198512",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198601",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198602",
+    "VALEUR": -6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198603",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198604",
+    "VALEUR": 4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198605",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198606",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198607",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198608",
+    "VALEUR": 13,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198609",
+    "VALEUR": 10.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198610",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198611",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198612",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198701",
+    "VALEUR": -5.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198702",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198703",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198704",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198705",
+    "VALEUR": 6.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198706",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198707",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198708",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198709",
+    "VALEUR": 13.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198710",
+    "VALEUR": 8.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198711",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198712",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198801",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198802",
+    "VALEUR": 0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198803",
+    "VALEUR": 2.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198804",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198805",
+    "VALEUR": 10.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198806",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198807",
+    "VALEUR": 13.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198808",
+    "VALEUR": 14,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198809",
+    "VALEUR": 10.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198810",
+    "VALEUR": 8.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198811",
+    "VALEUR": 0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198812",
+    "VALEUR": 2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198901",
+    "VALEUR": -1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198902",
+    "VALEUR": 0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198903",
+    "VALEUR": 4.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198904",
+    "VALEUR": 4.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198905",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198906",
+    "VALEUR": 11.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198907",
+    "VALEUR": 14.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198908",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198909",
+    "VALEUR": 10.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198910",
+    "VALEUR": 7.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198911",
+    "VALEUR": 0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "198912",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199001",
+    "VALEUR": -1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199002",
+    "VALEUR": 3.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199003",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199004",
+    "VALEUR": 4.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199005",
+    "VALEUR": 10.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199006",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199007",
+    "VALEUR": 14,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199008",
+    "VALEUR": 14.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199009",
+    "VALEUR": 9.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199010",
+    "VALEUR": 8.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199011",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199012",
+    "VALEUR": -1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199101",
+    "VALEUR": -0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199102",
+    "VALEUR": -3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199103",
+    "VALEUR": 5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199104",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199105",
+    "VALEUR": 5.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199106",
+    "VALEUR": 11.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199107",
+    "VALEUR": 14.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199108",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199109",
+    "VALEUR": 12.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199110",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199111",
+    "VALEUR": 2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199112",
+    "VALEUR": -1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199201",
+    "VALEUR": -2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199202",
+    "VALEUR": -0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199203",
+    "VALEUR": 3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199204",
+    "VALEUR": 4.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199205",
+    "VALEUR": 10.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199206",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199207",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199208",
+    "VALEUR": 15.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199209",
+    "VALEUR": 10.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199210",
+    "VALEUR": 6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199211",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199212",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199301",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199302",
+    "VALEUR": -2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199303",
+    "VALEUR": 1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199304",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199305",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199306",
+    "VALEUR": 12.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199307",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199308",
+    "VALEUR": 13.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199309",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199310",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199311",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199312",
+    "VALEUR": 2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199401",
+    "VALEUR": 1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199402",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199403",
+    "VALEUR": 6.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199404",
+    "VALEUR": 4.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199405",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199406",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199407",
+    "VALEUR": 16.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199408",
+    "VALEUR": 15.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199409",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199410",
+    "VALEUR": 7.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199411",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199412",
+    "VALEUR": 3.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199501",
+    "VALEUR": -0.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199502",
+    "VALEUR": 3.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199503",
+    "VALEUR": 1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199504",
+    "VALEUR": 5.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199505",
+    "VALEUR": 8.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199506",
+    "VALEUR": 11.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199507",
+    "VALEUR": 16.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199508",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199509",
+    "VALEUR": 9.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199510",
+    "VALEUR": 9.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199511",
+    "VALEUR": 2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199512",
+    "VALEUR": -0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199601",
+    "VALEUR": -0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199602",
+    "VALEUR": -1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199603",
+    "VALEUR": 0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199604",
+    "VALEUR": 4.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199605",
+    "VALEUR": 8.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199606",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199607",
+    "VALEUR": 13.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199608",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199609",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199610",
+    "VALEUR": 7.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199611",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199612",
+    "VALEUR": -1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199701",
+    "VALEUR": -2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199702",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199703",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199704",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199705",
+    "VALEUR": 9.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199706",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199707",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199708",
+    "VALEUR": 15.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199709",
+    "VALEUR": 11,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199710",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199711",
+    "VALEUR": 3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199712",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199801",
+    "VALEUR": 1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199802",
+    "VALEUR": 0.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199803",
+    "VALEUR": 2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199804",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199805",
+    "VALEUR": 9.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199806",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199807",
+    "VALEUR": 14.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199808",
+    "VALEUR": 13.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199809",
+    "VALEUR": 11.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199810",
+    "VALEUR": 7.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199811",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199812",
+    "VALEUR": -0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199901",
+    "VALEUR": 1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199902",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199903",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199904",
+    "VALEUR": 5.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199905",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199906",
+    "VALEUR": 11.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199907",
+    "VALEUR": 15.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199908",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199909",
+    "VALEUR": 13.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199910",
+    "VALEUR": 7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199911",
+    "VALEUR": 1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "199912",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200001",
+    "VALEUR": -0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200002",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200003",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200004",
+    "VALEUR": 6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200005",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200006",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200007",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200008",
+    "VALEUR": 14.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200009",
+    "VALEUR": 11.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200010",
+    "VALEUR": 8.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200011",
+    "VALEUR": 4.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200012",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200101",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200102",
+    "VALEUR": 1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200103",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200104",
+    "VALEUR": 4.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200105",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200106",
+    "VALEUR": 11.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200107",
+    "VALEUR": 14.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200108",
+    "VALEUR": 15.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200109",
+    "VALEUR": 9.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200110",
+    "VALEUR": 10.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200111",
+    "VALEUR": 1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200112",
+    "VALEUR": -1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200201",
+    "VALEUR": -0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200202",
+    "VALEUR": 4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200203",
+    "VALEUR": 3.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200204",
+    "VALEUR": 4.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200205",
+    "VALEUR": 8.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200206",
+    "VALEUR": 14.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200207",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200208",
+    "VALEUR": 14.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200209",
+    "VALEUR": 10.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200210",
+    "VALEUR": 7.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200211",
+    "VALEUR": 5.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200212",
+    "VALEUR": 3.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200301",
+    "VALEUR": -0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200302",
+    "VALEUR": -2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200303",
+    "VALEUR": 3.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200304",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200305",
+    "VALEUR": 10.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200306",
+    "VALEUR": 17.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200307",
+    "VALEUR": 15.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200308",
+    "VALEUR": 17.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200309",
+    "VALEUR": 10.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200310",
+    "VALEUR": 5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200311",
+    "VALEUR": 4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200312",
+    "VALEUR": 0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200401",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200402",
+    "VALEUR": -0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200403",
+    "VALEUR": 1.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200404",
+    "VALEUR": 5.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200405",
+    "VALEUR": 7.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200406",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200407",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200408",
+    "VALEUR": 14.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200409",
+    "VALEUR": 11.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200410",
+    "VALEUR": 9.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200411",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200412",
+    "VALEUR": -0.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200501",
+    "VALEUR": -1.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200502",
+    "VALEUR": -2.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200503",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200504",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200505",
+    "VALEUR": 9.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200506",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200507",
+    "VALEUR": 14.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200508",
+    "VALEUR": 12.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200509",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200510",
+    "VALEUR": 9.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200511",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200512",
+    "VALEUR": -1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200601",
+    "VALEUR": -2.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200602",
+    "VALEUR": -0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200603",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200604",
+    "VALEUR": 5.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200605",
+    "VALEUR": 9.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200606",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200607",
+    "VALEUR": 17.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200608",
+    "VALEUR": 12.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200609",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200610",
+    "VALEUR": 10.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200611",
+    "VALEUR": 4.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200612",
+    "VALEUR": 0.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200701",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200702",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200703",
+    "VALEUR": 2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200704",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200705",
+    "VALEUR": 10.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200706",
+    "VALEUR": 13.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200707",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200708",
+    "VALEUR": 13.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200709",
+    "VALEUR": 9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200710",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200711",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200712",
+    "VALEUR": -1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200801",
+    "VALEUR": 1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200802",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200803",
+    "VALEUR": 2.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200804",
+    "VALEUR": 5.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200805",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200806",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200807",
+    "VALEUR": 13.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200808",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200809",
+    "VALEUR": 9.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200810",
+    "VALEUR": 7.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200811",
+    "VALEUR": 3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200812",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200901",
+    "VALEUR": -3.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200902",
+    "VALEUR": -0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200903",
+    "VALEUR": 2.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200904",
+    "VALEUR": 6.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200905",
+    "VALEUR": 11,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200906",
+    "VALEUR": 12.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200907",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200908",
+    "VALEUR": 14.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200909",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200910",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200911",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "200912",
+    "VALEUR": 0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201001",
+    "VALEUR": -3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201002",
+    "VALEUR": 0,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201003",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201004",
+    "VALEUR": 5.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201005",
+    "VALEUR": 8.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201006",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201007",
+    "VALEUR": 15.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201008",
+    "VALEUR": 13.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201009",
+    "VALEUR": 9.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201010",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201011",
+    "VALEUR": 4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201012",
+    "VALEUR": -1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201101",
+    "VALEUR": 0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201102",
+    "VALEUR": 0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201103",
+    "VALEUR": 3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201104",
+    "VALEUR": 7.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201105",
+    "VALEUR": 9.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201106",
+    "VALEUR": 12.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201107",
+    "VALEUR": 12.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201108",
+    "VALEUR": 14,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201109",
+    "VALEUR": 12.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201110",
+    "VALEUR": 7.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201111",
+    "VALEUR": 4.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201112",
+    "VALEUR": 3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201201",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201202",
+    "VALEUR": -5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201203",
+    "VALEUR": 3.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201204",
+    "VALEUR": 6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201205",
+    "VALEUR": 9.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201206",
+    "VALEUR": 13.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201207",
+    "VALEUR": 14,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201208",
+    "VALEUR": 15.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201209",
+    "VALEUR": 10.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201210",
+    "VALEUR": 8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201211",
+    "VALEUR": 4.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201212",
+    "VALEUR": 2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201301",
+    "VALEUR": -0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201302",
+    "VALEUR": -2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201303",
+    "VALEUR": 1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201304",
+    "VALEUR": 5.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201305",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201306",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201307",
+    "VALEUR": 16,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201308",
+    "VALEUR": 13.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201309",
+    "VALEUR": 11.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201310",
+    "VALEUR": 9.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201311",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201312",
+    "VALEUR": 0.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201401",
+    "VALEUR": 2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201402",
+    "VALEUR": 3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201403",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201404",
+    "VALEUR": 6.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201405",
+    "VALEUR": 8.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201406",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201407",
+    "VALEUR": 14.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201408",
+    "VALEUR": 13.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201409",
+    "VALEUR": 11.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201410",
+    "VALEUR": 9.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201411",
+    "VALEUR": 5.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201412",
+    "VALEUR": 2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201501",
+    "VALEUR": 0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201502",
+    "VALEUR": -1.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201503",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201504",
+    "VALEUR": 5.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201505",
+    "VALEUR": 9.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201506",
+    "VALEUR": 13.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201507",
+    "VALEUR": 16.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201508",
+    "VALEUR": 15.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201509",
+    "VALEUR": 10.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201510",
+    "VALEUR": 6.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201511",
+    "VALEUR": 5.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201512",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201601",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201602",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201603",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201604",
+    "VALEUR": 5.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201605",
+    "VALEUR": 9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201606",
+    "VALEUR": 13.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201607",
+    "VALEUR": 14.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201608",
+    "VALEUR": 14,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201609",
+    "VALEUR": 12.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201610",
+    "VALEUR": 6.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201611",
+    "VALEUR": 3.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201612",
+    "VALEUR": -1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201701",
+    "VALEUR": -3.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201702",
+    "VALEUR": 2.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201703",
+    "VALEUR": 5.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201704",
+    "VALEUR": 4.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201705",
+    "VALEUR": 10,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201706",
+    "VALEUR": 15,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201707",
+    "VALEUR": 15.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201708",
+    "VALEUR": 15.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201709",
+    "VALEUR": 10.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201710",
+    "VALEUR": 7.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201711",
+    "VALEUR": 2.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201712",
+    "VALEUR": 1.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201801",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201802",
+    "VALEUR": -1.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201803",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201804",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201805",
+    "VALEUR": 10.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201806",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201807",
+    "VALEUR": 15.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201808",
+    "VALEUR": 15.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201809",
+    "VALEUR": 11.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201810",
+    "VALEUR": 7.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201811",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201812",
+    "VALEUR": 2.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201901",
+    "VALEUR": -0.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201902",
+    "VALEUR": 0.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201903",
+    "VALEUR": 4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201904",
+    "VALEUR": 5.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201905",
+    "VALEUR": 7.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201906",
+    "VALEUR": 14.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201907",
+    "VALEUR": 16,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201908",
+    "VALEUR": 14.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201909",
+    "VALEUR": 11.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201910",
+    "VALEUR": 9.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201911",
+    "VALEUR": 4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "201912",
+    "VALEUR": 2.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202001",
+    "VALEUR": 1.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202002",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202003",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202004",
+    "VALEUR": 6.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202005",
+    "VALEUR": 9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202006",
+    "VALEUR": 12.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202007",
+    "VALEUR": 14.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202008",
+    "VALEUR": 16,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202009",
+    "VALEUR": 12,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202010",
+    "VALEUR": 7.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202011",
+    "VALEUR": 4.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202012",
+    "VALEUR": 2.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202101",
+    "VALEUR": 0.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202102",
+    "VALEUR": 2.1,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202103",
+    "VALEUR": 1.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202104",
+    "VALEUR": 3.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202105",
+    "VALEUR": 7.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202106",
+    "VALEUR": 14.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202107",
+    "VALEUR": 14.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202108",
+    "VALEUR": 13.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202109",
+    "VALEUR": 12.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202110",
+    "VALEUR": 6.4,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202111",
+    "VALEUR": 2.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202112",
+    "VALEUR": 1.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202201",
+    "VALEUR": -0.8,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202202",
+    "VALEUR": 1.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202203",
+    "VALEUR": 3.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202204",
+    "VALEUR": 5.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202205",
+    "VALEUR": 10.9,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202206",
+    "VALEUR": 14.7,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202207",
+    "VALEUR": 15.6,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202208",
+    "VALEUR": 16.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202209",
+    "VALEUR": 11.5,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202210",
+    "VALEUR": 11.3,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202211",
+    "VALEUR": 6.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202212",
+    "VALEUR": 2.2,
+    "Q_HOM": 1
+  },
+  {
+    "YYYYMM": "202301",
+    "VALEUR": 2.7,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202302",
+    "VALEUR": 1.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202303",
+    "VALEUR": 4.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202304",
+    "VALEUR": 5.6,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202305",
+    "VALEUR": 10.4,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202306",
+    "VALEUR": 14.5,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202307",
+    "VALEUR": 15.9,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202308",
+    "VALEUR": 15.9,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202309",
+    "VALEUR": 14,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202310",
+    "VALEUR": 9.7,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202311",
+    "VALEUR": 5,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202312",
+    "VALEUR": 3.3,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202401",
+    "VALEUR": 0.9,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202402",
+    "VALEUR": 5,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202403",
+    "VALEUR": 5.4,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202404",
+    "VALEUR": 5.8,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202405",
+    "VALEUR": 10.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202406",
+    "VALEUR": 13.7,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202407",
+    "VALEUR": 15.3,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202408",
+    "VALEUR": 16.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202409",
+    "VALEUR": 11.7,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202410",
+    "VALEUR": 10.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202411",
+    "VALEUR": 4.1,
+    "Q_HOM": 0
+  },
+  {
+    "YYYYMM": "202412",
+    "VALEUR": -0.1,
+    "Q_HOM": 0
+  }
+]
