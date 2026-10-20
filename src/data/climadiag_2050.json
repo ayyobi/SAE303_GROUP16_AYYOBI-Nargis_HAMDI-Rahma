@@ -1,0 +1,43 @@
+{
+  "source": {
+    "organisme": "Météo-France",
+    "service": "Climadiag Commune",
+    "commune": "Besançon",
+    "codeCommune": "25056",
+    "rapportDate": "2026-10-19",
+    "url": "https://climadiag.meteofrance.fr/entity/25056",
+    "periodeReference": "1976–2005",
+    "horizonTRACC": 2050,
+    "grilleKm": 8,
+    "precision": "Valeur médiane et fourchette de projections ; pas des observations de 2050."
+  },
+  "indicateurs": {
+    "nuitsChaudes": {
+      "libelle": "Nuits chaudes (> 20 °C)",
+      "reference": 2,
+      "mediane": 14,
+      "basse": 9,
+      "haute": 19,
+      "unite": "nuits par an",
+      "pageRapport": 7
+    },
+    "joursTresChauds": {
+      "libelle": "Journées à 35 °C ou plus",
+      "reference": 1,
+      "mediane": 4,
+      "basse": 2,
+      "haute": 7,
+      "unite": "jours par an",
+      "pageRapport": 7
+    },
+    "temperatureEte": {
+      "libelle": "Température moyenne de l’été",
+      "reference": 18.9,
+      "mediane": 21.3,
+      "basse": 20.9,
+      "haute": 22.0,
+      "unite": "°C",
+      "pageRapport": 3
+    }
+  }
+}
