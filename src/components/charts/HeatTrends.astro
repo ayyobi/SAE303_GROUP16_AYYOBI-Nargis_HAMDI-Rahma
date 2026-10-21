@@ -1,0 +1,58 @@
+---
+import { JSDOM } from "jsdom";
+import annual from "../../assets/chaleur_annuelle.json";
+import metadata from "../../assets/heat-trends.metadata.json";
+import { prepareHeatTrendSeries, summarizeHeatTrends, createHeatTrends, formatHeat } from "../../lib/charts/heatTrends.js";
+const series = prepareHeatTrendSeries(annual);
+const stats = summarizeHeatTrends(series);
+if (series.length !== metadata.etes_retenus || Number(stats.difference.toFixed(2)) !== metadata.comparaison.ecart || stats.record.annee !== metadata.maximum.annee) throw new Error("V3 : les données ne correspondent pas aux résultats vérifiés.");
+const title = `Les maximales moyennes d’été ont augmenté de ${formatHeat(stats.difference)} °C entre deux périodes de 30 ans`;
+const description = `Courbe des moyennes des températures maximales des étés de 1959 à 2022 à Besançon. Un point par été complet, soit la moyenne de 92 maximales quotidiennes de juin à août. La moyenne des 30 étés 1961–1990 est de ${formatHeat(stats.meanFirst)} degrés Celsius ; celle des 30 étés 1991–2020 est de ${formatHeat(stats.meanRecent)} degrés, soit un écart de ${formatHeat(stats.difference)} degré. La valeur la plus élevée de cette série est celle de ${stats.record.annee}, avec ${formatHeat(stats.record.maximaleMoyenne)} degrés. Les valeurs varient d’une année à l’autre. Il ne s’agit ni de la température moyenne de toute la journée ni d’un record quotidien. L’axe vertical va de 20 à 31 degrés pour montrer les variations.`;
+const dom = new JSDOM("");
+function render(compact: boolean) {
+  const name = compact ? "mobile" : "desktop";
+  const chart = createHeatTrends(series, { document: dom.window.document, compact });
+  chart.setAttribute("role", "img");
+  chart.removeAttribute("aria-label");
+  chart.setAttribute("aria-labelledby", `heat-svg-title-${name} heat-svg-desc-${name}`);
+  const svgTitle = dom.window.document.createElementNS("http://www.w3.org/2000/svg", "title");
+  svgTitle.id = `heat-svg-title-${name}`;
+  svgTitle.textContent = title;
+  const desc = dom.window.document.createElementNS("http://www.w3.org/2000/svg", "desc");
+  desc.id = `heat-svg-desc-${name}`;
+  desc.textContent = description;
+  chart.prepend(svgTitle, desc);
+  return chart.outerHTML;
+}
+const desktop = render(false), mobile = render(true);
+dom.window.close();
+---
+<section id="evolution" class="heat-trends chapter-section" aria-labelledby="heat-title">
+  <div class="shell">
+    <div class="section-heading"><p class="eyebrow">Comprendre l’évolution · les étés au fil du temps</p><span class="section-number" aria-hidden="true">05 /</span></div>
+    <div class="distribution-heading"><h2 id="heat-title">Comment les fortes chaleurs ont-elles évolué à <em>Besançon&nbsp;?</em></h2><p>Les observations historiques permettent de comparer les étés au fil des décennies. Ici, nous suivons la moyenne des températures maximales des journées de juin à août.</p></div>
+    <figure class="distribution-figure heat-figure" aria-labelledby="heat-chart-title" aria-describedby="heat-reading heat-results heat-method">
+      <figcaption><p class="eyebrow">Un été, un point, 92 journées observées</p><h3 id="heat-chart-title">Les maximales moyennes d’été ont augmenté de {formatHeat(stats.difference)}&nbsp;°C entre deux périodes de 30 ans</h3><p>Besançon · 1959–2022 · moyenne des maximales quotidiennes de juin à août</p></figcaption>
+      <p id="heat-reading" class="distribution-reading">Chaque point représente un été complet : on additionne les températures maximales de ses 92 journées, puis on divise par 92. La courbe relie les étés dans l’ordre des années. Le point plus grand indique la valeur annuelle la plus élevée de la série.</p>
+      <div class="distribution-axes">
+        <p class="distribution-y-label">Moyenne des températures maximales de l’été (°C)</p>
+        <div class="distribution-svg distribution-desktop" set:html={desktop} />
+        <div class="distribution-svg distribution-mobile" set:html={mobile} />
+        <p class="distribution-x-label">Année</p>
+      </div>
+      <p class="heat-scale-note">L’axe vertical va de 20 à 31&nbsp;°C, sans partir de zéro, pour lire les variations entre les étés.</p>
+      <aside id="heat-results" class="heat-results" aria-labelledby="heat-results-title">
+        <h4 id="heat-results-title">Ce que nous montrent les données</h4>
+        <ul>
+          <li>La moyenne des maximales estivales passe de <strong>{formatHeat(stats.meanFirst)}&nbsp;°C sur 1961–1990</strong> à <strong>{formatHeat(stats.meanRecent)}&nbsp;°C sur 1991–2020</strong>. Ces deux périodes comptent chacune 30 étés complets ; leur écart est de {formatHeat(stats.difference)}&nbsp;°C.</li>
+          <li><strong>{stats.record.annee}</strong> présente la moyenne estivale la plus élevée parmi les années étudiées : <strong>{formatHeat(stats.record.maximaleMoyenne)}&nbsp;°C</strong>. Ce chiffre est une moyenne des maximales de l’été, pas la température d’une journée record.</li>
+          <li>La courbe monte et descend d’une année à l’autre : tous les étés ne se ressemblent pas. La comparaison de deux périodes longues permet de prendre du recul sur ces variations, sans expliquer à elle seule leurs causes.</li>
+        </ul>
+      </aside>
+      <p id="heat-method" class="distribution-method"><strong>Source :</strong> <a href={metadata.source_url}>Météo-France, séries quotidiennes de référence</a>, station {metadata.station}. Période 1959–2022 ; valeurs numériques, dates valides et uniques, qualité Q_SQR&nbsp;=&nbsp;1. Seuls les étés de juin à août disposant de 92 observations sont retenus. Les {series.length} étés sont complets, soit {metadata.observations.toLocaleString("fr-FR")} journées ; les prolongements 2023–2024 sont exclus. Les deux moyennes de comparaison portent chacune sur 30 moyennes estivales. Valeurs affichées à deux décimales.</p>
+      <p class="distribution-method">Cet indicateur ne représente pas la température moyenne sur toute une journée, le nombre de jours au-dessus d’un seuil, ni la température de chaque quartier. La comparaison n’est pas un test de significativité statistique.</p>
+    </figure>
+    <details class="distribution-table heat-table"><summary>Consulter les données des 64 étés</summary><table><caption>Besançon, juin à août de 1959 à 2022. Moyennes affichées à deux décimales.</caption><thead><tr><th scope="col">Année</th><th scope="col">Maximale moyenne (°C)</th><th scope="col">Journées retenues</th></tr></thead><tbody>{series.map(row => <tr><th scope="row">{row.annee}</th><td>{formatHeat(row.maximaleMoyenne)}</td><td>{row.joursValides}</td></tr>)}</tbody></table></details>
+    <div class="heat-next"><p class="eyebrow">La prochaine question</p><h3>Combien de journées dépassent un seuil de chaleur donné&nbsp;?</h3><p>Une moyenne estivale ne dit pas combien de journées atteignent un seuil précis. <a href="#explorer">Choisissez un seuil pour explorer les effectifs annuels.</a></p></div>
+  </div>
+</section>

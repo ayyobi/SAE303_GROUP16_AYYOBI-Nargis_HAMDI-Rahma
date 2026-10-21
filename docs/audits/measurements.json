@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-21",
+  "context": "Build statique servi localement en HTTP, sans d?ploiement ; une mesure par profil, ex?cutions concurrentes sur le m?me ordinateur ; police Open Sans charg?e normalement.",
+  "browser": "Chrome/155.0.8059.85",
+  "widths": [
+    320,
+    375,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "axe": [
+    {
+      "page": "/",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 1440,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "lighthouse": [
+    {
+      "page": "/",
+      "mode": "mobile",
+      "fetchTime": "2026-10-21T01:34:35.186Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1905.661525,
+          "unit": "millisecond",
+          "display": "1.9 s"
+        },
+        "largest-contentful-paint": {
+          "value": 1959.4596500000002,
+          "unit": "millisecond",
+          "display": "2.0 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond",
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.001265987860053439,
+          "unit": "unitless",
+          "display": "0.001"
+        }
+      },
+      "rawReport": "artifacts/audit/lighthouse-home-mobile.report.json",
+      "runWarnings": []
+    },
+    {
+      "page": "/",
+      "mode": "desktop",
+      "fetchTime": "2026-10-21T01:34:35.781Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 488.2193763697625,
+          "unit": "millisecond",
+          "display": "0.5 s"
+        },
+        "largest-contentful-paint": {
+          "value": 488.2193763697625,
+          "unit": "millisecond",
+          "display": "0.5 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond",
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.002527503422538705,
+          "unit": "unitless",
+          "display": "0.003"
+        }
+      },
+      "rawReport": "artifacts/audit/lighthouse-home-desktop.report.json",
+      "runWarnings": []
+    },
+    {
+      "page": "/methode",
+      "mode": "mobile",
+      "fetchTime": "2026-10-21T01:34:35.421Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1550.0360382572585,
+          "unit": "millisecond",
+          "display": "1.6 s"
+        },
+        "largest-contentful-paint": {
+          "value": 1550.0360382572585,
+          "unit": "millisecond",
+          "display": "1.6 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond",
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.03802983386900634,
+          "unit": "unitless",
+          "display": "0.038"
+        }
+      },
+      "rawReport": "artifacts/audit/lighthouse-method-mobile.report.json",
+      "runWarnings": []
+    },
+    {
+      "page": "/methode",
+      "mode": "desktop",
+      "fetchTime": "2026-10-21T01:34:35.225Z",
+      "lighthouseVersion": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 451.6126999999999,
+          "unit": "millisecond",
+          "display": "0.5 s"
+        },
+        "largest-contentful-paint": {
+          "value": 451.6126999999999,
+          "unit": "millisecond",
+          "display": "0.5 s"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond",
+          "display": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.021032982776803325,
+          "unit": "unitless",
+          "display": "0.021"
+        }
+      },
+      "rawReport": "artifacts/audit/lighthouse-method-desktop.report.json",
+      "runWarnings": []
+    }
+  ]
+}

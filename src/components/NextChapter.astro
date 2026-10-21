@@ -1,0 +1,11 @@
+---
+const nextChapterHref = "#distribution";
+---
+<section class="next-chapter chapter-section" aria-labelledby="next-title">
+  <div class="shell next-chapter-inner">
+    <p class="eyebrow">La suite de l’enquête</p>
+    <h2 id="next-title">Et que racontent réellement <em>les températures&nbsp;?</em></h2>
+    <p>Pour comprendre les fortes chaleurs à Besançon, commençons par regarder les températures relevées pendant les journées d’été. Leur répartition nous aide à comprendre ce qui est fréquent, ce qui est plus rare et où se situe notre seuil de 30&nbsp;°C.</p>
+    {nextChapterHref ? <a class="button" href={nextChapterHref}>Explorer les températures <span aria-hidden="true">↗</span></a> : <div class="next-chapter-status"><span class="future-action">Explorer les températures <span aria-hidden="true">↗</span></span><p>À venir : le premier graphique de l’enquête.</p></div>}
+  </div>
+</section>

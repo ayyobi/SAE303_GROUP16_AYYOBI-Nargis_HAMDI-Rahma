@@ -1,0 +1,36 @@
+---
+import annual from "../../assets/chaleur_annuelle.json";
+import { HEAT_THRESHOLDS, getThresholdModel, formatThresholdMean } from "../../lib/charts/heatThresholds.js";
+const initial = getThresholdModel(annual, 30);
+---
+<section id="explorer" class="threshold-section chapter-section" aria-labelledby="threshold-section-title">
+  <div class="shell">
+    <div class="section-heading"><p class="eyebrow">Explorer · changer de seuil pour comparer</p><span class="section-number" aria-hidden="true">06 /</span></div>
+    <div class="distribution-heading"><h2 id="threshold-section-title">Et si vous choisissiez votre propre <em>seuil de chaleur&nbsp;?</em></h2><div class="chapter-copy"><p>Une journée à 30&nbsp;°C ne raconte pas la même chose qu’une journée à 35&nbsp;°C. Modifiez le seuil pour explorer la fréquence des journées chaudes dans les observations historiques de Besançon.</p><p>Choisissez un seuil, puis observez comment le nombre de journées concernées change au fil du temps.</p></div></div>
+    <div data-threshold-explorer data-url={`${import.meta.env.BASE_URL}heat-thresholds.json`} data-threshold-state="waiting">
+      <figure class="distribution-figure threshold-figure" aria-labelledby="threshold-chart-title" aria-describedby="threshold-reading threshold-summary threshold-method">
+        <figcaption><h3 id="threshold-chart-title" data-threshold-title>{initial.title}</h3><p data-threshold-subtitle>Besançon, 1959–2022 · journées par année civile complète</p></figcaption>
+        <fieldset class="threshold-controls" disabled>
+          <legend>Afficher les journées dont la température maximale atteint au moins&nbsp;:</legend>
+          <div class="threshold-options">{HEAT_THRESHOLDS.map(threshold => <div><input id={`threshold-${threshold}`} type="radio" name="heat-threshold" value={threshold} checked={threshold === 30} /><label for={`threshold-${threshold}`}>{threshold}&nbsp;°C</label></div>)}</div>
+          <p>Le seuil est inclus : une journée atteignant exactement la valeur choisie est comptée.</p>
+        </fieldset>
+        <p class="threshold-status" data-threshold-status role="status">Le graphique se chargera à l’approche de cette section. Le tableau à 30&nbsp;°C est déjà disponible.</p>
+        <button type="button" class="lcz-button" data-threshold-retry hidden>Réessayer de charger l’explorateur</button>
+        <p id="threshold-reading" class="distribution-reading">Chaque barre indique le nombre de journées qui atteignent ou dépassent le seuil choisi, <strong>sur toute l’année civile</strong>. La courbe sombre représente la moyenne sur les dix dernières années civiles, année courante comprise. Elle n’apparaît que si ces dix années consécutives sont disponibles.</p>
+        <div class="threshold-legend"><span><i class="threshold-bar-key" data-threshold-bar-key style={`--threshold-color:${initial.color}`} aria-hidden="true"></i>Journées par année</span><span><i class="threshold-line-key" aria-hidden="true"></i>Moyenne sur dix ans</span></div>
+        <div class="distribution-axes"><p class="distribution-y-label" data-threshold-y-label>Journées à 30&nbsp;°C ou plus</p><div class="distribution-svg threshold-chart" data-threshold-chart aria-busy="false"></div><p class="distribution-x-label">Année</p></div>
+        <p id="threshold-summary" class="distribution-interpretation" data-threshold-summary aria-live="polite" aria-atomic="true">{initial.summary}</p>
+        <p id="threshold-method" class="distribution-method"><strong>Source :</strong> <a href="https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference">Météo-France, séries quotidiennes de référence</a>, station 25056001. Période 1959–2022 ; qualité Q_SQR&nbsp;=&nbsp;1 ; dates valides et uniques ; valeurs numériques. Les années civiles incomplètes sont exclues : les 64 années retenues comptent chacune 365 ou 366 journées. Les données 2023–2024 ne sont pas utilisées.</p>
+        <p class="distribution-method">Il s’agit de nombres de journées, pas de pourcentages. Une année sans journée atteignant un seuil ne comporte pas nécessairement de données manquantes : seules les années complètes sont représentées. Un seuil de 30 ou 35&nbsp;°C ne suffit pas à définir une canicule. Ces relevés proviennent d’une station, sans mesure de chaque quartier ni conclusion sanitaire.</p>
+        <noscript><p class="distribution-method">JavaScript est nécessaire pour changer le seuil. Le tableau ci-dessous reste consultable pour le seuil initial de 30&nbsp;°C.</p></noscript>
+      </figure>
+      <details class="distribution-table threshold-table"><summary>Consulter les effectifs annuels du seuil sélectionné</summary><div class="threshold-table-scroll" role="region" aria-label="Tableau annuel des journées à seuil" tabindex="0"><table><caption>Années civiles complètes 1959–2022. La moyenne sur dix ans est absente sans dix années consécutives disponibles.</caption><thead><tr><th scope="col">Année</th><th scope="col" data-threshold-table-title>Journées à 30&nbsp;°C ou plus</th><th scope="col">Journées observées</th><th scope="col">Moyenne sur dix ans (jours/an)</th></tr></thead><tbody>{initial.points.map(point => <tr><th scope="row">{point.annee}</th><td>{point.jours}</td><td>{point.joursValides}</td><td>{point.moyenne10 === null ? "Non disponible" : formatThresholdMean(point.moyenne10)}</td></tr>)}</tbody></table></div></details>
+      <p class="threshold-next"><a class="text-link" href="#horizon-2050">Et pour l’avenir&nbsp;? Découvrir les perspectives 2050 ↓</a></p>
+    </div>
+  </div>
+</section>
+<script>
+  import { mountHeatThresholdExplorer } from "../../scripts/heat-threshold-explorer.js";
+  document.querySelectorAll<HTMLElement>("[data-threshold-explorer]").forEach(mountHeatThresholdExplorer);
+</script>
