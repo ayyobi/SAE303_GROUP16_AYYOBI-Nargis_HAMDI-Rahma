@@ -1,4 +1,5 @@
 import * as Plot from "@observablehq/plot";
+import { namePlotGroups } from "./plotAccessibility.js";
 
 export function createHeatThresholdPlot(model, { document = globalThis.document, width = 900 } = {}) {
   const { points, threshold, record, color, title, summary } = model;
@@ -26,5 +27,5 @@ export function createHeatThresholdPlot(model, { document = globalThis.document,
     ],
   });
   chart.setAttribute("role", "img");
-  return chart;
+  return namePlotGroups(chart);
 }

@@ -1,4 +1,5 @@
 import * as Plot from "@observablehq/plot";
+import { namePlotGroups } from "./plotAccessibility.js";
 
 /** Fonction autonome : reçoit des classes préfiltrées et un document DOM de rendu. */
 export function createTemperatureDistribution(data, { document, width = 900, compact = false, ...options } = {}) {
@@ -13,7 +14,7 @@ export function createTemperatureDistribution(data, { document, width = 900, com
   const min = data[0].debut_c;
   const max = data.at(-1).fin_c;
   const ticks = Array.from({ length: Math.floor((max - Math.ceil(min / 4) * 4) / 4) + 1 }, (_, i) => Math.ceil(min / 4) * 4 + i * 4);
-  return Plot.plot({
+  return namePlotGroups(Plot.plot({
     document,
     width,
     height: compact ? 350 : 440,
@@ -36,5 +37,5 @@ export function createTemperatureDistribution(data, { document, width = 900, com
       Plot.ruleY([0]),
     ],
     ...options,
-  });
+  }));
 }

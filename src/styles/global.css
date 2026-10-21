@@ -270,7 +270,10 @@ h1 em {
   margin:145px 35px 110px
 }
 .visual-title em {
-  color:var(--choco)
+  color:var(--choco);
+  background:var(--beige);
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone
 }
 .visual-index {
   position:absolute;
@@ -420,6 +423,7 @@ h2 {
   flex-direction: column;
 }
 .site-footer {
+  margin-top:clamp(24px,4vw,48px);
   background:var(--choco);
   color:var(--paper);
   padding:50px 0 20px

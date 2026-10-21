@@ -13,7 +13,7 @@ SAE 303 — BUT MMI2.
 
 Le lien du notebook provient de l’export HTML local ; son accessibilité publique et sa version actuelle restent à vérifier. Aucune URL de déploiement n’est actuellement documentée.
 
-[Dépôt GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma) : URL du remote `origin`.
+[Dépôt GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma) : URL du remote `origin`, accessible publiquement lors du contrôle du 21 octobre 2026.
 
 ## Installer et lancer
 
@@ -32,7 +32,7 @@ npm run preview
 node --test
 ```
 
-Le build produit le site et ses téléchargements dans `dist/`. L’adaptateur Netlify est configuré ; ces commandes ne publient pas le site.
+Le build produit le site et ses téléchargements dans `dist/`. `npm run preview` les sert sur `http://127.0.0.1:4322` ; cette prévisualisation statique remplace `astro preview`, non pris en charge par l’adaptateur Netlify installé. L’adaptateur reste configuré pour l’hébergement ; ces commandes ne publient pas le site.
 
 ## Technologies et intégration
 
@@ -63,7 +63,7 @@ Notre site associe un récit sur les fortes chaleurs à Besançon à quatre visu
 
 - **Météo-France**, [Données changement climatique - SQR (Séries Quotidiennes de Référence)](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference), station 25056001, fichier `SQR_MTX325056001.csv`. Licence Ouverte 2.0 confirmée sur la fiche officielle. V1, V3 et V4 : 1959–2022, valeurs numériques valides, dates uniques et `Q_SQR = 1`. V1 et V3 utilisent juin–août ; V4 l’année civile entière. Les prolongements 2023–2024 sont exclus. Les CSV mensuels SH_MTX et SH_MTN appartiennent à l’exploration du notebook, pas aux calculs des trois vues quotidiennes.
 - **Cerema**, [Cartographie des Zones Climatiques Locales des 93 territoires de plus de 50 000 habitants](https://www.data.gouv.fr/datasets/6641c562e5acdb35c0e6051d), LCZ SPOT 2022. Licence Ouverte 2.0 confirmée sur la fiche officielle. Extrait central de 8 × 8 km, regroupé en 14 classes, géométries simplifiées. Référence de l’archive amont et algorithme de préparation exact : **À vérifier**. Cette carte ne mesure pas des températures par quartier.
-- **Météo-France, [Climadiag Commune](https://meteofrance.com/climadiag-commune)** : Besançon, référence 1976–2005, horizon TRACC 2050. Deux indicateurs du notebook : nuits chaudes et journées très chaudes, avec médiane et fourchette. Les valeurs concordent entre notebook et JSON local ; relecture directe du rapport original et licence : **À vérifier**.
+- **Météo-France, [Climadiag Commune](https://meteofrance.com/climadiag-commune)** : Besançon, référence 1976–2005, horizon TRACC 2050. Deux indicateurs du notebook : nuits chaudes (minimum ≥ 20 °C) et journées très chaudes (maximum > 35 °C), avec médiane et fourchette. Les huit valeurs arrondies à l’unité ont été recoupées avec l’application officielle le 21 octobre 2026, sans changer les chiffres affichés. Le seuil strict de Climadiag diffère du seuil inclusif de V4. PDF original cité dans le notebook et licence du rapport : **À vérifier**.
 - **Grand Besançon Métropole**, [Plan Climat Air Énergie Territorial 2024–2029, mars 2025](https://www.grandbesancon.fr/wp-content/uploads/sites/2/2025/03/PCAET-Mars-2025.pdf#page=19), actions 10–11, pages imprimées 36–37. Contexte pour l’adaptation ; licence du document **À vérifier**.
 
 Les fichiers du site sont dans **`src/assets/`**, sans dossiers `src/data` ou `public/data`. Les CSV bruts ne sont pas publiés ; `.gitignore` exclut les CSV, `data-raw/` et les exports HTML Observable. Les JSON de conversion contiennent davantage d’années que le périmètre des graphiques : ne pas les confondre avec les exports nettoyés.
@@ -89,4 +89,17 @@ Les observations d’une station, les types d’espaces LCZ et les projections s
 
 Le notebook conserve le journal détaillé d’utilisation de l’IA : aide au code, à la préparation des données, aux corrections et à la lisibilité. La page Méthode en donne un résumé et signale les vérifications restant ouvertes. L’export local consulté ne porte pas le suffixe `(1)` demandé dans le brief ; la correspondance avec cette version reste à vérifier.
 
-L’étape 8 ajoute la documentation et les téléchargements. Aucun déploiement ni commit automatique n’est effectué.
+L’étape 9 vérifie le site compilé et corrige l’accessibilité et le responsive. Le [rapport final](docs/audit-final.md) détaille les tests, les mesures Lighthouse et les points restant à vérifier. Aucun déploiement ni commit automatique n’est effectué.
+
+## Reproduire les contrôles
+
+```sh
+npm run build
+npm test
+npm run audit:build
+npm run audit:browser
+```
+
+L’audit navigateur démarre sa propre prévisualisation du build, puis ferme celle-ci et son Chrome de test. Chrome doit être installé ; `CHROME_PATH` permet d’indiquer un autre chemin. Les captures et le compte rendu sont conservés dans `artifacts/audit/`, ignoré par Git.
+
+Pour inclure l’analyse axe, définir `AXE_PATH` vers un fichier local `axe.min.js` avant de lancer l’audit. Sans cette variable, le rapport indique explicitement que les règles axe n’ont pas été exécutées. Les mesures Lighthouse se font avec l’outil temporaire sur une prévisualisation locale ; les commandes et les résultats mesurés figurent dans le rapport final. Aucune dépendance de production supplémentaire n’est nécessaire.

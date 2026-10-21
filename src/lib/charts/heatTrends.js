@@ -1,4 +1,5 @@
 import * as Plot from "@observablehq/plot";
+import { namePlotGroups } from "./plotAccessibility.js";
 
 export const formatHeat = value => new Intl.NumberFormat("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
 
@@ -26,7 +27,7 @@ export function createHeatTrends(data, { document, compact = false, width = comp
   const { record } = summarizeHeatTrends(series);
   const low = Math.floor(Math.min(...series.map(row => row.maximaleMoyenne))) - 1;
   const high = Math.ceil(Math.max(...series.map(row => row.maximaleMoyenne))) + 1;
-  return Plot.plot({
+  return namePlotGroups(Plot.plot({
     document, width, height: compact ? 360 : 440,
     marginLeft: compact ? 40 : 60, marginRight: compact ? 16 : 30, marginTop: 32, marginBottom: 42,
     style: { background: "transparent", color: "#392C25", fontFamily: '"Open Sans", Arial, sans-serif', fontSize: "14px" },
@@ -38,5 +39,5 @@ export function createHeatTrends(data, { document, compact = false, width = comp
       Plot.dot([record], { x: "annee", y: "maximaleMoyenne", fill: "#842F32", stroke: "#FAF7F0", strokeWidth: 1, r: 6 }),
       Plot.text([record], { x: "annee", y: "maximaleMoyenne", text: row => `${row.annee} : ${formatHeat(row.maximaleMoyenne)} °C`, dy: -16, dx: compact ? -10 : 0, fontWeight: "bold", fill: "#842F32" }),
     ],
-  });
+  }));
 }

@@ -30,3 +30,6 @@ pnpm-debug.log*
 data-raw/
 *.csv
 *Observable*.html
+
+# Rapports et captures des audits locaux reproductibles.
+artifacts/audit/

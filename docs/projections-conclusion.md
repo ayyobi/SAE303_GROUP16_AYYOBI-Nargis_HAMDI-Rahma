@@ -1,4 +1,4 @@
-# Étape 7 — Projections 2050 et conclusion
+# Projections 2050 et conclusion — contrôle complété à l’étape 9
 
 ## Périmètre et provenance
 
@@ -13,19 +13,19 @@ ont été comparées exactement à `src/assets/climadiag_2050.json`.
 
 ## Indicateurs retenus
 
-Source : Météo-France, Climadiag Commune, Besançon, rapport daté du 19/10/2026,
+Source : Météo-France, Climadiag Commune, Besançon, date renseignée dans le JSON local : 19/10/2026,
 page 7 selon le notebook et le JSON fourni. Référence : 1976–2005. Horizon :
 2050 dans le cadre TRACC, sans ajout d’un autre scénario ou niveau de réchauffement.
 
 | Indicateur | Référence 1976–2005 | Médiane 2050 | Borne basse | Borne haute | Unité |
 | --- | --- | --- | --- | --- | --- |
-| Nuits chaudes, minimum > 20 °C | 2 | 14 | 9 | 19 | nuits/an |
-| Journées dont la maximale atteint au moins 35 °C | 1 | 4 | 2 | 7 | jours/an |
+| Nuits chaudes, minimum ≥ 20 °C | 2 | 14 | 9 | 19 | nuits/an |
+| Journées dont la maximale dépasse strictement 35 °C | 1 | 4 | 2 | 7 | jours/an |
 
-La définition des nuits chaudes reprend strictement le seuil `> 20 °C` du
-notebook, distinct du seuil inclus `>= 35 °C` pour les journées. La nuit chaude,
-également appelée tropicale dans l’explication, est présentée sans ajout de
-conséquence sanitaire ou d’estimation de température par quartier.
+Le contrôle officiel de l’étape 9 corrige les libellés du notebook : minimum
+≥ 20 °C pour les nuits et maximum > 35 °C pour les jours. Les huit valeurs
+arrondies restent inchangées. V4 conserve son comptage historique ≥ au seuil.
+Les chiffres des deux sources ne sont pas mélangés.
 
 Le JSON contient aussi une température moyenne d’été, mais cet indicateur
 n’est pas retenu dans la cellule finale `climat2050` : il n’est pas affiché.
@@ -45,12 +45,12 @@ aux courbes, ou utilisées pour simuler un quartier.
 - Entrée officielle du service, utilisée dans la page : https://meteofrance.com/climadiag-commune
 - Présentation officielle du service : https://meteofrance.com/presse/climadiag-commune-un-outil-pour-decrire-par-territoire-les-risques-devolutions-climatiques
 
-Les valeurs numériques ont été vérifiées dans le notebook fourni et le JSON.
-La fiche communale n’a pas pu être relue en ligne avec l’outil de consultation,
-et aucun PDF Climadiag original n’est disponible dans les téléchargements.
-Cette étape ne prétend donc pas avoir renouvelé la vérification indépendante
-des huit valeurs dans le rapport officiel en direct. Le lien public proposé
-ouvre le service officiel, sans fabriquer une URL de rapport téléchargeable.
+Les huit valeurs arrondies ont été recoupées le 21 octobre 2026 avec la réponse
+officielle `entities.jsonl` chargée par l’application pour Besançon (25056),
+indicateurs S1 et S2, horizon 2050. Les définitions ont été relues dans les
+ressources de l’application. Le rapport final contient les valeurs décimales
+et leur arrondi. Aucun PDF original n’a été relu ; la référence à sa page 7
+provient du notebook. La licence du rapport reste à vérifier.
 
 ## Adaptation et document officiel
 

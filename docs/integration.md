@@ -1,12 +1,12 @@
 # Préparation du récit et des visualisations
 
-Étapes 1 à 8 réalisées : accueil, contexte, définitions, sources, V1 à V4, perspectives 2050, adaptation, conclusion et page `/methode`.
+Étapes 1 à 9 réalisées : accueil, contexte, définitions, sources, V1 à V4, perspectives 2050, adaptation, conclusion et page `/methode`.
 V1 est un histogramme statique rendu au build, documenté dans `temperature-distribution.md`.
 V2 est une carte Leaflet rendue chez le lecteur (méthode B), documentée dans `lcz-map.md`.
 V3 est une courbe statique rendue au build (méthode A), documentée dans `heat-trends.md`.
 V4 utilise la méthode B ; ses trois seuils, calculs et tests sont documentés dans `heat-thresholds.md`.
 Les projections et la conclusion sont documentées dans `projections-conclusion.md`.
-La page Méthode documente sources, licences, traitements, quatre fiches graphiques, méthodes A/B/C, limites, téléchargements, notebook et usage de l’IA. La finalisation et le déploiement de l’étape 9 restent hors du périmètre réalisé.
+La page Méthode documente sources, licences, traitements, quatre fiches graphiques, méthodes A/B/C, limites, téléchargements, notebook et usage de l’IA. L’audit de finalisation est documenté dans [audit-final.md](audit-final.md). Le déploiement reste hors du périmètre réalisé.
 La configuration Astro, Tailwind, Observable Plot et Netlify est conservée.
 Le graphique initial reste archivé dans `src/components/LegacyPlotExample.astro`,
 sans être importé dans la page publique.
@@ -72,7 +72,7 @@ Le composant `PlotFigure.astro` existant reste disponible pour le rendu Plot.
 La page Méthode indique les licences SQR et LCZ confirmées sur data.gouv.fr
 (Licence Ouverte 2.0). Elle marque « À vérifier » la relecture du rapport Climadiag,
 sa licence, celle du Plan Climat, la référence exacte de l’archive géographique
-et l’accès public actuel au notebook et à GitHub. Le journal détaillé de l’IA
+et l’accès public actuel au notebook (HTTP 429). GitHub répond publiquement. Les huit chiffres Climadiag arrondis ont été recoupés avec l’application officielle le 21 octobre 2026 ; ses définitions corrigées sont minimum ≥ 20 °C pour les nuits et maximum > 35 °C pour les jours. Le journal détaillé de l’IA
 reste dans le notebook. Les couleurs des graphiques sont documentées par vue.
 
 ## Vérification avant un futur commit
@@ -82,8 +82,10 @@ git ls-files -- '*.csv' '*Observable*.html' 'data-raw/*'
 git status --short
 npm run build
 node --test
+node scripts/audit-build.mjs
+node scripts/audit-site.mjs
 ```
 
 Contrôler les nouveaux fichiers avant toute mise en suivi. Aucun commit ou push
 n’est automatique. Message prévu après validation :
-`feat: add methodology and sources page`.
+`fix: improve accessibility and responsiveness`.

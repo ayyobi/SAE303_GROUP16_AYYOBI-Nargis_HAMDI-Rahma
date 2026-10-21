@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "node scripts/audit-site.mjs --serve",
+    "test": "node --test",
+    "audit:build": "node scripts/audit-build.mjs",
+    "audit:browser": "node scripts/audit-site.mjs",
     "astro": "astro"
   },
   "dependencies": {

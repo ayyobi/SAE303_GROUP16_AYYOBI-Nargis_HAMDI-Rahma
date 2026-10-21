@@ -48,6 +48,7 @@ export function mountLCZMap(root) {
         info.append(heading, description, area);
         overlay.setStyle(style);
       };
+      const popupWidth = () => Math.max(120, Math.min(260, container.clientWidth - 72));
       const overlay = L.geoJSON(data, { style, onEachFeature(feature, layer) {
         const p = feature.properties;
         const popup = document.createElement("div");
@@ -56,7 +57,10 @@ export function mountLCZMap(root) {
         const text = document.createElement("p");
         text.textContent = `${p.famille}. Surface de la classe dans le secteur : ${formatLCZ(p.surface_km2)} km². Détails sous la carte.`;
         popup.append(title, text);
-        layer.bindPopup(popup, { maxWidth: 260 });
+        layer.bindPopup(popup, { maxWidth: popupWidth(), autoPanPadding: [12, 12] });
+        layer.on("popupopen", event => {
+          event.popup.getElement()?.querySelector(".leaflet-popup-close-button")?.setAttribute("aria-label", "Fermer les informations de la classe");
+        });
         layer.on("click", () => showInfo(feature));
       } }).addTo(map);
       const bounds = overlay.getBounds();
@@ -106,6 +110,8 @@ export function mountLCZMap(root) {
       root.querySelector("[data-reset-bounds]").addEventListener("click", resetBounds);
       root.querySelectorAll("[data-map-control]").forEach(control => { control.disabled = false; });
       const resize = new ResizeObserver(() => {
+        overlay.eachLayer(layer => { layer.getPopup().options.maxWidth = popupWidth(); });
+        map.eachLayer(layer => { if (layer instanceof L.Popup) layer.update(); });
         if (initialView) resetBounds();
         else map.invalidateSize({ animate: false });
       });
