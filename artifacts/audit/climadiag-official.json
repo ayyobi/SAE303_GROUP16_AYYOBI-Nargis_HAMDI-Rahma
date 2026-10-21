@@ -1,0 +1,1146 @@
+{
+  "identifiant_insee": "25056",
+  "code_recherche": "25000",
+  "nom": "Besançon",
+  "type": "commune",
+  "population": 120057,
+  "alt_minimum": 233,
+  "alt_moyenne": 421,
+  "alt_maximum": 610,
+  "nom_departement": "Doubs",
+  "opp_ref_index": 239,
+  "tranche_alt_max": 600,
+  "tranche_alt_min": 300,
+  "massif_rattachement": "Réverotte",
+  "commune_littorale": false,
+  "nombre_communes": 67,
+  "identifiant_epci_parent": "242500361",
+  "nom_epci_parent": "CU Grand Besançon Métropole",
+  "grand_paris": "Non",
+  "risques": [
+    "inondation",
+    "remonteeNappe",
+    "mouvementTerrain",
+    "retraitGonflementArgile",
+    "icu"
+  ],
+  "icu": 4,
+  "indicateurs": [
+    {
+      "id": "G1",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 2.35,
+            "min": 3.24,
+            "mean": 3.86,
+            "max": 4.22
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 10.18,
+            "min": 10.73,
+            "mean": 11.2,
+            "max": 11.95
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 18.88,
+            "min": 19.72,
+            "mean": 20.42,
+            "max": 20.99
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 10.53,
+            "min": 11.71,
+            "mean": 12.15,
+            "max": 12.56
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 2.35,
+            "min": 3.94,
+            "mean": 4.49,
+            "max": 5.1
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 10.18,
+            "min": 11.2,
+            "mean": 11.74,
+            "max": 12.46
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 18.88,
+            "min": 20.88,
+            "mean": 21.34,
+            "max": 21.96
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 10.53,
+            "min": 12.39,
+            "mean": 13.06,
+            "max": 13.21
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 2.35,
+            "min": 4.73,
+            "mean": 5.54,
+            "max": 6.38
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 10.18,
+            "min": 12.51,
+            "mean": 13.21,
+            "max": 13.87
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 18.88,
+            "min": 22.49,
+            "mean": 22.9,
+            "max": 23.91
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 10.53,
+            "min": 13.68,
+            "mean": 14.3,
+            "max": 14.67
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "G2",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 63.13,
+            "min": 41.89,
+            "mean": 45.15,
+            "max": 49.82
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 63.13,
+            "min": 32.15,
+            "mean": 38.8,
+            "max": 43.34
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 63.13,
+            "min": 19.74,
+            "mean": 28.4,
+            "max": 36.46
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "G3",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 270.22,
+            "min": 291.55,
+            "mean": 311.46,
+            "max": 347.78
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 277.14,
+            "min": 251.28,
+            "mean": 298.01,
+            "max": 343.57
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 257.47,
+            "min": 216.64,
+            "mean": 246.08,
+            "max": 292.21
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 293.5,
+            "min": 272.21,
+            "mean": 309.08,
+            "max": 362.44
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 270.22,
+            "min": 298.43,
+            "mean": 334.42,
+            "max": 373.01
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 277.14,
+            "min": 261.39,
+            "mean": 290.31,
+            "max": 349.24
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 257.47,
+            "min": 217.09,
+            "mean": 238.7,
+            "max": 294.13
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 293.5,
+            "min": 264.97,
+            "mean": 294.4,
+            "max": 347.08
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 270.22,
+            "min": 292.43,
+            "mean": 325.15,
+            "max": 406.08
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 277.14,
+            "min": 266.78,
+            "mean": 307.61,
+            "max": 349.7
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 257.47,
+            "min": 152.13,
+            "mean": 218.54,
+            "max": 287.11
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 293.5,
+            "min": 269.01,
+            "mean": 299.09,
+            "max": 334.71
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "G4",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 39.47,
+            "min": 38.8,
+            "mean": 41.05,
+            "max": 43.81
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 38.77,
+            "min": 35.58,
+            "mean": 39,
+            "max": 43.53
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 34.63,
+            "min": 29.41,
+            "mean": 32.4,
+            "max": 36.43
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 35.43,
+            "min": 31.94,
+            "mean": 35.7,
+            "max": 39.07
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 39.47,
+            "min": 39.67,
+            "mean": 42.65,
+            "max": 46.74
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 38.77,
+            "min": 35.46,
+            "mean": 38.95,
+            "max": 43.03
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 34.63,
+            "min": 28.27,
+            "mean": 31.45,
+            "max": 34.98
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 35.43,
+            "min": 30.63,
+            "mean": 34.25,
+            "max": 36.64
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 39.47,
+            "min": 37.11,
+            "mean": 41.6,
+            "max": 46.81
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 38.77,
+            "min": 34.71,
+            "mean": 37.9,
+            "max": 42.14
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 34.63,
+            "min": 20.97,
+            "mean": 27.25,
+            "max": 32.28
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 35.43,
+            "min": 28.21,
+            "mean": 32.15,
+            "max": 35.01
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "R1",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 1.5,
+            "min": 1.76,
+            "mean": 2.45,
+            "max": 3.18
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 1.9,
+            "min": 1.35,
+            "mean": 2.25,
+            "max": 3
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 1.83,
+            "min": 1.37,
+            "mean": 1.8,
+            "max": 3.14
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 2.97,
+            "min": 2.58,
+            "mean": 3.35,
+            "max": 4.52
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 1.5,
+            "min": 2.02,
+            "mean": 2.65,
+            "max": 3.56
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 1.9,
+            "min": 1.7,
+            "mean": 2.15,
+            "max": 2.96
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 1.83,
+            "min": 1.59,
+            "mean": 1.95,
+            "max": 2.76
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 2.97,
+            "min": 2.11,
+            "mean": 3.25,
+            "max": 4.02
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 1.5,
+            "min": 2.01,
+            "mean": 2.89,
+            "max": 4.52
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 1.9,
+            "min": 1.87,
+            "mean": 2.8,
+            "max": 3.29
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 1.83,
+            "min": 0.85,
+            "mean": 1.9,
+            "max": 3.15
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 2.97,
+            "min": 2.85,
+            "mean": 3.7,
+            "max": 4.41
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "R2",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 25.55,
+            "min": 25.31,
+            "mean": 28.85,
+            "max": 30.55
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 25.55,
+            "min": 26.44,
+            "mean": 28.64,
+            "max": 32
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 25.55,
+            "min": 26.74,
+            "mean": 29.89,
+            "max": 33.33
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "R4",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.43,
+            "min": 0.07,
+            "mean": 0.62,
+            "max": 4.9
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.43,
+            "min": 0.02,
+            "mean": 1.75,
+            "max": 5.81
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.43,
+            "min": 0.24,
+            "mean": 2.6,
+            "max": 15.15
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "R5",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0.89
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 14.57,
+            "min": 10.86,
+            "mean": 20.15,
+            "max": 41.26
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 8.5,
+            "min": 6.01,
+            "mean": 17.6,
+            "max": 35.82
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0.6
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 1.21
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 14.57,
+            "min": 13.77,
+            "mean": 25,
+            "max": 41.81
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 8.5,
+            "min": 11.39,
+            "mean": 23.6,
+            "max": 35.42
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 2.42
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 0,
+            "min": 0,
+            "mean": 0.25,
+            "max": 1.43
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 14.57,
+            "min": 23.29,
+            "mean": 34.45,
+            "max": 60.42
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 8.5,
+            "min": 17.89,
+            "mean": 30.1,
+            "max": 54.99
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "S1",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.7,
+            "min": 0.91,
+            "mean": 2.25,
+            "max": 6.13
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.7,
+            "min": 2.21,
+            "mean": 4.3,
+            "max": 7.18
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0.7,
+            "min": 5.75,
+            "mean": 11.35,
+            "max": 16.11
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "S2",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.43,
+            "min": 5.61,
+            "mean": 8.25,
+            "max": 12.3
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.43,
+            "min": 9.19,
+            "mean": 13.7,
+            "max": 18.7
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.43,
+            "min": 21.31,
+            "mean": 27.47,
+            "max": 33.29
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "S3",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.63,
+            "min": 5.23,
+            "mean": 8.9,
+            "max": 14.34
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.63,
+            "min": 10.51,
+            "mean": 14.8,
+            "max": 20.41
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2.63,
+            "min": 16.57,
+            "mean": 25.45,
+            "max": 36.39
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "S4",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 4.03,
+            "min": 1.23,
+            "mean": 1.95,
+            "max": 4.24
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 4.03,
+            "min": 0.5,
+            "mean": 1.15,
+            "max": 2.14
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 4.03,
+            "min": 0,
+            "mean": 0.37,
+            "max": 2.66
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "AG1",
+      "data": [
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 13.23,
+            "min": 11.13,
+            "mean": 13.1,
+            "max": 15.28
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 11.63,
+            "min": 9.54,
+            "mean": 10.7,
+            "max": 13.94
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 11.17,
+            "min": 10.04,
+            "mean": 12.35,
+            "max": 17.51
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 13.9,
+            "min": 12.73,
+            "mean": 14,
+            "max": 16.27
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 13.23,
+            "min": 9.66,
+            "mean": 11.25,
+            "max": 13.72
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 11.63,
+            "min": 10.61,
+            "mean": 11.65,
+            "max": 13.63
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 11.17,
+            "min": 10.66,
+            "mean": 13.1,
+            "max": 17.68
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 13.9,
+            "min": 12.05,
+            "mean": 15.05,
+            "max": 16.8
+          }
+        ],
+        [
+          {
+            "type_ind": "saisonnier",
+            "label": "hiver",
+            "ref": 13.23,
+            "min": 9.58,
+            "mean": 12.25,
+            "max": 16.18
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "printemps",
+            "ref": 11.63,
+            "min": 9.84,
+            "mean": 12.15,
+            "max": 15.61
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "été",
+            "ref": 11.17,
+            "min": 11.78,
+            "mean": 14.35,
+            "max": 23.98
+          },
+          {
+            "type_ind": "saisonnier",
+            "label": "automne",
+            "ref": 13.9,
+            "min": 12.98,
+            "mean": 14.6,
+            "max": 18.17
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "AG2",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 62.33,
+            "min": 48.77,
+            "mean": 51.2,
+            "max": 58.39
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 62.33,
+            "min": 43.98,
+            "mean": 47.2,
+            "max": 51
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 62.33,
+            "min": 37.14,
+            "mean": 41.5,
+            "max": 46.3
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "AG3",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2882.28,
+            "min": 3173.19,
+            "mean": 3266.08,
+            "max": 3326.54
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2882.28,
+            "min": 3389.56,
+            "mean": 3469.49,
+            "max": 3574.01
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 2882.28,
+            "min": 3731.69,
+            "mean": 3840.32,
+            "max": 3908.69
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "AG4",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 11.7,
+            "min": 13.5,
+            "mean": 15.95,
+            "max": 20.73
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 11.7,
+            "min": 17.63,
+            "mean": 20.65,
+            "max": 22.95
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 11.7,
+            "min": 22.33,
+            "mean": 26.1,
+            "max": 32.85
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "T1",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 43.1,
+            "min": 54.71,
+            "mean": 57.55,
+            "max": 68.09
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 43.1,
+            "min": 64.73,
+            "mean": 71.3,
+            "max": 76.5
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 43.1,
+            "min": 80.09,
+            "mean": 92.3,
+            "max": 104.63
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m"
+    },
+    {
+      "id": "T2",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 0,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 300 m - Réverotte"
+    },
+    {
+      "id": "T3",
+      "data": [
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 1,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 1,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ],
+        [
+          {
+            "type_ind": "annuel",
+            "label": null,
+            "ref": 1,
+            "min": 0,
+            "mean": 0,
+            "max": 0
+          }
+        ]
+      ],
+      "alti_text": "Données pour une altitude proche de 600 m - Réverotte"
+    }
+  ]
+}

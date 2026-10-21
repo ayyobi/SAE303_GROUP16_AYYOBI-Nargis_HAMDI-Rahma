@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-21T01:36:18.358Z",
+  "browser": "Chrome/155.0.8059.85",
+  "widths": [
+    320,
+    375,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "axe": [
+    {
+      "page": "/",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 1440,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "checks": [
+    [
+      "Map loaded: 14 GeoJSON features rendered"
+    ],
+    [
+      "All 14 colors match notebook legend"
+    ],
+    [
+      "3 modes, exact-class filter, empty state, keyboard info and reset: OK"
+    ],
+    [
+      "Zoom, keyboard panning and extent reset: OK"
+    ],
+    [
+      "320px: responsive OK"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-lcz-320.png"
+    ],
+    [
+      "375px: responsive OK"
+    ],
+    [
+      "430px: responsive OK"
+    ],
+    [
+      "768px: responsive OK"
+    ],
+    [
+      "1024px: responsive OK"
+    ],
+    [
+      "1440px: responsive OK"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-lcz-1440.png"
+    ],
+    [
+      "Summary: {\"broken\":0,\"h1\":1,\"table\":14,\"v1\":17,\"credit\":\" Leaflet | Cerema · LCZ SPOT 2022 · Licence Ouverte 2.0\"}"
+    ],
+    [
+      "[]"
+    ],
+    [
+      "{\"broken\":0,\"h1\":1,\"table\":14,\"v1\":17,\"credit\":\" Leaflet | Cerema · LCZ SPOT 2022 · Licence Ouverte 2.0\"}"
+    ],
+    [
+      "Map regression checks passed"
+    ],
+    [
+      "V3 320px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1980\",\"2000\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-v3-320.png"
+    ],
+    [
+      "V3 375px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1980\",\"2000\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "V3 430px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1980\",\"2000\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "V3 768px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1980\",\"2000\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "V3 1024px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1970\",\"1980\",\"1990\",\"2000\",\"2010\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "V3 1440px: {\"overflow\":false,\"visible\":1,\"points\":65,\"lines\":1,\"labels\":[\"1960\",\"1970\",\"1980\",\"1990\",\"2000\",\"2010\",\"2020\"],\"overlap\":false,\"description\":true,\"role\":\"img\"}"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-v3-1440.png"
+    ],
+    [
+      "V3 table: 64 rows, keyboard opening OK"
+    ],
+    [
+      "V4 25 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "V4 30 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "V4 35 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "V4 30 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "V4 25 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "V4 35 °C: 64 exact counts, title/summary/table and single SVG OK"
+    ],
+    [
+      "Native radio keyboard: ArrowLeft changes threshold and keeps focus"
+    ],
+    [
+      "V4 320px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-v4-320.png"
+    ],
+    [
+      "V4 375px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "V4 430px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "V4 768px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "V4 1024px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "V4 1440px: all 3 thresholds readable, no overlap or overflow"
+    ],
+    [
+      "E:\\GitHub\\SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma\\artifacts\\audit\\besancon-v4-1440.png"
+    ],
+    [
+      "V4 table keyboard opening OK"
+    ],
+    [
+      "No page reload after threshold changes"
+    ],
+    [
+      "[\"Chargement V4 :\",\"TypeError: Failed to fetch\\n    at h (http://127.0.0.1:57620/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:3510)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:57620/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:4514)\"]"
+    ],
+    [
+      "V4 loading error, fallback table and retry OK"
+    ],
+    [
+      "axe / 320px: no detected WCAG A/AA violation; 1 rules require manual review"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 320px OK"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 375px OK"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 430px OK"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 768px OK"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 1024px OK"
+    ],
+    [
+      "axe / 1440px: no detected WCAG A/AA violation; 1 rules require manual review"
+    ],
+    [
+      "Popup within map, French close label and V1 axes: 1440px OK"
+    ],
+    [
+      "[\"Chargement LCZ :\",\"TypeError: Failed to fetch\\n    at y (http://127.0.0.1:57620/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:2675)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:57620/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:7257)\"]"
+    ],
+    [
+      "Map network failure: table preserved and retry successful"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 320px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 375px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 430px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 768px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 1024px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: / 1440px OK"
+    ],
+    [
+      "Mobile menu/Escape and first Tab/skip link: / OK"
+    ],
+    [
+      "axe /methode 320px: no detected WCAG A/AA violation; 1 rules require manual review"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 320px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 375px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 430px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 768px OK"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 1024px OK"
+    ],
+    [
+      "axe /methode 1440px: no detected WCAG A/AA violation; 0 rules require manual review"
+    ],
+    [
+      "All tables open, no overflow, readable method notes: /methode 1440px OK"
+    ],
+    [
+      "Four built downloads: HTTP 200 and exact equality to visualization data"
+    ],
+    [
+      "Mobile menu/Escape and first Tab/skip link: /methode OK"
+    ],
+    [
+      "Without JavaScript: navigation and data alternatives / OK"
+    ],
+    [
+      "Without JavaScript: navigation and data alternatives /methode OK"
+    ]
+  ]
+}
