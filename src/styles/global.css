@@ -8,8 +8,8 @@
   --ink:#392C25;
   --muted:#66574B;
   --line:#D6C8B6;
-  --serif:"Playfair Display",Georgia,serif;
-  --sans:"DM Sans",Arial,sans-serif
+  --sans:"Open Sans",Arial,sans-serif;
+  --serif:var(--sans)
 }
 * {
   box-sizing:border-box
@@ -30,8 +30,14 @@ a {
   color:inherit;
   text-underline-offset:5px
 }
-button {
+button,input,select,textarea {
   font:inherit
+}
+em,i,cite {
+  font-style:normal
+}
+.leaflet-container {
+  font-family:var(--sans)
 }
 a,button {
   touch-action:manipulation
@@ -379,7 +385,7 @@ h2 {
   place-content:center;
   flex-shrink:0;
   font-family:var(--serif);
-  font-style:italic;
+  font-style:normal;
   font-size:.9rem
 }
 .method-note h3 {

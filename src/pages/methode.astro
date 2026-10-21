@@ -1,0 +1,161 @@
+---
+import Layout from "../layouts/Layout.astro";
+import lczUrl from "../assets/besancon_lcz_coeur_8km.geojson?url";
+const notebook = "https://observablehq.com/@mmi-montbeliard/sae-303-gr-16";
+const github = "https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma";
+const sqr = "https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference";
+const cerema = "https://www.data.gouv.fr/datasets/6641c562e5acdb35c0e6051d";
+const licence = "https://www.etalab.gouv.fr/licence-ouverte-open-licence/";
+const chapters = [
+  ["sources", "Nos sources"], ["traitements", "Des fichiers aux images"], ["visualisations", "Quatre choix graphiques"], ["export", "Intégrer dans Astro"],
+  ["limites", "Limites et biais"], ["donnees", "Télécharger les données"], ["observable", "Le notebook"], ["ia", "L’aide de l’IA"],
+];
+const views = [
+  { id: "V1", name: "Distribution estivale", href: "/#distribution", fields: [
+    ["Question", "Quelles températures maximales rencontre-t-on pendant les étés étudiés ?"],
+    ["Famille", "Distribution : histogramme d’effectifs."],
+    ["Encodage et justification", "La position horizontale indique une classe de température de 2 °C ; la hauteur indique son nombre de journées. Une largeur constante permet de comparer les effectifs et de repérer les températures fréquentes. Le repère à 30 °C situe les journées les plus chaudes."],
+    ["Unité et dénominateur", "Journées par classe, parmi 5 888 journées de juin à août, de 1959 à 2022. Bornes inférieures incluses, supérieures exclues."],
+    ["Titre et sous-titre informatifs", "« 682 journées d’été à 30 °C ou plus sur 5 888 étudiées » — « Besançon · juin à août · 1959–2022 »."],
+    ["Alternative textuelle", "Le texte donne la classe la plus fréquente et le nombre de journées atteignant 30 °C. Un tableau dépliable reprend les 17 classes et leurs effectifs."],
+  ] },
+  { id: "V2", name: "Espaces urbains LCZ", href: "/#ville", fields: [
+    ["Question", "Comment les types d’espaces se répartissent-ils dans le secteur central de Besançon ?"],
+    ["Famille", "Carte catégorielle interactive."],
+    ["Encodage et justification", "La position restitue la géographie. Les couleurs regroupent les 14 classes en six familles : bâti compact, bâti ouvert ou diffus, bâti et sols imperméables, végétation, sol nu, eau. Les filtres permettent de choisir tous les espaces, les espaces bâtis et imperméabilisés, ou la végétation et l’eau, puis une classe précise. Une légende et des libellés complètent les couleurs."],
+    ["Unité et dénominateur", "Surfaces en km² et parts du secteur étudié, calculées à partir des surfaces de l’extrait. Le secteur est un carré de 8 × 8 km, pas la commune entière."],
+    ["Titre et sous-titre informatifs", "« Où se trouvent les différents types d’espaces ? » — « Cerema · LCZ SPOT 2022 · secteur central de Besançon, environ 8 × 8 km »."],
+    ["Alternative textuelle", "Le tableau dépliable des 14 classes présente libellé, famille, surface et part du secteur. Les informations de la carte sont aussi accessibles au clavier ; un message et le tableau restent disponibles si la carte échoue."],
+  ] },
+  { id: "V3", name: "Évolution historique", href: "/#evolution", fields: [
+    ["Question", "Comment la température maximale moyenne des étés évolue-t-elle entre 1959 et 2022 ?"],
+    ["Famille", "Évolution : courbe chronologique avec points annuels."],
+    ["Encodage et justification", "Les années sont sur l’axe horizontal et les moyennes sur l’axe vertical. La ligne relie les étés et rend lisible leur variation ; le maximum est annoté. L’axe vertical est resserré pour lire les écarts : il ne part pas de zéro."],
+    ["Unité et dénominateur", "°C ; moyenne arithmétique des 92 températures maximales quotidiennes de juin à août par année. Comparaison des moyennes de 30 étés : 1961–1990 et 1991–2020."],
+    ["Titre et sous-titre informatifs", "« Les maximales moyennes d’été ont augmenté de 1,69 °C entre deux périodes de 30 ans » — « Besançon · 1959–2022 · moyenne des maximales quotidiennes de juin à août »."],
+    ["Alternative textuelle", "Le texte compare les deux périodes et signale l’été le plus chaud selon cet indicateur. Le tableau dépliable donne les 64 années, leur moyenne et leur couverture estivale."],
+  ] },
+  { id: "V4", name: "Explorateur de seuils", href: "/#explorer", fields: [
+    ["Question", "Combien de journées atteignent ou dépassent 25, 30 ou 35 °C chaque année ?"],
+    ["Famille", "Comparaison annuelle interactive : barres et moyenne mobile."],
+    ["Encodage et justification", "La hauteur d’une barre indique le comptage annuel. Une ligne montre la moyenne sur dix années consécutives, à partir de la dixième année. Les boutons radio changent le seuil et mettent à jour le graphique, le récit et le tableau. Changer le seuil permet de distinguer chaleur fréquente et plus rare."],
+    ["Unité et dénominateur", "Journées par année civile entière, sur 365 ou 366 observations valides ; température maximale ≥ au seuil. Ce comptage n’est pas limité à l’été."],
+    ["Titre et sous-titre informatifs", "Le titre suit le seuil ; initialement : « Jusqu’à 39 journées à 30 °C ou plus en 2003 » — « Besançon, 1959–2022 · journées par année civile complète »."],
+    ["Alternative textuelle", "Les résultats et l’année record sont annoncés dans le texte. Le tableau annuel suit le seuil sélectionné. Sans JavaScript, le tableau initial à 30 °C reste lisible ; les contrôles natifs fonctionnent au clavier."],
+  ] },
+];
+const downloads = [
+  { name: "Distribution des maximales estivales", href: "/telechargements/distribution.json", file: "besancon-distribution-ete.json", format: "JSON", period: "1959–2022, juin à août", source: "Météo-France, SQR", detail: "17 classes de 2 °C, effectifs et métadonnées de sélection." },
+  { name: "Évolution des moyennes estivales", href: "/telechargements/evolution.json", file: "besancon-evolution-ete.json", format: "JSON", period: "1959–2022, juin à août", source: "Météo-France, SQR", detail: "64 années, moyenne des maximales en °C et nombre de jours valides." },
+  { name: "Comptages annuels par seuil", href: "/heat-thresholds.json", file: "besancon-jours-seuils.json", format: "JSON", period: "1959–2022, années civiles", source: "Météo-France, SQR", detail: "64 années, journées ≥ 25, 30 et 35 °C et couverture annuelle." },
+  { name: "Espaces LCZ du secteur central", href: lczUrl, file: "besancon-lcz-secteur-central.geojson", format: "GeoJSON", period: "Occupation du sol 2022", source: "Cerema, LCZ SPOT 2022", detail: "14 classes regroupées ; géométries simplifiées, coordonnées EPSG:4326 et surfaces en km²." },
+];
+---
+<Layout title="Méthode et sources — Besançon sous la chaleur" description="Sources, traitements, choix graphiques et limites de notre enquête sur les fortes chaleurs à Besançon. Téléchargez les données nettoyées.">
+  <div class="shell method-page">
+    <header class="method-hero">
+      <p class="eyebrow">Les coulisses de l’enquête</p>
+      <h1>Comprendre notre <em>méthode</em></h1>
+      <p class="method-intro">Comment avons-nous utilisé les données pour raconter l’évolution des fortes chaleurs à Besançon ? Retrouvez ici nos sources, nos choix de visualisation, nos traitements et les limites de notre enquête.</p>
+      <a class="text-link" href="/#accueil">Revenir à l’enquête ←</a>
+    </header>
+    <div class="method-layout">
+      <nav class="method-toc" aria-label="Sommaire de la méthode"><p class="eyebrow">Dans cette page</p><ol>{chapters.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}</ol></nav>
+      <div class="method-content">
+        <section id="sources" aria-labelledby="sources-title">
+          <p class="eyebrow">01 / La provenance</p><h2 id="sources-title">Nos sources</h2>
+          <p>Trois regards se complètent : une station pour les observations, des catégories de paysage pour la ville et des projections pour envisager l’avenir. Le Plan Climat apporte le contexte de l’adaptation.</p>
+          <div class="source-grid">
+            <article class="source-card"><h3>Météo-France</h3><p><strong>Jeu :</strong> Données changement climatique - SQR (Séries Quotidiennes de Référence).</p><p><strong>Producteur :</strong> Météo-France. <strong>Période retenue :</strong> 1959–2022, station 25056001, Besançon.</p><p><strong>Utilisation :</strong> V1, V3 et V4. Fichier <code>SQR_MTX325056001.csv</code> ; date, température maximale <code>VALEUR</code>, indicateur <code>Q_SQR</code>.</p><p>Les séries mensuelles <code>SH_MTX325056001.csv</code> et <code>SH_MTN325056001.csv</code> figurent dans l’exploration du notebook ; elles ne servent pas au calcul de ces trois vues quotidiennes.</p><p><strong>Licence :</strong> <a href={licence}>Licence Ouverte 2.0</a>, indiquée sur la fiche officielle.</p><a class="text-link" href={sqr}>Consulter les SQR sur data.gouv.fr ↗</a></article>
+            <article class="source-card"><h3>Cerema</h3><p><strong>Jeu :</strong> Cartographie des Zones Climatiques Locales (LCZ) des 93 territoires de plus de 50 000 habitants en France.</p><p><strong>Producteur :</strong> Cerema. <strong>Millésime :</strong> LCZ SPOT 2022.</p><p><strong>Utilisation :</strong> V2 ; extrait central de Besançon de 8 × 8 km, 14 classes (2, 3, 4, 5, 6, 8, 9, A, B, C, D, E, F, G).</p><p><strong>Licence :</strong> <a href={licence}>Licence Ouverte 2.0</a>, indiquée sur la fiche officielle. <strong>À vérifier :</strong> référence exacte de l’archive amont utilisée pour cet extrait déjà préparé.</p><a class="text-link" href={cerema}>Consulter les LCZ du Cerema ↗</a></article>
+            <article class="source-card"><h3>Climadiag Commune</h3><p><strong>Producteur :</strong> Météo-France. <strong>Commune :</strong> Besançon, code 25056.</p><p><strong>Référence :</strong> 1976–2005. <strong>Horizon :</strong> 2050, trajectoire TRACC.</p><p><strong>Utilisation :</strong> nuits chaudes (&gt; 20 °C) et journées très chaudes (≥ 35 °C), en nombre annuel. Valeur médiane et fourchette basse–haute sont distinguées des observations.</p><p>Les valeurs du JSON correspondent à celles transcrites dans le notebook, qui renvoie à la page 7 du rapport. <strong>À vérifier :</strong> relecture directe des huit valeurs dans le rapport original de Besançon et licence de réutilisation du rapport. La collecte locale est datée du 19 octobre 2026.</p><a class="text-link" href="https://meteofrance.com/climadiag-commune">Accéder au service officiel Climadiag Commune ↗</a></article>
+            <article class="source-card"><h3>Grand Besançon Métropole</h3><p><strong>Document :</strong> Plan Climat Air Énergie Territorial 2024–2029, document de mars 2025.</p><p><strong>Producteur :</strong> Grand Besançon Métropole.</p><p><strong>Utilisation :</strong> contexte territorial et adaptation ; actions 10 et 11, pages imprimées 36–37 (page 19 du PDF), sur la place du végétal, l’infiltration et la renaturation.</p><p>Ces orientations ne constituent pas des effets mesurés par nos graphiques. <strong>Licence :</strong> À vérifier ; le PDF n’est pas redistribué ici.</p><a class="text-link" href="https://www.grandbesancon.fr/wp-content/uploads/sites/2/2025/03/PCAET-Mars-2025.pdf#page=19">Lire le Plan Climat officiel (PDF) ↗</a></article>
+          </div>
+        </section>
+        <section id="traitements" aria-labelledby="traitements-title"><p class="eyebrow">02 / Le cheminement</p><h2 id="traitements-title">Des fichiers bruts aux visualisations</h2>
+          <ol class="process-list">
+            <li><strong>Récupérer.</strong> Les observations Météo-France et l’extrait Cerema alimentent le travail Observable. Les CSV originaux restent hors du dépôt.</li>
+            <li><strong>Lire et contrôler.</strong> Les scripts lisent les CSV, ignorent les commentaires et contrôlent les dates ainsi que les doublons. Le GeoJSON est validé avant l’affichage.</li>
+            <li><strong>Sélectionner.</strong> Pour les températures, seules la date, la maximale quotidienne et la qualité sont nécessaires. Pour V2, les géométries, classes, familles et surfaces sont conservées.</li>
+            <li><strong>Fixer le périmètre.</strong> Les calculs historiques portent sur 1959–2022. Les prolongements 2023–2024 présents dans les JSON convertis sont exclus du périmètre homogénéisé retenu. V1 et V3 utilisent juin, juillet et août ; V4 utilise l’année entière.</li>
+            <li><strong>Filtrer la qualité.</strong> Seules les observations <code>Q_SQR = 1</code> avec une valeur numérique valide sont retenues. Une valeur vide ou invalide n’est jamais remplacée par zéro.</li>
+            <li><strong>Calculer.</strong> V1 compte les journées par classe de 2 °C ; V3 calcule une moyenne par été ; V4 compte les maximales atteignant ou dépassant chaque seuil, puis calcule une moyenne mobile sur dix années consécutives.</li>
+            <li><strong>Vérifier la couverture.</strong> Le script V1 vérifie les années civiles complètes avant la sélection estivale. V3 exige 92 jours d’été ; V4 exige 365 ou 366 jours par année. Les 64 années retenues sont complètes pour les indicateurs utilisés ; aucune n’a été exclue pour couverture insuffisante dans ce jeu.</li>
+            <li><strong>Préparer les exports.</strong> Les effectifs sont entiers. Les moyennes estivales sont conservées à quatre décimales dans le JSON, puis affichées à deux. Les surfaces LCZ sont conservées à quatre décimales en km², affichées à deux ; les parts utilisent la somme des surfaces de l’extrait.</li>
+            <li><strong>Intégrer.</strong> Astro lit les JSON de <code>src/assets/</code>. V1 et V3 sont rendues à la construction du site ; les données de V2 et V4 sont chargées pour les interactions dans le navigateur.</li>
+          </ol>
+          <aside class="method-note"><h3>Un extrait géographique déjà préparé</h3><p>Les métadonnées du GeoJSON indiquent 24 752 polygones à l’origine, 1 961 dans la sélection puis un regroupement en 14 classes. Elles indiquent une simplification de 10 mètres, un système source EPSG:2154 et un export EPSG:4326. Le script de préparation amont n’est pas livré : son algorithme exact reste <strong>À vérifier</strong>.</p><p>La carte Leaflet reprojette l’extrait en Lambert-93 (EPSG:2154) avec proj4 pour afficher le carré droit. Les infobulles donnent les surfaces de la classe entière, pas celles d’un petit morceau cliqué.</p></aside>
+        </section>
+        <section id="visualisations" aria-labelledby="visualisations-title"><p class="eyebrow">03 / Montrer pour comprendre</p><h2 id="visualisations-title">Nos quatre visualisations</h2><p>Chaque représentation répond à une question différente. Ces fiches décrivent les vues réellement intégrées ; les formulations de titre et de sous-titre en résument l’indicateur et le périmètre.</p>
+          {views.map(view => <article class="view-card"><p class="eyebrow">{view.id}</p><h3>{view.name}</h3><dl>{view.fields.map(([label, value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl><a class="text-link" href={view.href}>Voir {view.id} dans l’enquête →</a></article>)}
+        </section>
+        <section id="export" aria-labelledby="export-title"><p class="eyebrow">04 / Du notebook au site</p><h2 id="export-title">Intégrer dans Astro</h2><p><strong>A :</strong> génération du graphique pendant la construction du site. <strong>B :</strong> génération ou mise à jour dans le navigateur. <strong>C :</strong> génération d’une page statique par valeur ; cette méthode n’est utilisée par aucune de nos quatre vues.</p>
+          <div class="method-table-wrap" role="region" aria-label="Méthodes d’intégration" tabindex="0"><table><caption>Méthodes effectivement utilisées</caption><thead><tr><th scope="col">Vue</th><th scope="col">Méthode</th><th scope="col">Pourquoi ce choix ?</th></tr></thead><tbody><tr><th scope="row">V1</th><td>A</td><td>Histogramme fixe : SVG générés au build avec Plot et JSDOM, variantes adaptées aux petits et grands écrans.</td></tr><tr><th scope="row">V2</th><td>B</td><td>Leaflet chargé dans le navigateur ; filtres, sélection, déplacement et zoom interactifs. Le tableau existe dès le build.</td></tr><tr><th scope="row">V3</th><td>A</td><td>Courbe fixe générée au build avec Plot et JSDOM, sans calcul interactif requis.</td></tr><tr><th scope="row">V4</th><td>B</td><td>Plot chargé dans le navigateur ; le seuil modifie immédiatement les comptages affichés. Le tableau initial à 30 °C existe dès le build.</td></tr></tbody></table></div>
+          <h3>Des fonctions qui reçoivent leurs données</h3><p><code>createTemperatureDistribution(data, options)</code> et <code>createHeatTrends(data, options)</code> créent un graphique sans dépendre d’une cellule Observable. V4 sépare préparation des comptages, modèle du seuil et rendu Plot. V2 sépare validation, sélection et résumé des classes du script d’interface Leaflet. Les dépendances à <code>FileAttachment</code> et <code>view</code> sont remplacées par des imports ou des chargements explicites.</p>
+        </section>
+        <section id="limites" aria-labelledby="limites-title"><p class="eyebrow">05 / Lire avec précaution</p><h2 id="limites-title">Ce que nos données permettent de dire — et ce qu’elles ne permettent pas de dire</h2>
+          <ul class="limits-list"><li><strong>Une station, pas tous les quartiers.</strong> Les observations de la station 25056001 ne décrivent pas toutes les variations locales et ne mesurent pas directement un îlot de chaleur urbain.</li><li><strong>Une couverture contrôlée.</strong> Les valeurs invalides et hors période sont écartées. L’absence d’une observation n’est pas une journée sans chaleur. Les critères de complétude diffèrent selon l’indicateur.</li><li><strong>Un paysage, pas un thermomètre.</strong> Les classes LCZ décrivent la morphologie et la couverture des sols en 2022, dans un secteur limité et simplifié. Elles ne prouvent pas la température d’un quartier ni son évolution historique.</li><li><strong>Un futur assorti d’incertitudes.</strong> Climadiag présente des projections, pas des observations. La référence 1976–2005 diffère des périodes historiques 1961–1990 et 1991–2020 ; leurs écarts ne sont pas interchangeables. Les fourchettes ne prédisent pas une année précise.</li><li><strong>Des interprétations à encadrer.</strong> Une journée au-dessus d’un seuil ne suffit pas à définir une canicule. Nos vues n’établissent ni causalité entre forme urbaine et température, ni effet sanitaire, ni efficacité chiffrée d’un aménagement. Les pistes d’adaptation sont des orientations.</li></ul>
+        </section>
+        <section id="donnees" aria-labelledby="donnees-title"><p class="eyebrow">06 / Ouvrir l’enquête</p><h2 id="donnees-title">Réutiliser nos données</h2><p>Ces quatre téléchargements reprennent les données nettoyées des visualisations. Les fichiers bruts du défi ne sont pas publiés. Les sources restent dans <code>src/assets/</code> ; Astro produit les fichiers téléchargeables au build.</p>
+          <div class="download-grid">{downloads.map(item => <article class="download-card"><p class="eyebrow">{item.format} · {item.period}</p><h3>{item.name}</h3><p>{item.detail}</p><p><strong>Source :</strong> {item.source}.<br /><strong>Licence :</strong> Licence Ouverte 2.0.</p><a class="text-link" href={item.href} download={item.file}>Télécharger : {item.name} ↓</a></article>)}</div>
+          <p class="method-note">Pour réutiliser ces exports, indiquez le producteur (Météo-France ou Cerema), la source liée ci-dessus, le millésime ou la période et les transformations : « Traitement SAE 303 — Nargis Ayyobi et Rahma Hamdi ». La <a href={licence}>Licence Ouverte 2.0</a> permet la réutilisation avec attribution.</p>
+        </section>
+        <section id="observable" aria-labelledby="observable-title"><p class="eyebrow">07 / Refaire le parcours</p><h2 id="observable-title">Retrouver notre travail sur Observable</h2><p>Le notebook rassemble l’exploration, les traitements JavaScript, les visualisations, les choix méthodologiques et le journal détaillé d’utilisation de l’IA.</p><p><a class="text-link" href={notebook}>Ouvrir le notebook SAE 303 — Gr 16 ↗</a></p><p><a class="text-link" href={github}>Consulter le dépôt GitHub du projet ↗</a></p><p class="method-note">Le lien Observable provient de l’export HTML local consulté ; celui de GitHub du remote <code>origin</code>. <strong>À vérifier :</strong> leur accessibilité publique et la version en ligne actuelle. L’export disponible ne porte pas le suffixe « (1) » demandé dans le brief.</p></section>
+        <section id="ia" aria-labelledby="ia-title"><p class="eyebrow">08 / La transparence</p><h2 id="ia-title">L’aide de l’intelligence artificielle</h2><p>Le journal du notebook documente l’utilisation de ChatGPT pour aider à nettoyer les CSV, écrire et corriger du JavaScript Observable, améliorer les couleurs, les légendes et la lisibilité, puis accompagner le récit et le portage Astro. Les choix de problématique et d’interprétation restent ceux du groupe.</p><p>Les calculs historiques ont été confrontés aux fichiers sources et les licences citées aux fiches officielles. Les points encore non confirmés sont signalés « À vérifier », notamment la relecture du rapport Climadiag. Ce résumé complète le journal détaillé du notebook, sans le remplacer.</p><a class="text-link" href="#contenu">Revenir au début de la méthode ↑</a></section>
+      </div>
+    </div>
+  </div>
+</Layout>
+<style>
+  .method-page { padding-top: 64px; padding-bottom: 96px; }
+  .method-hero { max-width: 850px; margin-bottom: 64px; }
+  h1 { font-size: clamp(2.7rem, 5vw, 4.8rem); line-height: 1.1; margin: 18px 0 24px; }
+  h1 em { color: var(--choco); }
+  .method-intro { font-size: 1.18rem; line-height: 1.8; margin-bottom: 24px; }
+  .method-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 48px; align-items: start; }
+  .method-toc { position: sticky; top: 124px; border-top: 1px solid var(--line); padding-top: 22px; }
+  .method-toc ol { padding-left: 22px; display: grid; gap: 12px; list-style: decimal; }
+  .method-toc a { text-decoration: none; line-height: 1.5; }
+  .method-toc a:hover { text-decoration: underline; }
+  .method-content { min-width: 0; }
+  section { border-top: 1px solid var(--line); padding-top: 30px; margin-bottom: 64px; scroll-margin-top: 120px; }
+  h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.25; margin: 14px 0 24px; text-wrap: balance; }
+  h3 { font-size: 1.35rem; line-height: 1.4; margin: 0 0 16px; }
+  p, li, dd { line-height: 1.8; }
+  p { margin: 0 0 18px; }
+  a { color: inherit; text-underline-offset: 4px; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  .source-grid, .download-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
+  .source-card, .download-card, .view-card { padding: 26px; border: 1px solid var(--line); background: var(--paper); min-width: 0; }
+  .source-card p, .download-card p { font-size: .96rem; }
+  .source-card a, .download-card a { overflow-wrap: anywhere; }
+  .process-list { padding-left: 26px; list-style: decimal; }
+  .process-list li { padding: 0 0 18px 8px; }
+  .method-note { padding: 22px 24px; background: var(--beige); margin-top: 24px; border-left: 3px solid var(--choco); }
+  .method-note p:last-child { margin-bottom: 0; }
+  .view-card { margin-top: 24px; }
+  dl { margin: 0 0 20px; }
+  dl > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); }
+  dt { font-weight: 700; line-height: 1.6; }
+  dd { margin: 0; }
+  .method-table-wrap { overflow-x: auto; margin: 24px 0 32px; }
+  table { width: 100%; border-collapse: collapse; text-align: left; }
+  caption { text-align: left; font-weight: 700; margin-bottom: 12px; }
+  th, td { padding: 16px 12px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.6; }
+  thead { background: var(--beige); }
+  .limits-list { padding-left: 22px; list-style: disc; }
+  .method-table-wrap:focus-visible { outline: 3px solid var(--rust); outline-offset: 5px; }
+  .limits-list li { padding-bottom: 18px; }
+  @media (max-width: 1100px) { .method-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 28px; } .source-grid, .download-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 767px) {
+    .method-page { padding-top: 36px; padding-bottom: 40px; }
+    .method-hero { margin-bottom: 36px; }
+    .method-layout { grid-template-columns: 1fr; gap: 36px; }
+    .method-toc { position: static; }
+    .method-toc ol { grid-template-columns: 1fr 1fr; column-gap: 26px; font-size: .9rem; }
+    section { margin-bottom: 44px; scroll-margin-top: 100px; }
+    .source-card, .download-card, .view-card { padding: 20px; }
+    dl > div { grid-template-columns: 1fr; gap: 6px; }
+    th, td { padding: 12px 8px; font-size: .9rem; }
+  }
+</style>

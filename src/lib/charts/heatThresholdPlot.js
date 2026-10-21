@@ -13,7 +13,7 @@ export function createHeatThresholdPlot(model, { document = globalThis.document,
     marginTop: 38, marginLeft: compact ? 38 : 58, marginRight: 16, marginBottom: 40,
     ariaLabel: title,
     ariaDescription: `${summary} La courbe sombre indique la moyenne des dix années civiles précédentes, année courante comprise. Elle est absente tant que dix années consécutives ne sont pas disponibles.`,
-    style: { background: "transparent", color: "#392C25", fontFamily: '"DM Sans", Arial, sans-serif', fontSize: "14px" },
+    style: { background: "transparent", color: "#392C25", fontFamily: '"Open Sans", Arial, sans-serif', fontSize: "14px" },
     x: { domain: points.map(point => point.annee), ticks, tickFormat: String, label: null },
     y: { domain: [0, Math.ceil(record.jours * 1.15) + 2], grid: true, nice: true, ticks: compact ? 5 : 6, label: null },
     marks: [

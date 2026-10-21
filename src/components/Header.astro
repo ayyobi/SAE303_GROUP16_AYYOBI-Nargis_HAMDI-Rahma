@@ -1,18 +1,17 @@
 ---
-// Les rubriques futures seront activées lorsque leur contenu sera intégré.
 const links = [
   { label: "Accueil", href: "/#accueil", available: true },
   { label: "Comprendre", href: "/#comprendre", available: true },
   { label: "Les données", href: "/#les-donnees", available: true },
   { label: "La ville", href: "/#ville", available: true },
   { label: "Explorer", href: "/#explorer", available: true },
-  { label: "Méthode", href: "/methode", available: false },
+  { label: "Méthode", href: "/methode", available: true },
 ];
 ---
 <header class="site-header"><div class="shell header-inner">
   <a class="wordmark" href="/#accueil" aria-label="Besançon sous la chaleur, accueil">BESANÇON<span>°</span></a>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
-  <nav id="main-navigation" aria-label="Navigation principale">{links.filter(link => link.available).map(({ label, href }) => <a href={href}>{label}</a>)}</nav>
+  <nav id="main-navigation" aria-label="Navigation principale">{links.filter(link => link.available).map(({ label, href }) => <a href={href} aria-current={href === "/methode" && Astro.url.pathname.replace(/\/$/, "") === href ? "page" : undefined}>{label}</a>)}</nav>
 </div></header>
 <noscript><style>@media(max-width:959px){.site-header{position:relative}#main-navigation{display:grid;position:static;grid-template-columns:1fr 1fr;padding:10px 0;box-shadow:none}.header-inner{flex-wrap:wrap}.menu-toggle{display:none}}</style></noscript>
 <script>

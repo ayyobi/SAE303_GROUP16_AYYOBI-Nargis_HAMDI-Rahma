@@ -21,7 +21,7 @@ export function createTemperatureDistribution(data, { document, width = 900, com
     marginRight: 20,
     marginLeft: compact ? 48 : 62,
     marginBottom: 52,
-    style: { background: "transparent", color: "#392C25", fontFamily: '"DM Sans", Arial, sans-serif', fontSize: "14px" },
+    style: { background: "transparent", color: "#392C25", fontFamily: '"Open Sans", Arial, sans-serif', fontSize: "14px" },
     x: { domain: [min, max], ticks, label: null, tickFormat: value => String(value) },
     y: { domain: [0, Math.ceil(Math.max(...data.map(bin => bin.nombre_jours)) * 1.08)], grid: true, label: null, ticks: compact ? 5 : 6, tickFormat: value => String(value) },
     marks: [

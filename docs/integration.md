@@ -1,12 +1,12 @@
 # Préparation du récit et des visualisations
 
-Étapes 1 à 7 réalisées : accueil, contexte, définitions, sources, V1 à V4, perspectives 2050, adaptation et conclusion éditoriale.
+Étapes 1 à 8 réalisées : accueil, contexte, définitions, sources, V1 à V4, perspectives 2050, adaptation, conclusion et page `/methode`.
 V1 est un histogramme statique rendu au build, documenté dans `temperature-distribution.md`.
 V2 est une carte Leaflet rendue chez le lecteur (méthode B), documentée dans `lcz-map.md`.
 V3 est une courbe statique rendue au build (méthode A), documentée dans `heat-trends.md`.
 V4 utilise la méthode B ; ses trois seuils, calculs et tests sont documentés dans `heat-thresholds.md`.
 Les projections et la conclusion sont documentées dans `projections-conclusion.md`.
-La page Méthode et la finalisation technique restent hors du périmètre réalisé.
+La page Méthode documente sources, licences, traitements, quatre fiches graphiques, méthodes A/B/C, limites, téléchargements, notebook et usage de l’IA. La finalisation et le déploiement de l’étape 9 restent hors du périmètre réalisé.
 La configuration Astro, Tailwind, Observable Plot et Netlify est conservée.
 Le graphique initial reste archivé dans `src/components/LegacyPlotExample.astro`,
 sans être importé dans la page publique.
@@ -36,42 +36,44 @@ Comment les fortes chaleurs ont-elles évolué à Besançon, et comment l'analys
 3. **Révélation** : suivre l’évolution historique (V3) et explorer les journées à seuil (V4).
 4. **Conclusion** : synthèse fondée sur les résultats vérifiés, limites et perspectives d’adaptation ; distinguer Climadiag des observations historiques.
 
-## Contrats à préserver pour l’intégration future
+## Périmètres effectivement intégrés
 
 | Vue | Contenu vérifié | Points à conserver |
 | --- | --- | --- |
 | V1 | Distribution des températures maximales quotidiennes d’été | Juin à août ; classes de 2 °C ; observations 1959–2022 ; la distribution ne donne pas la chronologie |
 | V2 | Carte des zones climatiques locales du Cerema | Types d’espaces, surfaces en km² ou parts du secteur ; carré central de 8 km ; aucune température mesurée par quartier |
-| V3 | Évolution des fortes chaleurs | Reprendre les calculs, unités, périodes et références exacts du notebook lors de son intégration |
-| V4 | Journées atteignant ou dépassant un seuil | Comptage annuel, pas uniquement estival ; reprendre exactement seuils, filtres et traitement des années incomplètes du notebook |
+| V3 | Moyenne des maximales de chaque été | Juin–août, 92 jours valides ; 1959–2022 ; moyennes des périodes 1961–1990 et 1991–2020 |
+| V4 | Journées atteignant ou dépassant 25, 30 ou 35 °C | Année civile complète de 365 ou 366 jours ; 1959–2022 ; moyenne mobile de dix années consécutives |
 
 Les JSON convertis des CSV contiennent aussi des prolongements jusqu’en 2024.
 Ils ne doivent pas être présentés comme des séries intégralement homogénéisées.
-Les futures transformations sélectionneront explicitement 1959–2022 pour
-reproduire le périmètre du notebook, avec contrôle des indicateurs de qualité.
-Documenter les données manquantes et les critères de validité avant publication.
+Les transformations sélectionnent explicitement 1959–2022 et Q_SQR = 1 pour
+reproduire le périmètre du notebook. Les valeurs manquantes ne deviennent pas zéro.
+Les critères de validité sont documentés dans chaque vue et sur `/methode`.
 Les JSON annuels et de distribution préparés sont disponibles dans `src/assets/`.
-Cette étape ne modifie aucun fichier de données.
+Les téléchargements dérivés sont produits au build : `/telechargements/distribution.json`, `/telechargements/evolution.json`, `/heat-thresholds.json` et le même asset GeoJSON que la carte. Les CSV bruts ne sont pas redistribués.
 
 ## Méthodes A, B et C et fonction autonome
 
 Les définitions sont fournies par le brief de l’étape 3 : A = calcul et rendu au
 build ; B = calcul et rendu chez le lecteur ; C = une page générée par valeur.
-V1 utilise A : sa distribution est fixe et rendue en SVG statique dans Astro.
-Pour chaque méthode, documenter les dépendances, le chargement des JSON,
-l’accessibilité, le responsive et les limites.
+V1 et V3 utilisent A : leurs SVG Plot sont générés avec JSDOM au build.
+V2 et V4 utilisent B : Leaflet ou Plot s’exécutent dans le navigateur.
+La méthode C n’est pas utilisée. Les tableaux alternatifs existent dès le build.
 
 Pour le portage autonome depuis Observable, isoler une fonction qui reçoit
 ses données et options en paramètres et retourne un élément graphique, sans
 `FileAttachment`, `view` ou dépendance implicite à une cellule du notebook.
-La fonction `graphiqueCarteLCZ(donnees, mode)` existe dans le notebook et
-constitue une candidate à examiner ; aucune carte n’est développée ici.
+Le portage remplace les dépendances implicites à Observable par des fonctions
+autonomes de rendu et de préparation dans `src/lib/charts/`, des helpers LCZ
+dans `src/lib/maps/` et des scripts d’interface dans `src/scripts/`.
 Le composant `PlotFigure.astro` existant reste disponible pour le rendu Plot.
 
-La future page Méthode décrira la provenance, les transformations, les filtres,
-les fonctions portées et les limites. Elle n’est pas créée vide à cette étape.
-La palette des graphiques reste à définir : elle sera distincte de la palette
-éditoriale et vérifiée pour le contraste et la distinction des séries.
+La page Méthode indique les licences SQR et LCZ confirmées sur data.gouv.fr
+(Licence Ouverte 2.0). Elle marque « À vérifier » la relecture du rapport Climadiag,
+sa licence, celle du Plan Climat, la référence exacte de l’archive géographique
+et l’accès public actuel au notebook et à GitHub. Le journal détaillé de l’IA
+reste dans le notebook. Les couleurs des graphiques sont documentées par vue.
 
 ## Vérification avant un futur commit
 
@@ -79,8 +81,9 @@ La palette des graphiques reste à définir : elle sera distincte de la palette
 git ls-files -- '*.csv' '*Observable*.html' 'data-raw/*'
 git status --short
 npm run build
+node --test
 ```
 
 Contrôler les nouveaux fichiers avant toute mise en suivi. Aucun commit ou push
 n’est automatique. Message prévu après validation :
-`feat: create climate website homepage`.
+`feat: add methodology and sources page`.

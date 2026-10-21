@@ -29,7 +29,7 @@ export function createHeatTrends(data, { document, compact = false, width = comp
   return Plot.plot({
     document, width, height: compact ? 360 : 440,
     marginLeft: compact ? 40 : 60, marginRight: compact ? 16 : 30, marginTop: 32, marginBottom: 42,
-    style: { background: "transparent", color: "#392C25", fontFamily: '"DM Sans", Arial, sans-serif', fontSize: "14px" },
+    style: { background: "transparent", color: "#392C25", fontFamily: '"Open Sans", Arial, sans-serif', fontSize: "14px" },
     x: { domain: [1959, 2022], ticks: compact ? [1960, 1980, 2000, 2020] : [1960, 1970, 1980, 1990, 2000, 2010, 2020], tickFormat: String, label: null },
     y: { domain: [low, high], ticks: compact ? 5 : 6, tickFormat: value => String(value), label: null, grid: true },
     marks: [
