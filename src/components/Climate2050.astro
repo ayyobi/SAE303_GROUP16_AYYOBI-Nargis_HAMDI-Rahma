@@ -1,0 +1,38 @@
+---
+import report from "../assets/climadiag_2050.json";
+// Seuls les deux indicateurs retenus dans le notebook sont présentés.
+const indicators = [
+  { id: "nuits-chaudes", title: "Des nuits qui restent chaudes", ...report.indicateurs.nuitsChaudes },
+  { id: "jours-35", title: "Des journées au-dessus de 35 °C", ...report.indicateurs.joursTresChauds },
+];
+for (const indicator of indicators) {
+  if (![indicator.reference, indicator.mediane, indicator.basse, indicator.haute].every(Number.isFinite) || indicator.basse > indicator.mediane || indicator.mediane > indicator.haute) throw new Error("Projections 2050 : valeurs ou fourchettes invalides.");
+}
+const date = new Date(report.source.rapportDate).toLocaleDateString("fr-FR", { timeZone: "UTC" });
+---
+<section id="horizon-2050" class="climate-2050 chapter-section" aria-labelledby="horizon-title">
+  <div class="shell">
+    <div class="section-heading"><p class="eyebrow">Envisager l’avenir · une autre source, un autre regard</p><span class="section-number" aria-hidden="true">07 /</span></div>
+    <div class="distribution-heading"><h2 id="horizon-title">Et demain, quelle chaleur à <em>Besançon&nbsp;?</em></h2><p>Les observations racontent les étés passés. Les projections climatiques permettent d’explorer ce que pourraient devenir les conditions estivales à l’horizon 2050.</p></div>
+    <p class="projection-intro">Les deux indicateurs ci-dessous viennent de Climadiag Commune, le service de Météo-France. Ils décrivent des niveaux climatiques possibles à l’échelle de la commune. Ce ne sont pas des prévisions météo pour une année précise.</p>
+    <div class="projection-grid">
+      {indicators.map(indicator => <article class="projection-card" aria-labelledby={`projection-${indicator.id}`} data-projection={indicator.id}>
+        <p class="eyebrow">Climadiag Commune · horizon 2050</p>
+        <h3 id={`projection-${indicator.id}`}>{indicator.title}</h3>
+        <p class="projection-definition">{indicator.libelle}</p>
+        <dl class="projection-values">
+          <div><dt>Référence {report.source.periodeReference}</dt><dd><strong>{indicator.reference}</strong><span>{indicator.unite}</span></dd></div>
+          <div class="projection-future"><dt>Projection médiane en 2050</dt><dd><strong>{indicator.mediane}</strong><span>{indicator.unite}</span></dd></div>
+        </dl>
+        <p class="projection-range">Fourchette projetée en 2050 : <strong>{indicator.basse} à {indicator.haute} {indicator.unite}</strong>.</p>
+        <p class="projection-source">Source : Météo-France, Climadiag Commune — Besançon. Date renseignée dans les données : {date} ; valeurs recoupées avec l’application officielle le 21/10/2026. La page {indicator.pageRapport} du rapport est citée dans <a href="https://observablehq.com/@mmi-montbeliard/sae-303-gr-16">notre notebook</a>.</p>
+      </article>)}
+    </div>
+    <div class="projection-notes">
+      <div><h3>Une nuit chaude, qu’est-ce que cela signifie&nbsp;?</h3><p>On parle aussi de nuit tropicale. Dans l’indicateur Climadiag, la température ne descend pas sous 20&nbsp;°C durant la nuit : le seuil de 20&nbsp;°C est inclus.</p></div>
+      <div><h3>Une médiane et une fourchette, pas une certitude</h3><p>La médiane est la valeur centrale des projections. Les bornes basse et haute rendent visible leur dispersion. Elles ne garantissent pas le nombre de jours ou de nuits d’une année future donnée.</p></div>
+    </div>
+    <aside class="projection-reference" aria-labelledby="projection-reference-title"><h3 id="projection-reference-title">Garder les références distinctes</h3><p>Climadiag utilise ici la période de référence <strong>{report.source.periodeReference}</strong>, dans le cadre de l’horizon TRACC {report.source.horizonTRACC}. Nos comparaisons historiques portent sur 1961–1990 et 1991–2020. Nous ne soustrayons pas ces séries entre elles : les projections concernent la commune et ne prolongent pas les courbes de la station.</p><p>Pour les jours très chauds, Climadiag utilise un maximum strictement supérieur à 35&nbsp;°C ; l’explorateur historique compte les maximales supérieures ou égales au seuil choisi. Les chiffres projetés sont arrondis à l’unité, comme dans le notebook.</p><a class="text-link" href="https://meteofrance.com/climadiag-commune">Découvrir le service officiel Climadiag Commune ↗</a></aside>
+    <a class="text-link" href="#adaptation">Quelles pistes pour préparer la ville&nbsp;? ↓</a>
+  </div>
+</section>

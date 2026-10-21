@@ -1,0 +1,46 @@
+{
+  "source": "Météo-France — SQR des températures maximales quotidiennes",
+  "source_file": "SQR_MTX325056001.csv",
+  "station": "25056001",
+  "source_url": "https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference",
+  "source_sha256": "cbaf473cacc2b81c869e9d7eaff5de3055fcb4e8d6c0b44d1f9e15db7f5af8b0",
+  "periode": [
+    1959,
+    2022
+  ],
+  "mois": [
+    6,
+    7,
+    8
+  ],
+  "qualite": {
+    "champ": "Q_SQR",
+    "valeur": 1
+  },
+  "indicateur": "Moyenne des températures maximales quotidiennes de juin à août",
+  "unite": "°C",
+  "jours_par_ete": 92,
+  "etes_retenus": 64,
+  "etes_incomplets_exclus": [],
+  "observations": 5888,
+  "precision_json_decimales": 4,
+  "precision_affichage_decimales": 2,
+  "comparaison": {
+    "periode_ancienne": [
+      1961,
+      1990
+    ],
+    "periode_recente": [
+      1991,
+      2020
+    ],
+    "etes_par_periode": 30,
+    "moyenne_ancienne": 23.27,
+    "moyenne_recente": 24.96,
+    "ecart": 1.69
+  },
+  "maximum": {
+    "annee": 2003,
+    "maximale_moyenne": 29.47
+  }
+}

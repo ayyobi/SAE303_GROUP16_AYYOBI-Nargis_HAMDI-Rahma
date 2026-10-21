@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "node scripts/audit-site.mjs --serve",
+    "test": "node --test",
+    "audit:build": "node scripts/audit-build.mjs",
+    "audit:browser": "node scripts/audit-site.mjs",
     "astro": "astro"
   },
   "dependencies": {
@@ -14,6 +17,8 @@
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.4",
     "jsdom": "^30.0.1",
+    "leaflet": "^1.9.4",
+    "proj4": "^2.22.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {

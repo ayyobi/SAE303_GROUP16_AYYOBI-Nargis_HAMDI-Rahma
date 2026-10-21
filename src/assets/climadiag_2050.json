@@ -13,7 +13,7 @@
   },
   "indicateurs": {
     "nuitsChaudes": {
-      "libelle": "Nuits chaudes (> 20 °C)",
+      "libelle": "Nuits chaudes (minimum ≥ 20 °C)",
       "reference": 2,
       "mediane": 14,
       "basse": 9,
@@ -22,7 +22,7 @@
       "pageRapport": 7
     },
     "joursTresChauds": {
-      "libelle": "Journées à 35 °C ou plus",
+      "libelle": "Journées très chaudes (maximum > 35 °C)",
       "reference": 1,
       "mediane": 4,
       "basse": 2,
