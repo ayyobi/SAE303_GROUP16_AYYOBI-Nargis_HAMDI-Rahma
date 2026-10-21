@@ -1,0 +1,32 @@
+---
+import annual from "../assets/chaleur_annuelle.json";
+import { prepareHeatTrendSeries, summarizeHeatTrends, formatHeat } from "../lib/charts/heatTrends.js";
+import { getThresholdModel, formatThresholdMean } from "../lib/charts/heatThresholds.js";
+const trends = summarizeHeatTrends(prepareHeatTrendSeries(annual));
+const threshold = getThresholdModel(annual, 30);
+---
+<section id="conclusion" class="climate-conclusion chapter-section" aria-labelledby="conclusion-title">
+  <div class="shell">
+    <p class="eyebrow">Au terme de l’enquête</p>
+    <h2 id="conclusion-title">Comprendre la chaleur pour imaginer <em>la ville de demain.</em></h2>
+    <div class="conclusion-layout">
+      <div class="conclusion-story">
+        <h3>La chaleur a changé ; notre regard sur la ville peut évoluer.</h3>
+        <p>Les relevés de Besançon montrent des températures maximales moyennes d’été plus élevées dans la période récente : <strong>+{formatHeat(trends.difference)}&nbsp;°C entre 1961–1990 et 1991–2020</strong>. Le nombre moyen de journées à 30&nbsp;°C ou plus sur l’année passe de {formatThresholdMean(threshold.meanFirst)} à {formatThresholdMean(threshold.meanRecent)}. La distribution des journées d’été complète ce constat en montrant la diversité des maximales observées, sans raconter à elle seule leur évolution.</p>
+        <p>L’analyse des espaces urbains apporte une autre pièce au raisonnement : elle situe le bâti, les surfaces imperméables, la végétation et l’eau. Elle peut aider à organiser des diagnostics d’aménagement, à condition de la compléter par des mesures locales. Elle ne classe pas les quartiers selon leur température.</p>
+        <p>Pour l’avenir, les indicateurs Climadiag retenus dans notre notebook envisagent des nuits chaudes et des journées au-dessus de 35&nbsp;°C plus fréquentes à l’horizon 2050. Leurs fourchettes invitent à préparer l’adaptation tout en conservant une lecture prudente des niveaux projetés.</p>
+        <p class="conclusion-closing">Pour préparer Besançon, l’enjeu est de relier ces connaissances, puis d’enrichir le diagnostic par des mesures locales et les usages des habitants.</p>
+      </div>
+      <aside class="conclusion-limits" aria-labelledby="conclusion-limits-title">
+        <h3 id="conclusion-limits-title">Ce que nos données ne disent pas</h3>
+        <ul>
+          <li>Une station météorologique ne représente pas tous les microclimats de Besançon.</li>
+          <li>Les catégories LCZ décrivent les espaces ; elles ne mesurent pas la température des quartiers.</li>
+          <li>Les projections 2050 comportent des incertitudes et ne prédisent pas la météo d’une année précise.</li>
+          <li>La référence Climadiag 1976–2005 diffère des périodes de comparaison historiques. Ces données ne sont pas mélangées dans un même calcul.</li>
+        </ul>
+      </aside>
+    </div>
+    <div class="conclusion-links"><a href="#explorer">Revenir aux observations</a><a href="https://observablehq.com/@mmi-montbeliard/sae-303-gr-16">Consulter les sources et les calculs dans le notebook ↗</a></div>
+  </div>
+</section>
