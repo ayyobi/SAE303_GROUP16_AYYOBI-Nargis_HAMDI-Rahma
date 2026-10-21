@@ -1292,6 +1292,123 @@ h2 {
     padding-inline: 5px;
   }
 }
+.threshold-section {
+  background: var(--paper);
+}
+.threshold-controls {
+  margin: 24px 0 20px;
+  padding: 22px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #F2EBDF;
+}
+.threshold-controls legend {
+  font-size: .95rem;
+  font-weight: 600;
+  padding-inline: 8px;
+  color: var(--choco);
+}
+.threshold-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 360px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.threshold-options > div {
+  position: relative;
+}
+.threshold-options input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.threshold-options label {
+  display: block;
+  padding: 12px 26px;
+  background: var(--paper);
+  border: 1px solid var(--muted);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+}
+.threshold-options input:checked + label {
+  background: var(--choco);
+  border-color: var(--choco);
+  color: var(--paper);
+}
+.threshold-options input:focus-visible + label {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+.threshold-controls:disabled label {
+  cursor: wait;
+}
+.threshold-controls > p, .threshold-status {
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.threshold-controls > p {
+  margin-top: 16px;
+}
+.threshold-status {
+  margin-bottom: 22px;
+}
+.threshold-legend {
+  display: flex;
+  gap: 18px 28px;
+  flex-wrap: wrap;
+  font-size: .8rem;
+  margin-block: 20px;
+}
+.threshold-legend > span {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.threshold-bar-key {
+  display: inline-block;
+  width: 14px;
+  height: 18px;
+  background: var(--threshold-color);
+}
+.threshold-line-key {
+  display: inline-block;
+  width: 26px;
+  height: 3px;
+  background: #6B302C;
+}
+.threshold-chart {
+  min-height: 360px;
+}
+.threshold-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.threshold-table-scroll:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+.threshold-table table {
+  min-width: 550px;
+}
+@media(max-width:639px) {
+  .threshold-controls {
+    padding: 18px 12px;
+  }
+  .threshold-options {
+    gap: 10px;
+  }
+  .threshold-options label {
+    padding: 10px 8px;
+    font-size: .9rem;
+  }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto

@@ -53,6 +53,6 @@ dom.window.close();
       <p class="distribution-method">Cet indicateur ne représente pas la température moyenne sur toute une journée, le nombre de jours au-dessus d’un seuil, ni la température de chaque quartier. La comparaison n’est pas un test de significativité statistique.</p>
     </figure>
     <details class="distribution-table heat-table"><summary>Consulter les données des 64 étés</summary><table><caption>Besançon, juin à août de 1959 à 2022. Moyennes affichées à deux décimales.</caption><thead><tr><th scope="col">Année</th><th scope="col">Maximale moyenne (°C)</th><th scope="col">Journées retenues</th></tr></thead><tbody>{series.map(row => <tr><th scope="row">{row.annee}</th><td>{formatHeat(row.maximaleMoyenne)}</td><td>{row.joursValides}</td></tr>)}</tbody></table></details>
-    <div class="heat-next"><p class="eyebrow">La prochaine question</p><h3>Combien de journées dépassent un seuil de chaleur donné&nbsp;?</h3><p>Une moyenne estivale ne dit pas combien de journées atteignent un seuil précis. Cette question guidera le prochain temps de l’enquête.</p></div>
+    <div class="heat-next"><p class="eyebrow">La prochaine question</p><h3>Combien de journées dépassent un seuil de chaleur donné&nbsp;?</h3><p>Une moyenne estivale ne dit pas combien de journées atteignent un seuil précis. <a href="#explorer">Choisissez un seuil pour explorer les effectifs annuels.</a></p></div>
   </div>
 </section>

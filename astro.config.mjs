@@ -12,7 +12,7 @@ export default defineConfig({
     // Leaflet est chargé à l'approche de la carte : le préparer dès le démarrage
     // évite une optimisation tardive et des URL de modules périmées en dev.
     optimizeDeps: {
-      include: ['leaflet', 'proj4']
+      include: ['leaflet', 'proj4', '@observablehq/plot']
     }
   },
 

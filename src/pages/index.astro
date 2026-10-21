@@ -8,6 +8,7 @@ import NextChapter from "../components/NextChapter.astro";
 import TemperatureDistribution from "../components/charts/TemperatureDistribution.astro";
 import BesanconLCZMap from "../components/maps/BesanconLCZMap.astro";
 import HeatTrends from "../components/charts/HeatTrends.astro";
+import HeatThresholdExplorer from "../components/charts/HeatThresholdExplorer.astro";
 const axes = [
   { number: "01", title: "Observer le passé", text: "Les observations de la station Météo-France de Besançon, entre 1959 et 2022, permettent de comprendre l’évolution des températures et la fréquence des fortes chaleurs." },
   { number: "02", title: "Comprendre les espaces urbains", text: "La cartographie du Cerema décrit les différentes formes d’urbanisation dans un secteur central de Besançon. Elle aide à réfléchir à la place de l’ombre, des arbres et des sols perméables." },
@@ -30,4 +31,5 @@ const axes = [
   <TemperatureDistribution />
   <BesanconLCZMap />
   <HeatTrends />
+  <HeatThresholdExplorer />
 </Layout>
