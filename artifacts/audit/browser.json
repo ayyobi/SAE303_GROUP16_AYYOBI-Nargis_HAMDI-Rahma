@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-21T01:36:18.358Z",
+  "date": "2026-10-21T07:16:38.281Z",
   "browser": "Chrome/155.0.8059.85",
   "widths": [
     320,
@@ -30,9 +30,7 @@
       "page": "/methode",
       "width": 320,
       "violations": [],
-      "incomplete": [
-        "color-contrast"
-      ]
+      "incomplete": []
     },
     {
       "page": "/methode",
@@ -169,7 +167,7 @@
       "No page reload after threshold changes"
     ],
     [
-      "[\"Chargement V4 :\",\"TypeError: Failed to fetch\\n    at h (http://127.0.0.1:57620/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:3510)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:57620/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:4514)\"]"
+      "[\"Chargement V4 :\",\"TypeError: Failed to fetch\\n    at h (http://127.0.0.1:55242/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:3510)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:55242/_astro/HeatThresholdExplorer.astro_astro_type_script_index_0_lang.BYG4-W6m.js:2:4514)\"]"
     ],
     [
       "V4 loading error, fallback table and retry OK"
@@ -199,7 +197,7 @@
       "Popup within map, French close label and V1 axes: 1440px OK"
     ],
     [
-      "[\"Chargement LCZ :\",\"TypeError: Failed to fetch\\n    at y (http://127.0.0.1:57620/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:2675)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:57620/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:7257)\"]"
+      "[\"Chargement LCZ :\",\"TypeError: Failed to fetch\\n    at y (http://127.0.0.1:55242/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:2675)\\n    at IntersectionObserver.rootMargin (http://127.0.0.1:55242/_astro/BesanconLCZMap.astro_astro_type_script_index_0_lang.fjHkOdnG.js:2:7257)\"]"
     ],
     [
       "Map network failure: table preserved and retry successful"
@@ -226,7 +224,7 @@
       "Mobile menu/Escape and first Tab/skip link: / OK"
     ],
     [
-      "axe /methode 320px: no detected WCAG A/AA violation; 1 rules require manual review"
+      "axe /methode 320px: no detected WCAG A/AA violation; 0 rules require manual review"
     ],
     [
       "All tables open, no overflow, readable method notes: /methode 320px OK"

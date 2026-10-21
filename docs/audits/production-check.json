@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-21",
+  "url": "https://spiffy-frangollo-70ef1e.netlify.app",
+  "browser": "Chrome/155.0.8059.85",
+  "widths": [
+    320,
+    375,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/methode",
+      "status": 200
+    },
+    {
+      "route": "/heat-thresholds.json",
+      "status": 200
+    },
+    {
+      "route": "/telechargements/distribution.json",
+      "status": 200
+    },
+    {
+      "route": "/telechargements/evolution.json",
+      "status": 200
+    },
+    {
+      "route": "/package.json",
+      "status": 404
+    }
+  ],
+  "axe": [
+    {
+      "page": "/",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "page": "/methode",
+      "width": 1440,
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "interactionAudit": "Nous avons testé les classes et les filtres de la carte, le clavier, le zoom et les infobulles, les trois seuils, les téléchargements, les pannes réseau et le bouton Réessayer, le menu mobile et la lecture sans JavaScript. Les contrôles ont réussi.",
+  "localTests": {
+    "passed": 17,
+    "failed": 0,
+    "build": "passed"
+  },
+  "observable": {
+    "url": "https://observablehq.com/@mmi-montbeliard/sae-303-gr-16",
+    "status": 429,
+    "reason": "L’accès automatisé est bloqué par le contrôle Vercel Security Checkpoint. Il reste à confirmer manuellement que le notebook est public."
+  },
+  "evidence": "artifacts/audit/production/browser.json"
+}

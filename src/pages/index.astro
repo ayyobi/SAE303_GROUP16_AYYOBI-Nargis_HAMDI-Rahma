@@ -13,18 +13,18 @@ import Climate2050 from "../components/Climate2050.astro";
 import UrbanAdaptation from "../components/UrbanAdaptation.astro";
 import ClimateConclusion from "../components/ClimateConclusion.astro";
 const axes = [
-  { number: "01", title: "Observer le passé", text: "Les observations de la station Météo-France de Besançon, entre 1959 et 2022, permettent de comprendre l’évolution des températures et la fréquence des fortes chaleurs." },
-  { number: "02", title: "Comprendre les espaces urbains", text: "La cartographie du Cerema décrit les différentes formes d’urbanisation dans un secteur central de Besançon. Elle aide à réfléchir à la place de l’ombre, des arbres et des sols perméables." },
-  { number: "03", title: "Envisager l’avenir", text: "Les projections officielles de Climadiag à l’horizon 2050 apportent un autre éclairage pour réfléchir aux besoins d’adaptation de Besançon." },
+  { number: "01", title: "Les relevés météo", text: "Nous regardons les observations de Météo-France entre 1959 et 2022 pour suivre les températures et compter les journées chaudes." },
+  { number: "02", title: "La forme de la ville", text: "La carte du Cerema nous permet de situer le bâti, la végétation et les sols imperméables dans un secteur central de Besançon." },
+  { number: "03", title: "Les perspectives 2050", text: "Nous présentons ensuite les projections Climadiag, séparément des observations, pour ouvrir la réflexion sur l’adaptation." },
 ];
 ---
 
 <Layout>
   <Hero />
   <section id="introduction" class="introduction" aria-labelledby="intro-title"><div class="shell">
-    <div class="section-heading"><p class="eyebrow">Comprendre · avant d’explorer</p><span class="section-number" aria-hidden="true">01 /</span></div>
-    <div class="intro-grid"><h2 id="intro-title">Pourquoi étudier les fortes chaleurs à <em>Besançon&nbsp;?</em></h2><div class="intro-text"><p>Les fortes chaleurs ne se résument pas à quelques journées d’été. Leur fréquence, leur intensité et leur évolution dans le temps permettent de mieux comprendre les changements du climat local.</p><p class="research-question">Notre question : <strong>Comment les fortes chaleurs ont-elles évolué à Besançon, et comment l'analyse des espaces urbains peut-elle aider la ville à s'adapter ?</strong></p></div></div>
-    <div class="journey-heading"><h3>Trois regards pour comprendre</h3><span>Des observations aux enjeux d’adaptation</span></div>
+    <div class="section-heading"><p class="eyebrow">Pourquoi nous avons choisi ce sujet</p><span class="section-number" aria-hidden="true">01 /</span></div>
+    <div class="intro-grid"><h2 id="intro-title">Notre point de départ : <em>Besançon.</em></h2><div class="intro-text"><p>Nous voulions comprendre comment les journées chaudes évoluent dans une ville précise. Les données de Besançon nous permettent de suivre plusieurs décennies et de relier cette lecture à la question des espaces urbains.</p><p class="research-question">Notre question : <strong>Comment les fortes chaleurs ont-elles évolué à Besançon, et comment l'analyse des espaces urbains peut-elle aider la ville à s'adapter ?</strong></p></div></div>
+    <div class="journey-heading"><h3>Comment nous avons abordé la question</h3><span>Trois sources, trois lectures complémentaires</span></div>
     <ul class="journey-grid">{axes.map(axis => <li><span class="step-number" aria-hidden="true">{axis.number}</span><h4>{axis.title}</h4><p>{axis.text}</p></li>)}</ul>
   </div></section>
   <ClimateContext />

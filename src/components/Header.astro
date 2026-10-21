@@ -8,17 +8,29 @@ const links = [
   { label: "Méthode", href: "/methode", available: true },
 ];
 ---
-<header class="site-header"><div class="shell header-inner">
+<header class="site-header" data-menu-open="false"><div class="shell header-inner">
   <a class="wordmark" href="/#accueil" aria-label="Besançon sous la chaleur, accueil">BESANÇON<span>°</span></a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
-  <nav id="main-navigation" aria-label="Navigation principale">{links.filter(link => link.available).map(({ label, href }) => <a href={href} aria-current={href === "/methode" && Astro.url.pathname.replace(/\/$/, "") === href ? "page" : undefined}>{label}</a>)}</nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Ouvrir le menu"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></button>
+  <nav id="main-navigation" aria-label="Navigation principale">{links.filter(link => link.available).map(({ label, href }, index) => <a href={href} style={`--menu-index:${index}`} aria-current={href === "/methode" && Astro.url.pathname.replace(/\/$/, "") === href ? "page" : undefined}>{label}</a>)}</nav>
 </div></header>
-<noscript><style>@media(max-width:959px){.site-header{position:relative}#main-navigation{display:grid;position:static;grid-template-columns:1fr 1fr;padding:10px 0;box-shadow:none}.header-inner{flex-wrap:wrap}.menu-toggle{display:none}}</style></noscript>
+<div class="menu-backdrop" aria-hidden="true"></div>
+<noscript><style>@media(max-width:959px){.site-header{position:relative}#main-navigation{display:grid;position:static;grid-template-columns:1fr 1fr;padding:10px 0;box-shadow:none;visibility:visible;opacity:1;transform:none;clip-path:none;pointer-events:auto;max-height:none;overflow:visible}#main-navigation a{opacity:1;transform:none;font-size:1rem;transition:none}.header-inner{flex-wrap:wrap}.menu-toggle,.menu-backdrop{display:none}}</style></noscript>
 <script>
+  const header = document.querySelector<HTMLElement>('.site-header');
   const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const navigation = document.querySelector<HTMLElement>('#main-navigation');
-  if (button && navigation) {
-    const setOpen = (open: boolean) => button.setAttribute('aria-expanded', String(open));
+  if (header && button && navigation) {
+    const desktop = window.matchMedia('(min-width: 960px)');
+    const label = button.querySelector<HTMLElement>('.menu-label');
+    const setOpen = (open: boolean) => {
+      const expanded = open && !desktop.matches;
+      button.setAttribute('aria-expanded', String(expanded));
+      button.setAttribute('aria-label', expanded ? 'Fermer le menu' : 'Ouvrir le menu');
+      header.dataset.menuOpen = String(expanded);
+      navigation.inert = !desktop.matches && !expanded;
+      if (label) label.textContent = expanded ? 'Fermer' : 'Menu';
+    };
+    setOpen(false);
     button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
     navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
     document.addEventListener('keydown', event => {
@@ -30,6 +42,6 @@ const links = [
     document.addEventListener('focusin', event => {
       if (event.target instanceof Element && !event.target.closest('.site-header')) setOpen(false);
     });
-    window.matchMedia('(min-width: 960px)').addEventListener('change', () => setOpen(false));
+    desktop.addEventListener('change', () => setOpen(false));
   }
 </script>

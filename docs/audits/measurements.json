@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "context": "Build statique servi localement en HTTP, sans d?ploiement ; une mesure par profil, ex?cutions concurrentes sur le m?me ordinateur ; police Open Sans charg?e normalement.",
+  "context": "Nous avons mesuré le site compilé sur un serveur HTTP local, avec Open Sans. Chaque profil a été lancé une fois, en même temps que les autres sur le même ordinateur. Ces scores datent de l’audit initial, avant les dernières retouches de texte et de présentation ; ils ne mesurent pas le site Netlify.",
   "browser": "Chrome/155.0.8059.85",
   "widths": [
     320,

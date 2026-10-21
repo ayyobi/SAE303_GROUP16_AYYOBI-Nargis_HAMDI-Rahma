@@ -150,7 +150,7 @@ if (process.argv.includes("--serve")) {
         "Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,8000))])",
       );
       await run(
-        "document.querySelector('#ville').scrollIntoView({behavior:'instant'})",
+        "document.querySelector('[data-lcz-map]').scrollIntoView({behavior:'instant'})",
       );
       for (let i = 0; i < 80; i++) {
         if (
@@ -650,7 +650,7 @@ if (process.argv.includes("--serve")) {
         );
       }
       await run(
-        "document.querySelector('#ville').scrollIntoView({behavior:'instant'})",
+        "document.querySelector('[data-lcz-map]').scrollIntoView({behavior:'instant'})",
       );
       for (let i = 0; i < 80; i++) {
         if (

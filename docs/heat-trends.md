@@ -1,108 +1,62 @@
-# V3 — Évolution des maximales moyennes de l’été
+# V3 — Comment les étés ont-ils évolué ?
 
-## Fiche V3 en six points
+La distribution nous donne une vue d’ensemble des températures. Pour voir ce qui change au fil du temps, nous avons ensuite calculé la moyenne des maximales de chaque été. Chaque point de cette courbe correspond donc à un été complet.
 
-1. **Question** : comment les températures maximales moyennes de l’été ont-elles évolué à Besançon ?
-2. **Famille** : série temporelle en courbe, comme `graphiqueEvolutionEte` dans le notebook.
-3. **Encodage** : année en position horizontale ; moyenne estivale en position verticale ; une ligne et un point par été ; point plus grand et annotation textuelle sur le maximum de la série. La taille et le texte rendent ce repère compréhensible sans couleur.
-4. **Unité et dénominateur** : °C. Pour chaque été complet, somme des 92 températures maximales quotidiennes de juin à août divisée par 92. Les périodes 1961–1990 et 1991–2020 sont des moyennes de 30 moyennes estivales chacune.
-5. **Titre et sous-titre** : « Les maximales moyennes d’été ont augmenté de 1,69 °C entre deux périodes de 30 ans » ; « Besançon · 1959–2022 · moyenne des maximales quotidiennes de juin à août ». Résultats calculés au build, pas codés en dur dans le titre.
-6. **Alternative textuelle** : les maximales moyennes estivales passent de 23,27 °C sur 1961–1990 à 24,96 °C sur 1991–2020, soit +1,69 °C. Les valeurs varient d’une année à l’autre ; 2003 est le maximum de cette série avec 29,47 °C. Il ne s’agit pas de la température moyenne d’une journée entière ni d’un record quotidien. Un tableau des 64 étés complète les descriptions SVG.
+## Notre fiche en six points
 
-## Sources et préparation
+1. **Question :** comment les températures maximales moyennes d’été ont-elles évolué à Besançon ?
+2. **Famille :** une courbe chronologique, comme dans la fonction `graphiqueEvolutionEte` du notebook.
+3. **Encodage :** les années sont à l’horizontale et les moyennes à la verticale. La ligne relie les étés. Le maximum est marqué par un point plus grand et une annotation, pour le repérer sans dépendre de la couleur.
+4. **Unité et dénominateur :** des °C. Pour un été, nous additionnons les maximales de ses 92 journées de juin à août, puis divisons par 92. Chaque moyenne de période porte ensuite sur 30 étés.
+5. **Titre et sous-titre :** « Les maximales moyennes d’été ont augmenté de 1,69 °C entre deux périodes de 30 ans » ; « Besançon · 1959–2022 · moyenne des maximales quotidiennes de juin à août ». Les résultats sont calculés au build.
+6. **Alternative textuelle :** le texte compare les deux périodes et indique le maximum de la série. Un tableau donne les 64 moyennes estivales et leur couverture. Les SVG ont un titre et une description.
 
-- Source exacte : `SQR_MTX325056001.csv`, Météo-France, station 25056001, Besançon.
-- Source officielle : https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference
-- Notebook : https://observablehq.com/@mmi-montbeliard/sae-303-gr-16
-- Version locale consultée : `SAE 303 — Gr 16 _ MMI Montbéliard _ Observable.html` ; la version `(1)` reste absente.
-- Les séries mensuelles SH_MTX et SH_MTN ne sont pas l’entrée de V3.
+## Les données et nos calculs
 
-Lire les lignes hors commentaires ; convertir les valeurs numériques sans
-transformer une valeur absente en zéro. Garder `Q_SQR = 1`, les températures
-finies et les dates valides, vérifier l’absence de doublons et limiter à
-1959–2022. Les prolongements 2023–2024 sont exclus. Retenir les mois 6, 7 et 8,
-regrouper par année et calculer la moyenne des maximales quotidiennes. Exclure
-les étés qui n’ont pas exactement 92 jours. Le fichier actuel donne 64 étés
-complets, 5 888 observations et aucun été exclu. V3 exige un été complet, sans
-ajouter une exclusion d’année sur la seule base d’une absence hivernale.
+Nous utilisons `SQR_MTX325056001.csv`, pour la station de Besançon 25056001, dans les [SQR de Météo-France](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference). Les séries mensuelles SH_MTX et SH_MTN ne servent pas à ce calcul.
 
-Le script `scripts/verify-heat-trends.mjs` recalcule les moyennes depuis le CSV
-local hors du dépôt. Il vérifie les données déjà nettoyées dans
-`src/assets/chaleur_annuelle.json`, sans créer un second fichier annuel.
-Ce JSON contient les moyennes estivales à quatre décimales ; ce niveau de
-précision existant est conservé pour les calculs, tandis que les valeurs
-affichées sont arrondies à deux décimales. Les moyennes des deux périodes,
-leur différence et le maximum affichés sont également comparés aux résultats
-calculés avant arrondi depuis les observations. Les contrôles et l’empreinte du
-CSV sont conservés dans `src/assets/heat-trends.metadata.json`.
+Comme pour V1, nous gardons la qualité `Q_SQR = 1`, les valeurs numériques finies, les dates valides et uniques, entre 1959 et 2022. Les prolongements 2023–2024 sont exclus et les valeurs absentes ne deviennent pas zéro.
 
-Le composant ne retient au build que l’année, la moyenne estivale et le nombre
-de jours ; les autres colonnes du JSON annuel ne sont pas envoyées au navigateur.
+Nous sélectionnons juin, juillet et août, puis regroupons les journées par année. Un été doit compter exactement 92 observations. Le jeu utilisé contient 64 étés complets, soit 5 888 journées ; aucun été n’a été écarté. Une éventuelle absence en hiver n’exclurait pas un été complet de V3.
 
-## Résultats contrôlés
+Les moyennes sont déjà dans `src/assets/chaleur_annuelle.json`, à quatre décimales. Nous gardons cette précision pour les calculs et affichons deux décimales. Le script `verify-heat-trends.mjs` refait les calculs depuis le CSV et les compare au JSON, ainsi qu’aux résultats obtenus avant arrondi. Les contrôles et l’empreinte du CSV sont dans `heat-trends.metadata.json`.
 
-| Indicateur | Valeur affichée |
+Nous avons également repris le code de V3 depuis l’export local du [notebook Observable](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16). Les 64 moyennes concordent avant arrondi. La version du fichier avec `(1)` reste à retrouver.
+
+## Les résultats que nous affichons
+
+| Repère | Valeur |
 | --- | --- |
 | Moyenne des 30 étés 1961–1990 | 23,27 °C |
 | Moyenne des 30 étés 1991–2020 | 24,96 °C |
-| Écart entre les périodes | +1,69 °C |
-| Maximum annuel de la série | 2003, 29,47 °C |
+| Différence entre ces périodes | +1,69 °C |
+| Maximum annuel de la série | 2003, avec 29,47 °C |
 
-La différence est calculée avant arrondi ; ne pas soustraire des valeurs
-d’affichage déjà arrondies pour fabriquer de nouveaux résultats.
+Nous calculons l’écart avant d’arrondir l’affichage. Le maximum de 2003 est une moyenne estivale des maximales : ce n’est pas la température record d’une journée.
 
-## Export A et présentation
+## Notre choix de rendu
 
-Méthode **A : calcul et rendu au build**. V3 est statique dans la version finale
-du notebook. Astro calcule les résumés à partir des agrégats et JSDOM fournit le
-document nécessaire à Observable Plot pour produire les SVG. Aucun calcul Plot
-ou chargement des observations n’est nécessaire chez le lecteur.
+Nous avons choisi la méthode A, car cette vue est fixe. Astro et JSDOM créent les SVG avec Plot pendant la compilation. Le lecteur n’a pas besoin de charger Plot ni les observations quotidiennes pour voir la courbe.
 
-`createHeatTrends(data, options)` reçoit sa série et son document en arguments,
-trie une copie et n’altère pas l’entrée. La fonction reprend courbe, points et
-annotation du maximum du notebook. Elle n’ajoute aucune régression ou moyenne
-glissante. Les couleurs de données `#B45B36` et `#842F32` restent distinctes de
-la charte. La couleur de la ligne a été légèrement assombrie pour le contraste.
+`createHeatTrends(data, options)` reçoit sa série et son document DOM en argument. Elle trie une copie des données. Nous gardons la courbe, les points et l’annotation du notebook, sans ajouter de régression ou de moyenne mobile.
 
-Deux SVG de la même série adaptent le nombre de graduations et la taille du
-dessin aux écrans ; un seul est visible à la fois. Les axes sont linéaires.
-L’axe vertical explicite 20–31 °C et son origine non nulle est expliquée sous
-le graphique. Cette échelle ne concerne pas une longueur de barre : elle
-permet de lire les variations de la courbe tout en gardant toutes les valeurs.
-Les années sont écrites sans séparateur de milliers, avec moins de graduations
-sur mobile. Les infobulles du notebook ne sont pas simulées dans ce rendu
-statique ; un tableau HTML repliable donne les 64 valeurs et leurs effectifs.
+La courbe utilise `#B45B36` et son maximum `#842F32`. Leurs contrastes sur le fond du graphique sont respectivement 4,37:1 et 8,06:1. Deux variantes du même SVG adaptent les graduations aux écrans ; une seule est affichée à la fois. Le graphique conserve les 64 points annuels, plus le repère du maximum.
 
-La figure a un titre, une légende, une description des résultats et une note
-méthodologique. Chaque SVG possède un rôle d’image, un titre et une description
-avec identifiants propres. Le maximum est annoté et agrandi, pas seulement coloré.
+L’axe vertical va de 20 à 31 °C. Nous avons choisi cette échelle pour lire les variations et précisé qu’elle ne part pas de zéro. Sur mobile, il y a moins d’années écrites sur l’axe, mais aucune année n’est retirée de la courbe.
 
-## Limites
+## Ce que cette courbe ne montre pas
 
-Moyenne des maximales quotidiennes, pas température moyenne de l’ensemble des
-journées ni maximum absolu mesuré un jour. Les valeurs concernent une station,
-pas tous les quartiers ou une exposition individuelle. Une moyenne ne dénombre
-pas les jours au-dessus d’un seuil. Les écarts entre périodes sont descriptifs :
-aucune significativité statistique ni cause des variations interannuelles
-n’est établie par ce graphique seul. Aucune projection n’est ajoutée à la courbe.
-V4, la conclusion et la page Méthode ne sont pas développés à cette étape.
+Il s’agit de la moyenne des maximales quotidiennes, pas de la température moyenne de toute la journée. La courbe ne compte pas les dépassements d’un seuil et ne décrit pas chaque quartier. Les différences entre périodes restent descriptives : nous ne présentons ni test de significativité ni explication des causes à partir de ce seul graphique.
 
-## Vérification
+Le tableau dépliable permet de lire les valeurs sans survol ni JavaScript. Chaque SVG possède un rôle d’image et ses propres identifiants. Le titre, les unités, la source et les explications restent visibles autour de la figure.
 
-Contrôles réalisés : extraction et exécution du code original de V3 dans le
-notebook, avec égalité des 64 moyennes avant arrondi et correspondance du JSON
-à quatre décimales. Le titre, l’écart et l’annotation du maximum concordent.
-Douze tests automatisés (V1, V2, V3) passent et Astro compile. Vérifications
-Chrome réussies à 320, 390, 768 et 1440 px : une seule courbe visible, 64 points
-annuels plus le repère du maximum, aucun débordement ni chevauchement des
-années, tableau de 64 lignes accessible au clavier, aucune ancre cassée.
-Les filtres, le zoom et la réinitialisation de V2 restent fonctionnels. Les
-contrastes sur le fond du graphique sont 4,37:1 pour la courbe et 8,06:1 pour
-l’annotation. Tests navigateur avec polices de secours, sans Google Fonts.
+## Refaire les contrôles
 
-```powershell
-node scripts/verify-heat-trends.mjs 'C:\Users\Panda\Downloads\SQR_MTX325056001.csv'
-node --test tests/heat-trends.test.mjs tests/temperature-distribution.test.mjs tests/lcz-map.test.mjs
+```sh
+node scripts/verify-heat-trends.mjs /chemin/vers/SQR_MTX325056001.csv
+node --test tests/heat-trends.test.mjs
 npm run build
-git ls-files -- '*.csv' '*.shp' '*.gpkg'
+npm run audit:browser
 ```
+
+L’audit navigateur vérifie aussi le tableau, le clavier et la lisibilité sur les six largeurs de l’audit final.

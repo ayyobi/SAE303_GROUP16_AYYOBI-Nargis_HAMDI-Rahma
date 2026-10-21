@@ -1,104 +1,33 @@
-# V4 — Explorateur interactif des journées à seuil
+# V4 — Choisir un seuil de chaleur
 
-## Fiche V4 en six points
+Une moyenne d’été ne dit pas combien de journées atteignent une température donnée. Nous avons donc ajouté un choix entre 25, 30 et 35 °C. Le lecteur peut changer le seuil et regarder comment le comptage évolue, sans quitter le graphique.
 
-1. **Question** : les journées atteignant 25, 30 ou 35 °C évoluent-elles de la même façon ? Le lecteur choisit le seuil et observe les effectifs au fil des années.
-2. **Famille** : barres annuelles avec boutons radio de seuil, courbe de moyenne sur dix années civiles consécutives et annotation du maximum, comme dans `graphiqueJoursChauds`.
-3. **Encodage** : année en x, nombre de journées en y, hauteur de barre = effectif ; couleur chaude propre au seuil ; courbe sombre = moyenne mobile ; point et annotation = maximum annuel. Les libellés et le résumé changent avec les valeurs, pas uniquement la couleur.
-4. **Dénominateur et unité** : nombre entier de journées sur une année civile complète (365 ou 366 journées observées), pas un pourcentage. Le seuil est inclus (`>=`). Les moyennes de comparaison portent chacune sur 30 années complètes : 1961–1990 et 1991–2020. La moyenne mobile utilise exactement dix années civiles consécutives, année courante comprise.
-5. **Titre et sous-titre** : « Jusqu’à N journées à X °C ou plus en Y », calculé pour le seuil actif ; « Besançon, 1959–2022 · journées par année civile complète ». Les années réellement présentes servent au titre du modèle et au sous-titre dynamique.
-6. **Alternative textuelle** : résumé dynamique indiquant seuil inclus, période, maximum et moyennes des deux périodes. Description SVG des barres et de la moyenne sur dix ans. Tableau HTML synchronisé avec effectifs, jours observés et moyenne mobile, disponible au clavier.
+## Notre fiche en six points
 
-L’interaction change la mesure étudiée, pas seulement un habillage : une journée
-peut entrer dans le comptage à 25 °C et ne pas y entrer à 30 ou 35 °C. Les mêmes
-années et les mêmes encodages permettent de comparer ces lectures successives
-sans parcourir trois graphiques identiques. Les axes sont réévalués pour chaque
-seuil, conformément au notebook ; comparer les graduations, pas seulement la
-hauteur visuelle des barres d’un seuil à l’autre.
+1. **Question :** les journées atteignant 25, 30 ou 35 °C évoluent-elles de la même façon ?
+2. **Famille :** des barres annuelles, une moyenne mobile sur dix ans et une annotation du maximum, comme dans `graphiqueJoursChauds`.
+3. **Encodage :** l’année est en abscisse et le nombre de journées en ordonnée. La hauteur des barres donne l’effectif, la courbe sombre sa moyenne mobile. Les libellés, les résultats et le tableau changent avec le seuil.
+4. **Unité et dénominateur :** des journées par année civile complète, sur 365 ou 366 observations. Le seuil est inclus : une maximale exactement égale au seuil est comptée. Les comparaisons portent sur 1961–1990 et 1991–2020, soit 30 années chacune.
+5. **Titre et sous-titre :** « Jusqu’à N journées à X °C ou plus en Y », selon le seuil ; « Besançon, 1959–2022 · journées par année civile complète ».
+6. **Alternative textuelle :** un résumé annonce le seuil, la période, le maximum et les moyennes. Le tableau annuel suit le choix du lecteur et donne les effectifs, la couverture et la moyenne mobile.
 
-## Source et règles de calcul
+## Ce que nous comptons
 
-- Météo-France, `SQR_MTX325056001.csv`, station de Besançon 25056001.
-- Source officielle : https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference
-- Notebook : https://observablehq.com/@mmi-montbeliard/sae-303-gr-16
-- Version locale disponible : `SAE 303 — Gr 16 _ MMI Montbéliard _ Observable.html`. La version demandée avec `(1)` est absente.
+Les données viennent du fichier `SQR_MTX325056001.csv`, station de Besançon 25056001, dans les [SQR de Météo-France](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference).
 
-Les commentaires sont retirés ; les valeurs manquantes restent absentes et ne
-sont jamais converties en zéro. Sélection : indicateur `Q_SQR = 1`, valeurs
-numériques finies, dates valides et uniques, 1959–2022 inclus. Les prolongements
-2023–2024 sont exclus. Contrairement à V1 et V3, **tous les mois de l’année**
-sont comptés. Une journée est retenue si sa maximale est supérieure ou égale au
-seuil. Les années avec moins de 365/366 journées valides sont exclues.
+Nous gardons 1959–2022, la qualité `Q_SQR = 1`, les dates valides et uniques et les températures numériques finies. Nous excluons 2023–2024. Les valeurs manquantes restent absentes.
 
-Les données actuelles donnent 64 années civiles complètes et 23 376 observations
-valides, sans année exclue. Une barre à zéro représente donc une absence de
-dépassement du seuil, pas une absence de relevés dans l’année.
+La différence avec V1 et V3 est importante : nous comptons **tous les mois de l’année**, pas seulement l’été. Une année doit avoir 365 ou 366 relevés valides. Les données actuelles donnent 64 années complètes et 23 376 observations, sans année écartée. Une barre à zéro signifie donc qu’aucune journée n’a atteint le seuil, et non qu’il manque les relevés.
 
-Les moyennes mobiles pour une année Y exigent les valeurs des années Y−9 à Y.
-Il ne suffit pas de prendre les dix dernières lignes disponibles. Une lacune
-empêche le calcul tant que dix années consécutives ne sont pas à nouveau
-disponibles. Les premières moyennes de la série complète apparaissent en 1968.
-Les moyennes sont conservées en pleine précision dans les calculs et arrondies
-à deux décimales dans le texte et le tableau ; les nombres de journées restent entiers.
+Pour la moyenne mobile de l’année Y, nous utilisons les années Y−9 à Y, année courante comprise. Il faut dix années consécutives, pas simplement les dix dernières lignes disponibles. Une lacune bloque le calcul. La première moyenne de la série apparaît en 1968. Nous gardons la précision des calculs et affichons les moyennes à deux décimales ; les effectifs restent entiers.
 
-## Données réutilisées et export minimal
+## Pourquoi cette interaction ?
 
-`src/assets/chaleur_annuelle.json` contient déjà les effectifs annuels préparés.
-Il reste inchangé. `scripts/verify-heat-thresholds.mjs` les recalcule depuis le CSV
-local et vérifie les 192 valeurs (64 années × 3 seuils).
+Une même journée peut être comptée à 25 °C et ne plus l’être à 30 ou 35 °C. Changer le seuil aide à lire cette différence. Nous gardons les mêmes années et le même type de graphique pour faciliter la comparaison.
 
-`src/pages/heat-thresholds.json.ts` crée au build le fichier statique
-`/heat-thresholds.json` (environ 4,8 ko). Il conserve seulement les métadonnées de
-sélection et les colonnes `annee`, `joursValides`, `jours25`, `jours30`, `jours35`.
-Il n’y a ni nouvelle copie du CSV ni observations quotidiennes dans cette réponse.
-Le répertoire `src/assets` reste l’emplacement des données sources du site ;
-l’endpoint est du code Astro qui génère une réponse dérivée.
+L’axe vertical s’adapte à chaque seuil, comme dans le notebook. Il faut donc regarder ses graduations, et pas seulement comparer la hauteur des barres entre deux sélections.
 
-## Méthode B et architecture
-
-**B : calcul et rendu chez le lecteur.** Les effectifs sont préagrégés ; le
-navigateur sélectionne les valeurs, recalcule la moyenne mobile et les résumés,
-puis génère le graphique Observable Plot. Les trois boutons radio reprennent
-`Inputs.radio([25, 30, 35], { value: 30 })` du notebook. Aucun filtre de période
-ou seuil supplémentaire n’est ajouté.
-
-- `heatThresholds.js` : validation des années complètes, choix du seuil, points,
-  moyenne mobile, maximum et comparaisons entre périodes ; aucune dépendance DOM.
-- `heatThresholdPlot.js` : fonction graphique autonome, données en argument,
-  sans mutation de l’entrée.
-- `heat-threshold-explorer.js` : chargement à l’approche de la section, écoute
-  unique des changements, remplacement du SVG et synchronisation du texte et du tableau.
-- `HeatThresholdExplorer.astro` : structure sémantique, radios initialement à
-  30 °C, sources et tableau initial préaffichés au build.
-
-`replaceChildren` remplace le SVG existant à chaque changement. Un seul
-ResizeObserver et un seul écouteur de changement sont créés par composant ;
-les tentatives de chargement ne réenregistrent pas ces événements. Un résumé
-`aria-live="polite"` n’est réécrit que lorsqu’il change, pas à chaque redimensionnement.
-Les radios natives conservent leur comportement au clavier et leur focus.
-
-Le chargement traite les erreurs HTTP, réseau, JSON et de structure. Le bouton
-de nouvelle tentative est utilisable et le tableau initial à 30 °C reste présent.
-Sans JavaScript, ce tableau reste disponible et les contrôles sont désactivés.
-
-## Adaptations de rendu
-
-Même structure que le notebook : barres, moyenne sur dix ans, annotation du
-maximum et axe y partant de zéro. La courbe est interrompue si les données ne
-permettent pas de calculer une moyenne. Les couleurs des barres sont légèrement
-assombries pour le contraste : 25 °C `#AA6A24`, 30 °C `#B45332`, 35 °C `#AC403A`
-(contrastes respectifs 4,09:1, 4,65:1 et 5,53:1 sur le fond du graphique).
-La courbe `#6B302C` dispose d’un fin halo clair pour rester visible sur les barres.
-Les graduations temporelles sont moins nombreuses sur mobile sans retirer
-d’années du graphique ; l’annotation du maximum s’aligne pour rester dans le SVG.
-Les informations exactes se lisent dans le tableau, sans dépendre du survol.
-
-## Comparaison et résultats vérifiés
-
-La fonction originale `graphiqueJoursChauds` a été extraite et exécutée pour
-les trois seuils : égalité exacte des 192 effectifs et des 165 moyennes mobiles
-(55 par seuil), ainsi que du test de lacune du notebook (2005–2014 sans 2009 :
-neuf années, aucune moyenne sur dix ans).
+## Les résultats vérifiés
 
 | Seuil inclus | Maximum annuel | Moyenne 1961–1990 | Moyenne 1991–2020 |
 | --- | --- | --- | --- |
@@ -106,25 +35,38 @@ neuf années, aucune moyenne sur dix ans).
 | 30 °C | 39 jours en 2003 | 7,33 jours/an | 14,50 jours/an |
 | 35 °C | 12 jours en 2003 | 0,23 jour/an | 1,50 jour/an |
 
-Ce sont des observations de station et des comparaisons descriptives. Un seuil
-ne définit pas à lui seul une canicule ; ni risque sanitaire ni température par
-quartier ne sont déduits. Aucune projection, conclusion générale ou page Méthode
-n’est développée à cette étape.
+Les 192 comptages correspondent au [notebook](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16) et aux observations quotidiennes. Les 165 moyennes mobiles, soit 55 par seuil, ont aussi été comparées. Le test du notebook qui retire 2009 de 2005–2014 ne donne bien aucune moyenne sur dix ans. L’export local utilisé ne porte pas le suffixe `(1)` demandé dans le brief.
 
-## Vérifications
+## Comment nous l’avons intégré
 
-```powershell
-node scripts/verify-heat-thresholds.mjs 'C:\Users\Panda\Downloads\SQR_MTX325056001.csv'
-node --test tests/*.test.mjs
+Nous utilisons la méthode B. Les effectifs annuels sont déjà préparés dans `src/assets/chaleur_annuelle.json`. Le navigateur choisit la colonne du seuil, calcule les moyennes mobiles et les résumés, puis crée le graphique Plot.
+
+Le fichier `/heat-thresholds.json`, généré au build par `src/pages/heat-thresholds.json.ts`, ne contient que les métadonnées et les colonnes utiles : `annee`, `joursValides`, `jours25`, `jours30` et `jours35`. Il pèse environ 4,8 ko. Les relevés quotidiens et le CSV brut ne sont pas envoyés au lecteur.
+
+Nous avons séparé les rôles dans le code :
+
+- `heatThresholds.js` prépare les années, les seuils, la moyenne mobile et les comparaisons.
+- `heatThresholdPlot.js` crée le graphique à partir du modèle reçu en argument.
+- `heat-threshold-explorer.js` charge les données et met à jour la figure, le texte et le tableau.
+- `HeatThresholdExplorer.astro` fournit la structure et le tableau initial à 30 °C.
+
+Le choix initial de 30 °C reprend le notebook. Nous ne proposons pas d’autres seuils ni de filtre de période. `replaceChildren` remplace le SVG à chaque changement ; les graphiques ne s’accumulent pas. Le redimensionnement passe par un ResizeObserver. Le résumé `aria-live="polite"` n’est réécrit que s’il change.
+
+## Lisibilité et accès au clavier
+
+Les barres partent de zéro. Leurs couleurs sont `#AA6A24`, `#B45332` et `#AC403A`, avec des contrastes de 4,09:1, 4,65:1 et 5,53:1 sur le fond de la figure. La courbe `#6B302C` a un halo clair pour rester visible sur les barres. Le maximum possède aussi un point et un texte.
+
+Les boutons radio gardent leur fonctionnement natif au clavier. Le tableau reste accessible sans survol. Sur mobile, les graduations sont moins nombreuses et l’annotation reste dans le dessin. Si le chargement échoue, un bouton permet de réessayer. Sans JavaScript, le tableau à 30 °C reste consultable.
+
+Ce sont des observations d’une station. Nous n’en déduisons ni température par quartier ni conséquence sanitaire. Le seuil choisi ne définit pas à lui seul une canicule.
+
+## Refaire les contrôles
+
+```sh
+node scripts/verify-heat-thresholds.mjs /chemin/vers/SQR_MTX325056001.csv
+npm test
 npm run build
-git ls-files -- '*.csv'
+npm run audit:browser
 ```
 
-17 tests automatisés réussissent. Dans Chrome, chaque seuil a été testé plusieurs
-fois : effectifs identiques au tableau source, un seul SVG, aucun rechargement
-de page, titre et résumé synchronisés. Le clavier des radios (flèches) et celui
-du tableau ont été testés. Aucun débordement ou chevauchement de graduations à
-320, 390, 768 et 1440 px pour les trois seuils. Le blocage volontaire du JSON
-déclenche le message d’erreur et la nouvelle tentative fonctionne. Les contrôles
-de V1, V2 et V3 restent réussis. Les tests navigateur utilisent les polices de
-secours, sans requêtes Google Fonts.
+Les tests vérifient notamment les années incomplètes, le seuil inclus et les lacunes dans la moyenne mobile. L’audit navigateur teste les trois sélections, les 64 valeurs, le clavier, le tableau, le redimensionnement et le bouton Réessayer.

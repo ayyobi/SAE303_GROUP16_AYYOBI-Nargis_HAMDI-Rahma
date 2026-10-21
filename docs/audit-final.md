@@ -1,10 +1,10 @@
-# Étape 9 — Audit final du 21 octobre 2026
+# Nos vérifications du site — 21 octobre 2026
 
-Le site compilé a été contrôlé localement, avec Open Sans et sans italique. Aucun déploiement, commit ou changement des résultats numériques n’a été effectué.
+Nous avons rassemblé ici les vérifications faites avant la mise en ligne : les problèmes repérés, leurs corrections et les points qui restent à compléter. Nous avons gardé Open Sans et les textes sans italique. Les corrections techniques n’ont pas changé les résultats numériques.
 
-## Défauts constatés avant correction
+## Ce que nous avons corrigé
 
-| Constat | Preuve initiale | Correction |
+| Problème | Ce que le contrôle a montré | Notre correction |
 | --- | --- | --- |
 | Attributs ARIA interdits sur les groupes SVG Plot | Lighthouse : accueil à 97 en accessibilité ; axe `aria-prohibited-attr` sur V1, V3 et V4 | Rôle `group` ajouté aux groupes nommés, sans retirer leurs descriptions ni leurs marques |
 | Encadrés Méthode disposés en colonnes et débordant intérieurement sur mobile | À 320 px, encadré large de 277 px pour un contenu de 346 px ; héritage global `display:flex` | Affichage en bloc limité à la page Méthode et retour à la ligne du texte |
@@ -19,7 +19,7 @@ Le site compilé a été contrôlé localement, avec Open Sans et sans italique.
 
 Le titre de la définition du seuil historique est clarifié pour éviter de confondre notre seuil d’analyse à 30 °C avec la définition Climadiag des jours très chauds. Le récit conserve l’ordre Contexte → Exploration (V1/V2) → Révélation (V3/V4) → Conclusion et adaptation. Les deux parties de la problématique sont traitées dans la conclusion.
 
-### Fichiers concernés
+### Où se trouvent les changements ?
 
 - `src/lib/charts/plotAccessibility.js` (créé) et les trois fonctions de rendu Plot : correction ARIA.
 - `src/scripts/lcz-map.js` et `src/styles/global.css` : infobulles adaptatives, libellé français et contraste de l’illustration.
@@ -29,11 +29,11 @@ Le titre de la définition du seuil historique est clarifié pour éviter de con
 - `scripts/audit-build.mjs`, `audit-site.mjs`, `verify-climadiag.mjs` (créés), `package.json` et `.gitignore` : contrôles reproductibles et rapports locaux ignorés.
 - `README.md`, `docs/integration.md`, `docs/projections-conclusion.md`, ce rapport et `docs/audits/measurements.json` : documentation et preuves de mesure.
 
-## Contrôle scientifique et sources
+## Comment nous avons vérifié les données
 
-Les 17 tests recalculent les distributions, les 64 moyennes estivales, les 192 comptages par seuil, les couvertures et les moyennes mobiles à partir des données quotidiennes. Les tests LCZ vérifient classes, couleurs, géométries, filtres et surfaces. Le notebook HTML local a été relu : classes de 2 °C, qualité 1, été juin–août pour V1/V3, année entière pour V4, exclusion 2023–2024, fonctions autonomes et journal IA. La version portant le suffixe `(1)` n’est pas disponible.
+Nous nous sommes appuyées sur 17 tests pour recalculer les distributions, les 64 moyennes estivales, les 192 comptages et les moyennes mobiles, en contrôlant aussi la couverture. Pour la carte, les tests vérifient les classes, les couleurs, les géométries, les filtres et les surfaces. Nous avons relu le notebook local pour vérifier les périodes et les règles de calcul : classes de 2 °C, qualité 1, juin–août pour V1/V3, année entière pour V4 et exclusion de 2023–2024. La version avec le suffixe `(1)` reste à retrouver.
 
-La réponse officielle de l’application [Climadiag Besançon](https://climadiag.meteofrance.fr/entity/25056), commune 25056, a été consultée le 21 octobre 2026. L’application charge les données de `entities.jsonl` par requête HTTP Range (206) ; le deuxième groupe des indicateurs correspond à 2050. Ses ressources définissent `mean` comme valeur médiane et distinguent les trois horizons 2030, 2050, 2100. Les huit arrondis concordent :
+Nous avons aussi recoupé les chiffres avec [l’application Climadiag de Besançon](https://climadiag.meteofrance.fr/entity/25056), commune 25056, le 21 octobre 2026. Elle charge les données de `entities.jsonl` par une requête HTTP Range (206). Le deuxième groupe correspond à 2050, parmi les horizons 2030, 2050 et 2100. Le champ `mean` désigne la médiane dans cette application. Nous retrouvons bien les huit arrondis affichés :
 
 | Indicateur officiel | Référence brute → affichée | Médiane brute → affichée | Basse brute → affichée | Haute brute → affichée |
 | --- | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ La réponse officielle de l’application [Climadiag Besançon](https://climadia
 
 La réponse officielle reste dans `artifacts/audit/climadiag-official.json`, ignorée par Git. Le script `verify-climadiag.mjs` reproduit ce contrôle. Les seules modifications de `src/assets/` portent sur les deux libellés de seuil, aucun nombre. La référence Climadiag 1976–2005 reste distincte des périodes historiques 1961–1990 et 1991–2020. La date du 19 octobre est renseignée dans le JSON fourni ; elle n’établit pas la date du PDF original, qui n’a pas été relu.
 
-| Source ou lien | Résultat du contrôle |
+| Source ou lien | Ce que nous avons pu vérifier |
 | --- | --- |
 | [Météo-France SQR](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference) | Fiche officielle accessible ; Licence Ouverte 2.0 indiquée |
 | [Cerema LCZ 2022](https://www.data.gouv.fr/datasets/6641c562e5acdb35c0e6051d) | Redirection vers la fiche officielle actuelle ; Licence Ouverte 2.0 indiquée ; version précise de l’archive de l’extrait à vérifier |
@@ -51,9 +51,9 @@ La réponse officielle reste dans `artifacts/audit/climadiag-official.json`, ign
 | [GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma) | HTTP 200, dépôt public accessible |
 | [Observable](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16) | URL retrouvée dans l’export local ; HTTP 429 « Vercel Security Checkpoint » lors de la lecture directe ; version publiée et accès à vérifier dans un navigateur utilisateur |
 
-Les quatre téléchargements compilés répondent HTTP 200. Leur contenu correspond exactement aux données des vues : 17 classes V1, 64 lignes V3, 64 lignes et trois seuils V4, GeoJSON V2 identique à celui de la carte. Ces fichiers suffisent à reproduire les vues avec les fonctions du dépôt. Ils ne permettent pas de refaire le traitement géographique amont ni de recalculer d’autres seuils à partir des observations brutes.
+Nous avons ouvert les quatre téléchargements : ils répondent en HTTP 200 et correspondent aux données des graphiques. On retrouve les 17 classes de V1, les 64 lignes de V3, les 64 années et les trois seuils de V4, ainsi que le même GeoJSON que sur la carte. Ces fichiers suffisent à refaire les vues avec les fonctions du dépôt. Ils ne permettent cependant pas de refaire la préparation géographique d’origine ou de calculer d’autres seuils à partir des relevés bruts.
 
-## Commandes et contrôles exécutés
+## Les contrôles que nous avons lancés
 
 ```sh
 npm run build
@@ -77,7 +77,7 @@ git ls-files -- '*.csv' '*.shp' '*.gpkg' '*Observable*.html' 'data-raw/*'
 - Axe (règles WCAG A/AA 2.0, 2.1 et 2.2) : aucune violation détectée sur l’accueil avec les vues chargées ni sur Méthode, à 320 et 1440 px. Certaines vérifications de contraste sont signalées comme nécessitant un examen manuel ; elles ne sont pas comptées comme des réussites automatiques.
 - Aucun CSV, SHP, GPKG ou export HTML brut suivi dans Git, ni publié dans `dist/`. Les conversions JSON complètes préexistantes restent dans `src/assets/` conformément à la demande initiale ; elles ne sont pas livrées au navigateur. Les rapports d’audit sont ignorés par Git.
 
-## Lighthouse mesuré sur le build
+## Ce que donne Lighthouse
 
 Lighthouse **13.5.0**, Chrome **155.0.8059.85**, Windows, mesures du **21 octobre 2026** :
 
@@ -88,11 +88,11 @@ Lighthouse **13.5.0**, Chrome **155.0.8059.85**, Windows, mesures du **21 octobr
 | Accueil | Ordinateur | 100 | 100 | 100 | 100 |
 | Méthode | Ordinateur | 100 | 100 | 100 | 100 |
 
-Les mesures et leurs métriques sont conservées dans [measurements.json](audits/measurements.json). Les quatre rapports complets HTML/JSON sont dans `artifacts/audit/lighthouse-*.report.*`, ainsi que les captures et `browser.json`. Les scores sont ceux d’une exécution par profil sur le dernier build ; les profils ont été exécutés simultanément sur le même ordinateur, donc la performance reste une mesure indicative. Le contrôle initial relevait 97 en accessibilité sur l’accueil et 100 sur Méthode ; le défaut ARIA a été corrigé.
+Nous gardons les mesures dans [measurements.json](audits/measurements.json) et les rapports complets dans `artifacts/audit/lighthouse-*.report.*`. Chaque profil a été lancé une fois, en même temps que les autres sur le même ordinateur : les performances restent indicatives. L’accueil était à 97 en accessibilité avant la correction ARIA et est passé à 100 lors de cette mesure. Ces scores datent de l’audit initial, avant les dernières retouches de texte et de présentation. Ils ne sont pas de nouvelles mesures de la version actuelle.
 
-Lighthouse est exécuté temporairement, sans dépendance de production ajoutée. Les mesures portent sur une prévisualisation HTTP locale du build, avec le chargement normal d’Open Sans, et ne préjugent pas de l’hébergement Netlify. Le rendu SVG au build et le chargement des vues interactives à l’approche de leurs sections sont conservés ; aucune optimisation d’architecture n’a été ajoutée sans défaut constaté.
+Nous avons utilisé Lighthouse temporairement, sans l’ajouter aux dépendances du site. Les mesures portent sur le build servi en HTTP local, avec Open Sans ; elles ne mesurent pas l’hébergement Netlify. Nous avons conservé les SVG créés au build et le chargement des interactions à l’approche de leur section.
 
-Pour reproduire une mesure, démarrer `node scripts/audit-site.mjs --serve`, puis lancer dans un autre terminal :
+Pour refaire une mesure, nous lançons `node scripts/audit-site.mjs --serve`, puis cette commande dans un autre terminal :
 
 ```sh
 npm exec --yes --package=lighthouse -- lighthouse http://127.0.0.1:4322/ --only-categories=performance,accessibility,best-practices,seo --output=html --output=json --output-path=artifacts/audit/lighthouse-home-mobile
@@ -100,9 +100,9 @@ npm exec --yes --package=lighthouse -- lighthouse http://127.0.0.1:4322/ --only-
 
 Remplacer `/` par `/methode` et ajouter `--preset=desktop` pour les autres profils. Les exécutions de cet audit utilisent Chrome headless avec `--chrome-flags="--headless --no-sandbox"`. L’outil Lighthouse et son axe sont temporaires, sans modification des dépendances du projet. Pour l’audit navigateur complet, définir `AXE_PATH` vers le fichier `axe.min.js` disponible localement ; sinon son omission est signalée dans `browser.json`.
 
-Les scores automatisés ne constituent pas une certification WCAG. La lecture par un lecteur d’écran réel et les usages sur appareils physiques n’ont pas été évalués ; les tests mobiles utilisent l’émulation Chrome.
+Ces scores nous aident à repérer les problèmes, mais ils ne certifient pas une conformité WCAG complète. Les tests mobiles utilisent l’émulation Chrome. Nous n’avons pas évalué la lecture avec un lecteur d’écran réel ni tous les usages sur des appareils physiques.
 
-## Conformité SAE et preuves
+## Où nous en sommes par rapport à la SAE
 
 | Exigence | Statut | Preuve |
 | --- | --- | --- |
@@ -129,10 +129,10 @@ Les scores automatisés ne constituent pas une certification WCAG. La lecture pa
 | Lien Observable actuel | À vérifier | URL locale connue mais lecture publique bloquée par HTTP 429 |
 | README et liens vers le code | Conforme | Identités et URL conservées, remarques techniques, commandes, sources, méthodes et lien vers cet audit |
 
-## Problèmes restant avant publication
+## Ce que nous devons encore compléter
 
 1. Ouvrir le notebook publié depuis un navigateur utilisateur et confirmer sa visibilité ainsi que la correspondance avec la version remise ; l’export `(1)` reste introuvable localement.
 2. Retrouver le PDF Climadiag original cité page 7 et confirmer les licences de ce rapport et du Plan Climat. Ces documents ne sont pas redistribués ; les chiffres Climadiag sont déjà recoupés avec l’application officielle.
 3. Identifier l’archive Cerema exacte et le script de préparation de l’extrait si une reproduction du traitement géographique amont est exigée.
 
-Aucun bug technique bloquant ne reste dans les scénarios exécutés. Le domaine et l’URL Netlify seront renseignés lors de l’étape dédiée au déploiement, qui n’a pas été commencée.
+Les parcours testés n’ont pas révélé de bug technique bloquant. Le site a ensuite été publié sur [Netlify](https://spiffy-frangollo-70ef1e.netlify.app/) et vérifié en ligne : le [compte rendu](audits/production-check.json) garde les résultats de ce contrôle. Il nous reste surtout à confirmer l’accès public au notebook et à compléter les références documentaires ci-dessus.

@@ -1,101 +1,56 @@
-# V1 — Distribution des maximales estivales
+# V1 — Comment se répartissent les températures d’été ?
 
-## Provenance et comparaison
+Avec ce premier graphique, nous voulions voir quelles maximales reviennent le plus souvent pendant les étés étudiés. L’histogramme rassemble les journées par classes de 2 °C. Il donne une vue d’ensemble, avant de regarder l’évolution dans le temps avec V3.
 
-Source : Météo-France, série quotidienne de référence `SQR_MTX325056001.csv`,
-station 25056001, Besançon. Les séries mensuelles SH_MTX et SH_MTN ne sont pas
-utilisées pour cet histogramme.
+## D’où viennent les données ?
 
-Jeu officiel : https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference
+Nous utilisons les [Séries Quotidiennes de Référence de Météo-France](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference), station de Besançon 25056001, fichier `SQR_MTX325056001.csv`. Les séries mensuelles SH_MTX et SH_MTN ne servent pas à ce graphique.
 
-Notebook : https://observablehq.com/@mmi-montbeliard/sae-303-gr-16
+La fonction `graphiqueDistribution(donnees)` du [notebook](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16) a été comparée aux classes du fichier `src/assets/distribution_ete.json`. Les 17 classes correspondent exactement. Nous avons donc repris ce fichier, sans créer une deuxième version. L’export local consulté ne porte pas le suffixe `(1)` ; cette version reste à retrouver.
 
-La version locale disponible est `SAE 303 — Gr 16 _ MMI Montbéliard _ Observable.html`.
-La version nommée `(1)` n’est pas disponible. Le code complet de
-`graphiqueDistribution(donnees)` a été extrait du HTML, puis exécuté avec les
-observations du CSV original et son algorithme `d3.bin`. Les 17 classes obtenues
-coïncident exactement avec `src/assets/distribution_ete.json`, réutilisé sans
-modification. Aucun second fichier de classes n’est créé.
+## Notre préparation
 
-## Sélection et calcul
+Nous lisons le CSV avec son séparateur `;`, en ignorant les lignes de commentaires. Nous gardons les dates valides et uniques, les températures numériques finies et la qualité `Q_SQR = 1`. Une valeur manquante reste absente : elle ne devient jamais zéro.
 
-- Lire les lignes non vides hors commentaires, séparateur `;`.
-- Ne pas transformer une température manquante en zéro.
-- Garder les dates valides et uniques, les valeurs numériques finies et `Q_SQR = 1`.
-- Période : 1959–2022 inclus ; les prolongements 2023–2024 sont exclus.
-- Vérifier les 64 années complètes : 23 376 observations quotidiennes valides.
-- Sélectionner juin, juillet et août : 92 jours par été, soit 5 888 journées.
-- Classes de 2 °C : minimum arrondi vers le bas au multiple de 2 ; maximum
-  arrondi vers le bas au multiple de 2, puis augmenté de 2.
-- Chaque classe inclut sa borne inférieure et exclut sa borne supérieure.
-- Une journée correspond à une maximale et contribue à un seul effectif.
-- Aucun pourcentage ni pondération par la population ; effectifs entiers.
+Nous retenons 1959–2022 et excluons les prolongements 2023–2024. Le contrôle des années donne 64 années complètes et 23 376 observations quotidiennes valides. Nous sélectionnons ensuite juin, juillet et août : 92 journées par été, soit **5 888 journées**.
 
-Le code V1 du notebook sélectionne directement les observations quotidiennes,
-tandis que sa fiche annonce des années complètes. Le contrôle confirme que les
-64 années sont effectivement complètes : aucune sélection supplémentaire ne
-change les données. Le script bloque l’export si cette condition cesse d’être vraie.
+Chaque classe inclut sa borne basse et exclut sa borne haute. Le minimum est arrondi vers le bas au multiple de 2 ; le maximum est arrondi de la même façon, puis augmenté de 2. Chaque journée est comptée une seule fois. Nous affichons des nombres de journées, sans pourcentage ni pondération par la population.
 
-Résultats vérifiés : 17 classes de [6 ; 8[ à [38 ; 40[, somme 5 888 journées,
-682 journées à au moins 30 °C. Classe modale : [24 ; 26[, 894 journées.
-Les valeurs affichées dans Astro sont calculées à partir des classes, et
-confrontées aux métadonnées au build.
+Le notebook sélectionne directement les journées, alors que sa fiche mentionne des années complètes. Nous avons vérifié ce point : les 64 années le sont bien, donc le contrôle ne change pas les données. Le script bloque l’export si ce n’est plus le cas.
 
-Les métadonnées sont dans `src/assets/distribution_ete.metadata.json` : station,
-période, filtres, dénominateur, effectifs de contrôle et empreinte SHA-256 du CSV.
+## Ce que nous retrouvons
 
-## Méthode A et fonction autonome
+| Repère | Résultat |
+| --- | --- |
+| Classes représentées | 17, de [6 ; 8[ à [38 ; 40[ °C |
+| Journées retenues | 5 888 |
+| Journées à 30 °C ou plus | 682 |
+| Classe la plus fréquente | [24 ; 26[ °C, avec 894 journées |
 
-**A = calcul et rendu au build** ; B = calcul et rendu chez le lecteur ;
-C = une page générée par valeur. Pour cette distribution fixe, A évite de livrer
-les observations quotidiennes et la bibliothèque de calcul au navigateur.
+Le composant Astro calcule ces repères à partir des classes et les compare aux métadonnées pendant le build. Le fichier `distribution_ete.metadata.json` garde la station, les filtres, les effectifs de contrôle et l’empreinte SHA-256 du CSV.
 
-La fonction `createTemperatureDistribution(data, options)` accepte des classes
-préfiltrées en argument et un document DOM injecté. Elle ne dépend d’aucune cellule
-Observable, ne charge aucun fichier et ne modifie pas les données. Le composant
-Astro utilise JSDOM pour construire les SVG pendant le build ; la page reçoit
-du SVG statique. Les calculs sur le CSV sont préparés hors navigateur par le script
-reproductible ; les totaux, le résultat éditorial et le rendu sont calculés au build.
-La base Astro/Plot du professeur et les dépendances existantes sont conservées.
+## Pourquoi la méthode A ?
 
-Deux mises en page statiques représentent les mêmes 17 classes : l’une pour
-ordinateur, l’autre avec des axes adaptés aux écrans plus étroits. Les médias CSS
-n’en affichent qu’une à la fois, y compris dans l’arbre d’accessibilité.
+Ce graphique est fixe. Nous avons choisi de le créer pendant la compilation avec Observable Plot et JSDOM, plutôt que d’envoyer les observations quotidiennes et Plot au navigateur.
 
-## Encodage et accessibilité
+La fonction `createTemperatureDistribution(data, options)` reçoit les classes et un document DOM en argument. Elle ne charge pas de fichier et ne modifie pas les données. Astro produit deux SVG de la même distribution : un pour ordinateur, un pour les petits écrans. Le CSS n’en affiche qu’un à la fois.
 
-Comme dans le notebook : x = température maximale quotidienne en °C,
-y = nombre de journées, couleurs plus chaudes pour les classes élevées,
-seuil vertical pointillé à 30 °C. Les trois familles thermiques changent à 24 et
-30 °C. Les couleurs sont adaptées pour contraster sur le fond du site et restent
-distinctes de la charte éditoriale : `#88786D`, `#B66B39`, `#A9362A`.
-La hauteur et la position portent l’information même sans couleur.
+L’axe horizontal indique la maximale en °C et la hauteur des barres le nombre de journées. Un trait pointillé marque 30 °C. Les couleurs changent à 24 et 30 °C : `#88786D`, `#B66B39` et `#A9362A`. La position et la hauteur restent compréhensibles sans couleur.
 
-Les SVG sont dans une figure avec titre, légende, description des résultats,
-source et note de lecture. Chaque format possède un `title`, un `desc`, un rôle
-d’image et des identifiants propres. Un tableau HTML repliable donne tous les
-effectifs avec leurs bornes. Les infobulles interactives du notebook ne sont pas
-reproduites dans le rendu statique ; le tableau fonctionne au clavier et au toucher.
+## Comment lire le graphique autrement ?
 
-## Limites
+Le graphique a un titre, une description, ses unités, sa source et une note de lecture. Les deux SVG possèdent leurs propres identifiants, un rôle d’image, un `title` et un `desc`. Un tableau dépliable reprend les effectifs et les bornes ; il fonctionne au clavier et au toucher. Nous n’avons pas reproduit les infobulles du notebook dans ce rendu statique.
 
-Il s’agit des maximales à une station, pas d’une mesure rue par rue ni de
-l’exposition individuelle de tous les habitants. Le graphique réunit les étés
-sur toute la période : il ne prouve pas une tendance chronologique. Le seuil
-30 °C n’est pas à lui seul une définition de canicule. Aucun résultat sanitaire
-ni aucune projection 2050 ne découle de cette distribution.
+Ces relevés viennent d’une station, pas de chaque rue. Cette distribution regroupe tous les étés : elle ne suffit donc pas à montrer une tendance dans le temps. Le seuil de 30 °C ne définit pas à lui seul une canicule.
 
-## Reproduire les contrôles
+## Refaire le contrôle
 
-Le CSV reste hors dépôt (ou dans `data-raw/`, ignoré) :
+Le CSV d’origine reste hors du dépôt, ou dans `data-raw/`, qui est ignoré par Git.
 
-```powershell
-node scripts/prepare-temperature-distribution.mjs 'C:\Users\Panda\Downloads\SQR_MTX325056001.csv'
+```sh
+node scripts/prepare-temperature-distribution.mjs /chemin/vers/SQR_MTX325056001.csv
 node --test tests/temperature-distribution.test.mjs
 npm run build
-git ls-files -- '*.csv'
 ```
 
-Le script compare les classes recalculées au JSON existant avant d’écrire les
-métadonnées et s’arrête en cas de différence. Il ne copie pas le CSV.
-La page Méthode et V2, V3, V4 restent hors du périmètre de cette étape.
+Le script compare les classes recalculées au JSON avant d’écrire les métadonnées. Il s’arrête en cas de différence et ne copie pas le CSV.

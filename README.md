@@ -1,105 +1,92 @@
 # Besançon sous la chaleur
 
-SAE 303 — BUT MMI2.
+Nous sommes Nargis Ayyobi et Rahma Hamdi, étudiantes en BUT MMI2. Nous avons réalisé ce site pour la SAE 303, à partir de notre travail sur Observable.
 
-- URL site WEB : [Besançon sous la chaleur sur Netlify](https://spiffy-frangollo-70ef1e.netlify.app/) — configuration de publication corrigée dans le dépôt ; redéploiement à effectuer.
-- URL Notebook Observable : [SAE 303 — Gr 16](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16).
+- URL site WEB : [Besançon sous la chaleur](https://spiffy-frangollo-70ef1e.netlify.app/)
+- URL Notebook Observable : [SAE 303 — Gr 16](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16)
 - Nom : **AYYOBI**
 - Prénom : **Nargis**
 - Nom binome : **HAMDI**
 - Prénom binome : **Rahma**
 
-**Problématique :** Comment les fortes chaleurs ont-elles évolué à Besançon, et comment l’analyse des espaces urbains peut-elle aider la ville à s’adapter ?
+Notre question de départ est la suivante : **comment les fortes chaleurs ont-elles évolué à Besançon, et comment l’analyse des espaces urbains peut-elle aider la ville à s’adapter ?**
 
-Le lien du notebook provient de l’export HTML local ; son accessibilité publique et sa version actuelle restent à vérifier. L’adresse Netlify ci-dessus provient du projet montré dans le tableau de bord.
+Pour y répondre, nous avons croisé les relevés de Météo-France, la carte des espaces urbains du Cerema et les projections de Climadiag pour 2050. Le site commence par quelques définitions, puis laisse le lecteur explorer les données avant de revenir sur les possibilités d’adaptation.
 
-[Dépôt GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma) : URL du remote `origin`, accessible publiquement lors du contrôle du 21 octobre 2026.
+Le [code du projet est sur GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma). Le site en ligne a été vérifié le 21 octobre 2026.
 
-## Installer et lancer
+## Lancer le projet
 
-Node.js **22.22.0 ou supérieur**, compatible avec la version d’Astro installée, et npm.
+Il faut Node.js **22.22.0 ou une version plus récente** et npm.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Ouvrir l’adresse indiquée dans le terminal, habituellement `http://localhost:4321`. La documentation est accessible à `/methode` depuis le menu et le footer.
+Le terminal indique l’adresse locale, généralement `http://localhost:4321`. La page Méthode se trouve à `/methode`.
+
+Pour consulter la version compilée :
 
 ```sh
 npm run build
 npm run preview
-node --test
 ```
 
-Le build produit le site et ses téléchargements dans `dist/`. `npm run preview` les sert sur `http://127.0.0.1:4322` ; cette prévisualisation statique remplace `astro preview`, non pris en charge par l’adaptateur Netlify installé. L’adaptateur reste configuré pour l’hébergement ; ces commandes ne publient pas le site.
-
-## Technologies et intégration
-
-### Configuration Netlify
-
-Le fichier [netlify.toml](netlify.toml) définit le dossier de base `.` (racine du dépôt), la commande `npm run build`, le dossier publié `dist` et Node.js 22.22.0. Le dossier source du projet ne doit pas être publié directement : l’accueil généré se trouve dans `dist/index.html`.
-
-Pour un déploiement depuis GitHub, inclure cette configuration dans la branche déployée, puis relancer le déploiement Netlify. Pour un dépôt manuel de fichiers, lancer d’abord `npm run build`, puis déposer uniquement le contenu du dossier `dist`. Une vérification du site en ligne reste nécessaire après le redéploiement.
-
-### Visualisations
-
-Astro, Tailwind CSS, JavaScript, Observable Plot, JSDOM, Leaflet et proj4. Typographie : Open Sans, sans texte en italique.
-
-| Vue | Indicateur | Intégration réelle |
-| --- | --- | --- |
-| V1 | Distribution des maximales estivales, classes de 2 °C | **A** : SVG Plot au build avec JSDOM |
-| V2 | Carte catégorielle des espaces LCZ | **B** : Leaflet et filtres dans le navigateur |
-| V3 | Moyenne des maximales de chaque été | **A** : SVG Plot au build avec JSDOM |
-| V4 | Journées annuelles ≥ 25, 30 ou 35 °C | **B** : Plot actualisé selon le seuil dans le navigateur |
-
-A signifie génération au build ; B, génération ou mise à jour chez le lecteur. **C**, une page statique par valeur, n’est pas utilisée. Les fonctions de rendu acceptent explicitement données et options ; voir `src/lib/charts/`. Les filtres et résumés LCZ sont dans `src/lib/maps/`.
+Le résultat est créé dans `dist/`, puis servi sur `http://127.0.0.1:4322`. Nous utilisons une prévisualisation statique, car l’adaptateur Netlify installé ne prend pas en charge `astro preview`. Cette commande ne publie rien en ligne.
 
 ## Remarques
 
-Notre site associe un récit sur les fortes chaleurs à Besançon à quatre visualisations complémentaires. Nous avons porté les graphiques du notebook Observable dans Astro et ajouté les interactions suivantes :
+Nous avons voulu que le lecteur puisse regarder les données à son rythme, sur ordinateur comme sur téléphone.
 
-- **Navigation dans le récit :** le menu donne accès aux sections de l’enquête et à la page Méthode. Sur mobile, un bouton ouvre et ferme le menu ; la touche Échap le ferme et replace le focus sur le bouton. Un lien d’évitement permet d’atteindre directement le contenu. Voir le [menu](src/components/Header.astro) et le [layout commun](src/layouts/Layout.astro).
-- **Carte interactive :** Leaflet permet de déplacer la carte, de zoomer et de filtrer les espaces par famille ou par classe LCZ. La sélection d’une zone affiche les informations de sa classe. Des commandes réinitialisent les filtres et le cadrage ; la projection Lambert-93 conserve le carré du secteur droit. Voir le [script de la carte](src/scripts/lcz-map.js) et la [projection](src/lib/maps/lambert93.js).
-- **Exploration des seuils :** le lecteur choisit 25, 30 ou 35 °C avec des boutons radio. Le graphique, le texte de synthèse et le tableau annuel se mettent à jour sans rechargement de la page. Une moyenne mobile sur dix ans complète les barres annuelles. Voir les [interactions](src/scripts/heat-threshold-explorer.js) et les [calculs par seuil](src/lib/charts/heatThresholds.js).
-- **Affichage responsive :** les colonnes se réorganisent sur les petits écrans. Les graphiques statiques disposent de variantes pour mobile et ordinateur ; le graphique interactif adapte son rendu à la largeur disponible. Voir les [styles du site](src/styles/global.css), la [distribution estivale](src/components/charts/TemperatureDistribution.astro) et le [rendu interactif](src/lib/charts/heatThresholdPlot.js).
-- **Accessibilité :** les liens et commandes ont un focus visible. Le menu, les filtres et les seuils sont utilisables au clavier. Les graphiques sont accompagnés de descriptions et de tableaux dépliables ; ces tableaux sont présents dès la construction du site et restent consultables sans JavaScript. La préférence de réduction des animations est respectée. Voir les [styles communs](src/styles/global.css) et le [composant de l’explorateur](src/components/charts/HeatThresholdExplorer.astro).
-- **Rendu et chargement :** la distribution et la courbe historique sont générées en SVG à la compilation avec Observable Plot et JSDOM. La carte et l’explorateur sont initialisés dans le navigateur à l’approche de leur section. Voir le [rendu de la courbe historique](src/components/charts/HeatTrends.astro) et les scripts de la [carte](src/scripts/lcz-map.js) et des [seuils](src/scripts/heat-threshold-explorer.js).
-- **Transparence des données :** la page Méthode présente les sources, les traitements, les limites et quatre téléchargements de données nettoyées. Voir la [page Méthode](src/pages/methode.astro).
+- **La navigation** suit les parties du récit. Sur mobile, le menu s’ouvre progressivement avec des liens qui apparaissent en cascade. Il se ferme avec Échap ou en touchant l’extérieur, et respecte le réglage de réduction des animations. Le lien « Aller au contenu » permet de passer directement à la page. Voir le [menu](src/components/Header.astro) et le [layout](src/layouts/Layout.astro).
+- **La carte LCZ** permet de filtrer les espaces, de choisir une classe, de zoomer et de revenir au cadrage de départ. Nous utilisons Lambert-93 pour garder le carré du secteur droit. Voir le [script de la carte](src/scripts/lcz-map.js) et la [projection](src/lib/maps/lambert93.js).
+- **L’explorateur de seuils** laisse choisir 25, 30 ou 35 °C. Le graphique, les résultats et le tableau changent ensemble, sans recharger la page. Voir les [interactions](src/scripts/heat-threshold-explorer.js) et les [calculs](src/lib/charts/heatThresholds.js).
+- **Sur mobile**, les colonnes passent les unes sous les autres et les graphiques adaptent leurs graduations. Nous avons gardé Open Sans, des textes sans italique et une présentation simple, dans des tons chauds. Voir les [styles](src/styles/global.css).
+- **Pour l’accessibilité**, nous avons prévu le clavier, un focus visible, des descriptions et des tableaux dépliables. Les tableaux restent lisibles sans JavaScript. Les animations respectent la préférence de réduction des mouvements. Voir les [composants des graphiques](src/components/charts/).
+- **La page Méthode** explique nos sources, nos calculs et nos limites. Elle donne aussi accès aux données nettoyées. Voir son [code](src/pages/methode.astro).
 
-## Sources et traitements
+## Nos choix techniques
 
-- **Météo-France**, [Données changement climatique - SQR (Séries Quotidiennes de Référence)](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference), station 25056001, fichier `SQR_MTX325056001.csv`. Licence Ouverte 2.0 confirmée sur la fiche officielle. V1, V3 et V4 : 1959–2022, valeurs numériques valides, dates uniques et `Q_SQR = 1`. V1 et V3 utilisent juin–août ; V4 l’année civile entière. Les prolongements 2023–2024 sont exclus. Les CSV mensuels SH_MTX et SH_MTN appartiennent à l’exploration du notebook, pas aux calculs des trois vues quotidiennes.
-- **Cerema**, [Cartographie des Zones Climatiques Locales des 93 territoires de plus de 50 000 habitants](https://www.data.gouv.fr/datasets/6641c562e5acdb35c0e6051d), LCZ SPOT 2022. Licence Ouverte 2.0 confirmée sur la fiche officielle. Extrait central de 8 × 8 km, regroupé en 14 classes, géométries simplifiées. Référence de l’archive amont et algorithme de préparation exact : **À vérifier**. Cette carte ne mesure pas des températures par quartier.
-- **Météo-France, [Climadiag Commune](https://meteofrance.com/climadiag-commune)** : Besançon, référence 1976–2005, horizon TRACC 2050. Deux indicateurs du notebook : nuits chaudes (minimum ≥ 20 °C) et journées très chaudes (maximum > 35 °C), avec médiane et fourchette. Les huit valeurs arrondies à l’unité ont été recoupées avec l’application officielle le 21 octobre 2026, sans changer les chiffres affichés. Le seuil strict de Climadiag diffère du seuil inclusif de V4. PDF original cité dans le notebook et licence du rapport : **À vérifier**.
-- **Grand Besançon Métropole**, [Plan Climat Air Énergie Territorial 2024–2029, mars 2025](https://www.grandbesancon.fr/wp-content/uploads/sites/2/2025/03/PCAET-Mars-2025.pdf#page=19), actions 10–11, pages imprimées 36–37. Contexte pour l’adaptation ; licence du document **À vérifier**.
+Nous avons utilisé Astro, Tailwind CSS, Observable Plot, JSDOM, Leaflet et proj4.
 
-Les fichiers du site sont dans **`src/assets/`**, sans dossiers `src/data` ou `public/data`. Les CSV bruts ne sont pas publiés ; `.gitignore` exclut les CSV, `data-raw/` et les exports HTML Observable. Les JSON de conversion contiennent davantage d’années que le périmètre des graphiques : ne pas les confondre avec les exports nettoyés.
-
-Les contrôles reproductibles sont dans `scripts/prepare-temperature-distribution.mjs`, `scripts/verify-heat-trends.mjs` et `scripts/verify-heat-thresholds.mjs`. Ils reçoivent le chemin du CSV source en argument. Les valeurs manquantes ne deviennent pas zéro ; V3 exige 92 journées d’été et V4 365 ou 366 journées annuelles. Les moyennes du JSON ont quatre décimales, l’affichage deux. Les détails et limites figurent sur `/methode` et dans les [documents techniques](docs/integration.md).
-
-## Données téléchargeables
-
-La page `/methode#donnees` propose quatre liens réels, produits à la compilation :
-
-| Export | Route | Contenu |
+| Vue | Ce qu’elle montre | Méthode choisie |
 | --- | --- | --- |
-| Distribution estivale | `/telechargements/distribution.json` | 17 classes et métadonnées, 1959–2022 |
-| Évolution estivale | `/telechargements/evolution.json` | 64 moyennes et couvertures, 1959–2022 |
-| Comptages annuels | `/heat-thresholds.json` | 64 années et trois seuils, 1959–2022 |
-| Extrait LCZ | Lien d’asset généré par Astro sur la page Méthode | GeoJSON 2022 des 14 classes |
+| V1 | La répartition des maximales d’été, par classes de 2 °C | A : SVG Plot créé au build avec JSDOM |
+| V2 | Les types d’espaces LCZ | B : carte Leaflet dans le navigateur |
+| V3 | La moyenne des maximales de chaque été | A : SVG Plot créé au build avec JSDOM |
+| V4 | Le nombre annuel de journées ≥ 25, 30 ou 35 °C | B : Plot mis à jour selon le seuil |
 
-Ces exports dérivés citent Météo-France ou Cerema, sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/). Mentionner le producteur, la source, la période et le traitement SAE 303 — Nargis Ayyobi et Rahma Hamdi lors d’une réutilisation.
+Nous avons choisi A pour les vues fixes et B pour celles qui demandent une interaction. La méthode C, qui génère une page par valeur, n’est pas utilisée. Les fonctions de [rendu des graphiques](src/lib/charts/) reçoivent leurs données en argument, sans dépendre des cellules Observable.
 
-## Transparence et limites
+Le fichier [netlify.toml](netlify.toml) indique la racine du dépôt comme dossier de base, `npm run build` comme commande et `dist` comme dossier à publier. Il fixe Node.js à 22.22.0. Lors du premier déploiement, Netlify servait les sources au lieu du site compilé ; ce réglage a corrigé la 404. Pour un dépôt manuel, il faut donc compiler le projet puis envoyer uniquement `dist`.
 
-Les observations d’une station, les types d’espaces LCZ et les projections sont distingués dans le récit. Les périodes de référence diffèrent ; un seuil journalier n’est pas une définition de canicule. Le projet ne mesure ni effet sanitaire, ni causalité urbaine, ni efficacité chiffrée des adaptations proposées.
+## Les données que nous utilisons
 
-Le notebook conserve le journal détaillé d’utilisation de l’IA : aide au code, à la préparation des données, aux corrections et à la lisibilité. La page Méthode en donne un résumé et signale les vérifications restant ouvertes. L’export local consulté ne porte pas le suffixe `(1)` demandé dans le brief ; la correspondance avec cette version reste à vérifier.
+**Météo-France.** Nos calculs historiques viennent des [Séries Quotidiennes de Référence](https://www.data.gouv.fr/datasets/donnees-changement-climatique-sqr-series-quotidiennes-de-reference), station de Besançon 25056001, fichier `SQR_MTX325056001.csv`. Nous gardons 1959–2022, les valeurs valides et la qualité `Q_SQR = 1`. V1 et V3 portent sur juin, juillet et août ; V4 compte toute l’année. Les prolongements 2023–2024 sont exclus. Les séries mensuelles SH_MTX et SH_MTN ont servi à l’exploration du notebook, mais pas à ces trois vues. La fiche officielle indique la Licence Ouverte 2.0.
 
-L’étape 9 vérifie le site compilé et corrige l’accessibilité et le responsive. Le [rapport final](docs/audit-final.md) détaille les tests, les mesures Lighthouse et les points restant à vérifier. Aucun déploiement ni commit automatique n’est effectué.
+**Cerema.** La [carte LCZ SPOT 2022](https://www.data.gouv.fr/datasets/6641c562e5acdb35c0e6051d) décrit un carré central de 8 × 8 km, regroupé en 14 classes. Elle nous aide à lire les espaces urbains, sans donner la température de chaque quartier. La Licence Ouverte 2.0 est indiquée sur la fiche.
 
-## Reproduire les contrôles
+**Climadiag Commune.** Nous reprenons deux indicateurs du [service de Météo-France](https://meteofrance.com/climadiag-commune) pour 2050 : les nuits dont la température ne descend pas sous 20 °C et les jours dont la maximale dépasse 35 °C. La référence est 1976–2005. Les huit valeurs, arrondies à l’unité, ont été recoupées avec l’application officielle le 21 octobre 2026. Le seuil strict des jours Climadiag diffère du seuil inclusif de V4.
+
+**Grand Besançon Métropole.** Le [Plan Climat 2024–2029](https://www.grandbesancon.fr/wp-content/uploads/sites/2/2025/03/PCAET-Mars-2025.pdf#page=19), document de mars 2025, apporte le contexte de l’adaptation. Nous citons les actions 10 et 11, pages 36–37.
+
+Les données du site se trouvent dans `src/assets/`. Nous ne publions pas les CSV bruts. Les conversions JSON complètes contiennent aussi des années hors de notre étude ; les téléchargements du site sont, eux, préfiltrés. Une valeur manquante ne devient jamais zéro. Nous demandons 92 jours par été pour V3 et 365 ou 366 jours par année pour V4. Les moyennes sont conservées à quatre décimales et affichées à deux.
+
+## Télécharger et reprendre les données
+
+La page [Méthode](https://spiffy-frangollo-70ef1e.netlify.app/methode#donnees) propose quatre fichiers :
+
+| Fichier | Contenu |
+| --- | --- |
+| `/telechargements/distribution.json` | Les 17 classes estivales et leurs métadonnées |
+| `/telechargements/evolution.json` | Les 64 moyennes estivales et leur couverture |
+| `/heat-thresholds.json` | Les 64 comptages annuels pour les trois seuils |
+| GeoJSON proposé sur la page | Les 14 classes LCZ du secteur central en 2022 |
+
+Pour les réutiliser, il faut citer Météo-France ou le Cerema, la source, la période et notre traitement : « SAE 303 — Nargis Ayyobi et Rahma Hamdi ». Les jeux SQR et LCZ sont sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
+
+## Ce que nous avons vérifié
 
 ```sh
 npm run build
@@ -108,6 +95,12 @@ npm run audit:build
 npm run audit:browser
 ```
 
-L’audit navigateur démarre sa propre prévisualisation du build, puis ferme celle-ci et son Chrome de test. Chrome doit être installé ; `CHROME_PATH` permet d’indiquer un autre chemin. Les captures et le compte rendu sont conservés dans `artifacts/audit/`, ignoré par Git.
+Les 17 tests vérifient les calculs et les données. L’audit navigateur teste notamment la carte, les seuils, le clavier et six largeurs d’écran. Il ouvre son propre Chrome et ferme sa prévisualisation à la fin. Si besoin, `CHROME_PATH` permet de choisir le navigateur ; `AXE_PATH` ajoute l’analyse axe à partir d’un fichier local `axe.min.js`. Sans ce fichier, le rapport précise que cette analyse n’a pas été lancée.
 
-Pour inclure l’analyse axe, définir `AXE_PATH` vers un fichier local `axe.min.js` avant de lancer l’audit. Sans cette variable, le rapport indique explicitement que les règles axe n’ont pas été exécutées. Les mesures Lighthouse se font avec l’outil temporaire sur une prévisualisation locale ; les commandes et les résultats mesurés figurent dans le rapport final. Aucune dépendance de production supplémentaire n’est nécessaire.
+Les captures et rapports détaillés sont gardés dans `artifacts/audit/`, hors du suivi Git. Le [compte rendu](docs/audit-final.md) rassemble les résultats, les mesures Lighthouse datées et les points à compléter.
+
+## Les limites de notre travail
+
+Nous avons séparé les observations, la carte des espaces et les projections. Une station ne représente pas tous les quartiers ; une classe LCZ n’est pas une mesure de chaleur ; une journée au-dessus d’un seuil ne suffit pas à définir une canicule. Nos pistes d’adaptation ne sont pas des effets mesurés.
+
+Nous avons aussi utilisé l’IA pour nous aider avec le code, certaines transformations et la lisibilité. Le notebook garde le journal détaillé de cette aide. L’export local consulté ne porte pas le suffixe `(1)` demandé dans le brief : nous devons encore confirmer qu’il correspond bien à la version remise.
