@@ -1,11 +1,12 @@
 # Préparation du récit et des visualisations
 
-Étapes 1 à 6 réalisées : accueil, contexte, définitions, sources, distribution V1, carte LCZ V2, courbe historique V3 et explorateur de seuils V4.
+Étapes 1 à 7 réalisées : accueil, contexte, définitions, sources, V1 à V4, perspectives 2050, adaptation et conclusion éditoriale.
 V1 est un histogramme statique rendu au build, documenté dans `temperature-distribution.md`.
 V2 est une carte Leaflet rendue chez le lecteur (méthode B), documentée dans `lcz-map.md`.
 V3 est une courbe statique rendue au build (méthode A), documentée dans `heat-trends.md`.
 V4 utilise la méthode B ; ses trois seuils, calculs et tests sont documentés dans `heat-thresholds.md`.
-La conclusion, les projections et la page Méthode restent hors du périmètre réalisé.
+Les projections et la conclusion sont documentées dans `projections-conclusion.md`.
+La page Méthode et la finalisation technique restent hors du périmètre réalisé.
 La configuration Astro, Tailwind, Observable Plot et Netlify est conservée.
 Le graphique initial reste archivé dans `src/components/LegacyPlotExample.astro`,
 sans être importé dans la page publique.

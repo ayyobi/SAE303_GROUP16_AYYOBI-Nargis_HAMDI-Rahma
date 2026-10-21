@@ -26,6 +26,7 @@ const initial = getThresholdModel(annual, 30);
         <noscript><p class="distribution-method">JavaScript est nécessaire pour changer le seuil. Le tableau ci-dessous reste consultable pour le seuil initial de 30&nbsp;°C.</p></noscript>
       </figure>
       <details class="distribution-table threshold-table"><summary>Consulter les effectifs annuels du seuil sélectionné</summary><div class="threshold-table-scroll" role="region" aria-label="Tableau annuel des journées à seuil" tabindex="0"><table><caption>Années civiles complètes 1959–2022. La moyenne sur dix ans est absente sans dix années consécutives disponibles.</caption><thead><tr><th scope="col">Année</th><th scope="col" data-threshold-table-title>Journées à 30&nbsp;°C ou plus</th><th scope="col">Journées observées</th><th scope="col">Moyenne sur dix ans (jours/an)</th></tr></thead><tbody>{initial.points.map(point => <tr><th scope="row">{point.annee}</th><td>{point.jours}</td><td>{point.joursValides}</td><td>{point.moyenne10 === null ? "Non disponible" : formatThresholdMean(point.moyenne10)}</td></tr>)}</tbody></table></div></details>
+      <p class="threshold-next"><a class="text-link" href="#horizon-2050">Et pour l’avenir&nbsp;? Découvrir les perspectives 2050 ↓</a></p>
     </div>
   </div>
 </section>
