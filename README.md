@@ -2,7 +2,7 @@
 
 SAE 303 — BUT MMI2.
 
-- URL site WEB : **À renseigner après déploiement sur Netlify.**
+- URL site WEB : [Besançon sous la chaleur sur Netlify](https://spiffy-frangollo-70ef1e.netlify.app/) — configuration de publication corrigée dans le dépôt ; redéploiement à effectuer.
 - URL Notebook Observable : [SAE 303 — Gr 16](https://observablehq.com/@mmi-montbeliard/sae-303-gr-16).
 - Nom : **AYYOBI**
 - Prénom : **Nargis**
@@ -11,7 +11,7 @@ SAE 303 — BUT MMI2.
 
 **Problématique :** Comment les fortes chaleurs ont-elles évolué à Besançon, et comment l’analyse des espaces urbains peut-elle aider la ville à s’adapter ?
 
-Le lien du notebook provient de l’export HTML local ; son accessibilité publique et sa version actuelle restent à vérifier. Aucune URL de déploiement n’est actuellement documentée.
+Le lien du notebook provient de l’export HTML local ; son accessibilité publique et sa version actuelle restent à vérifier. L’adresse Netlify ci-dessus provient du projet montré dans le tableau de bord.
 
 [Dépôt GitHub](https://github.com/ayyobi/SAE303_GROUP16_AYYOBI-Nargis_HAMDI-Rahma) : URL du remote `origin`, accessible publiquement lors du contrôle du 21 octobre 2026.
 
@@ -35,6 +35,14 @@ node --test
 Le build produit le site et ses téléchargements dans `dist/`. `npm run preview` les sert sur `http://127.0.0.1:4322` ; cette prévisualisation statique remplace `astro preview`, non pris en charge par l’adaptateur Netlify installé. L’adaptateur reste configuré pour l’hébergement ; ces commandes ne publient pas le site.
 
 ## Technologies et intégration
+
+### Configuration Netlify
+
+Le fichier [netlify.toml](netlify.toml) définit le dossier de base `.` (racine du dépôt), la commande `npm run build`, le dossier publié `dist` et Node.js 22.22.0. Le dossier source du projet ne doit pas être publié directement : l’accueil généré se trouve dans `dist/index.html`.
+
+Pour un déploiement depuis GitHub, inclure cette configuration dans la branche déployée, puis relancer le déploiement Netlify. Pour un dépôt manuel de fichiers, lancer d’abord `npm run build`, puis déposer uniquement le contenu du dossier `dist`. Une vérification du site en ligne reste nécessaire après le redéploiement.
+
+### Visualisations
 
 Astro, Tailwind CSS, JavaScript, Observable Plot, JSDOM, Leaflet et proj4. Typographie : Open Sans, sans texte en italique.
 
